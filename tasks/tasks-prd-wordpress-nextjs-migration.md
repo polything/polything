@@ -7,6 +7,8 @@
 
 ## Relevant Files
 
+- `scripts/wp-audit.js` - WordPress site audit and discovery script
+- `scripts/wp-audit.test.js` - Unit tests for WordPress audit functionality
 - `scripts/wp-export.mjs` - Main WordPress content export script
 - `scripts/wp-export.test.js` - Unit tests for export functionality
 - `scripts/media-fetcher.mjs` - Media download and mirroring script
@@ -50,7 +52,10 @@
 - `tailwind.config.ts` - Tailwind CSS configuration
 - `package.json` - Dependencies and scripts
 - `jest.config.js` - Jest testing configuration
+- `jest.setup.js` - Jest setup file for global test configuration
+- `babel.config.js` - Babel configuration for Jest
 - `playwright.config.ts` - Playwright E2E testing configuration
+- `audit-report.json` - Generated WordPress site audit report
 
 ### Notes
 
@@ -67,7 +72,7 @@
 ## Tasks
 
 - [ ] 1.0 Set up WordPress Content Export Infrastructure
-  - [ ] 1.1 Audit WordPress sites and confirm which subsites to migrate (polything.co.uk only for this phase)
+  - [x] 1.1 Audit WordPress sites and confirm which subsites to migrate (polything.co.uk only for this phase)
   - [ ] 1.2 Enable/confirm WP REST API access for posts, pages, and projects
   - [ ] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
   - [ ] 1.4 Create project directory structure (scripts/, lib/content/, content/, public/images/)
