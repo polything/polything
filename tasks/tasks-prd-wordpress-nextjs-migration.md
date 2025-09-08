@@ -26,6 +26,7 @@
 - `lib/api/api-client.js` - API client with retry logic and error handling
 - `lib/api/api-client.test.js` - Unit tests for API client (23 tests, all passing)
 - `scripts/test-api-client-integration.js` - Integration test for API client system
+- `docs/api-client-guide.md` - Complete API client documentation and usage guide
 - `lib/content/transformers.js` - Content transformation utilities
 - `lib/content/transformers.test.js` - Unit tests for transformation functions
 - `lib/content/schema.ts` - TypeScript definitions for content schema

@@ -800,6 +800,53 @@ pnpm test --watch
 3. Use Next.js debug mode for detailed information
 4. Check contentlayer logs for content processing issues
 
+### 6. API Client Issues
+
+#### Problem: API requests failing with timeout errors
+**Error**: `Request timeout` or `AbortError`
+**Causes**: Network issues, server overload, incorrect timeout settings, firewall blocking.
+**Solutions**: 
+- Increase timeout in client configuration
+- Check network connectivity
+- Verify server is responding
+- Check firewall/proxy settings
+
+#### Problem: Retry logic not working as expected
+**Error**: Requests failing immediately without retries
+**Causes**: Incorrect retry configuration, non-retryable status codes, network errors.
+**Solutions**: 
+- Check `retryOnStatus` configuration includes your error codes
+- Verify `retryAttempts` is set correctly
+- Ensure `retryOnNetworkError` is enabled for network issues
+- Check retry delay and backoff settings
+
+#### Problem: Authentication failures
+**Error**: `401 Unauthorized` or `403 Forbidden`
+**Causes**: Invalid credentials, expired tokens, incorrect authentication method.
+**Solutions**: 
+- Verify username/password or API key
+- Check authentication method (basic auth vs API key)
+- Ensure credentials are properly set in configuration
+- Test authentication with curl or Postman
+
+#### Problem: Batch requests failing or timing out
+**Error**: Batch processing errors, partial failures
+**Causes**: Too high concurrency, server rate limiting, memory issues.
+**Solutions**: 
+- Reduce concurrency level in batch requests
+- Implement delays between batches
+- Check server rate limiting headers
+- Monitor memory usage during batch processing
+
+#### Problem: Error logging not capturing API errors
+**Error**: Missing error logs for API failures
+**Causes**: Logging not properly integrated, error logger not initialized.
+**Solutions**: 
+- Ensure error logger is initialized before API calls
+- Check logging configuration and file permissions
+- Verify error logger integration in API client
+- Check log directory exists and is writable
+
 ### Common Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
@@ -813,6 +860,8 @@ pnpm test --watch
 - Review `contentlayer.config.ts` for configuration
 - Check `jest.config.js` for testing setup
 - Review component tests for usage examples
+- Check `lib/api/api-client.js` for API client implementation
+- Review `scripts/test-api-client-integration.js` for usage examples
 
 ---
 
