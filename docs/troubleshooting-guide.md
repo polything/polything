@@ -444,7 +444,237 @@ await downloadMediaFile(
 );
 ```
 
-### 6. Performance Issues
+### 6. Error Boundary and Loading Issues
+
+#### Problem: Error boundary not catching errors
+**Error**: Errors not being caught by error boundary
+
+**Causes**:
+- Error boundary not wrapping the component that throws
+- Error thrown outside of React component lifecycle
+- Error boundary not properly configured
+
+**Solutions**:
+1. Ensure error boundary wraps the component:
+```tsx
+<ErrorBoundary>
+  <ComponentThatMightThrow />
+</ErrorBoundary>
+```
+
+2. Check error boundary placement in component tree:
+```tsx
+// Good: Error boundary at appropriate level
+<ErrorBoundary>
+  <PageContent />
+</ErrorBoundary>
+
+// Bad: Error boundary too high in tree
+<ErrorBoundary>
+  <App />
+</ErrorBoundary>
+```
+
+3. Verify error boundary configuration:
+```tsx
+<ErrorBoundary
+  onRetry={() => window.location.reload()}
+  errorMessage="Custom error message"
+>
+  <Component />
+</ErrorBoundary>
+```
+
+#### Problem: Loading component not showing
+**Error**: Loading state not appearing
+
+**Causes**:
+- Loading component not properly imported
+- Loading state not triggered
+- CSS classes not applied correctly
+
+**Solutions**:
+1. Check loading component import:
+```tsx
+import { Loading, PageLoading } from '@/components/loading'
+```
+
+2. Verify loading state usage:
+```tsx
+// For page loading
+<PageLoading message="Loading page..." />
+
+// For inline loading
+<Loading inline size="sm" />
+
+// For button loading
+<Loading size="sm" showMessage={false} />
+```
+
+3. Check CSS classes:
+```bash
+# Verify Tailwind classes are applied
+# Check for animate-spin, proper sizing classes
+```
+
+#### Problem: Error boundary showing on every render
+**Error**: Error boundary appears even when no error occurs
+
+**Causes**:
+- Error boundary state not reset properly
+- Component throwing error on every render
+- Error boundary logic issue
+
+**Solutions**:
+1. Check error boundary state management:
+```tsx
+// Ensure proper state reset
+handleRetry = () => {
+  this.setState({ hasError: false, error: null })
+}
+```
+
+2. Verify component error handling:
+```tsx
+// Check for proper error handling in components
+try {
+  // Risky operation
+} catch (error) {
+  // Handle error appropriately
+}
+```
+
+3. Test error boundary in isolation:
+```tsx
+// Create test component that throws
+const ThrowError = ({ shouldThrow }) => {
+  if (shouldThrow) throw new Error('Test error')
+  return <div>No error</div>
+}
+```
+
+### 7. Sitemap and Robots Issues
+
+#### Problem: Sitemap not generating
+**Error**: Sitemap.xml not found or empty
+
+**Causes**:
+- Contentlayer not generating types
+- Sitemap function not properly exported
+- Build process not running
+
+**Solutions**:
+1. Generate contentlayer types:
+```bash
+pnpm contentlayer build
+```
+
+2. Check sitemap function export:
+```tsx
+// app/sitemap.ts
+export default function sitemap(): MetadataRoute.Sitemap {
+  // Implementation
+}
+```
+
+3. Verify build process:
+```bash
+pnpm build
+# Check .next/server/app/sitemap.xml
+```
+
+#### Problem: Robots.txt not accessible
+**Error**: 404 for /robots.txt
+
+**Causes**:
+- Robots function not properly exported
+- Next.js not recognizing robots.ts
+- Build issues
+
+**Solutions**:
+1. Check robots function export:
+```tsx
+// app/robots.ts
+export default function robots(): MetadataRoute.Robots {
+  // Implementation
+}
+```
+
+2. Verify file location:
+```
+app/robots.ts  # Correct location
+```
+
+3. Test robots.txt generation:
+```bash
+pnpm build
+# Check .next/server/app/robots.txt
+```
+
+#### Problem: Sitemap missing dynamic content
+**Error**: Sitemap only shows static routes
+
+**Causes**:
+- Contentlayer data not available
+- Dynamic route generation failing
+- Import issues
+
+**Solutions**:
+1. Check contentlayer integration:
+```tsx
+import { allPosts, allProjects, allPages } from 'contentlayer2/generated'
+```
+
+2. Verify content directory structure:
+```
+content/
+├── posts/
+├── projects/
+└── pages/
+```
+
+3. Test with simplified sitemap:
+```tsx
+// Use sitemap-simple.ts for testing
+export default function sitemap(): MetadataRoute.Sitemap {
+  // Static routes only
+}
+```
+
+#### Problem: AI bots not blocked
+**Error**: AI crawlers still accessing site
+
+**Causes**:
+- Robots.txt not properly configured
+- Bot user agents not recognized
+- Caching issues
+
+**Solutions**:
+1. Check robots.txt configuration:
+```tsx
+{
+  userAgent: 'GPTBot',
+  disallow: '/',
+}
+```
+
+2. Verify bot user agents:
+```tsx
+const aiCrawlers = [
+  'GPTBot',
+  'ChatGPT-User',
+  'CCBot',
+  'anthropic-ai',
+  'Claude-Web',
+]
+```
+
+3. Test robots.txt output:
+```bash
+curl https://polything.co.uk/robots.txt
+```
+
+### 8. Performance Issues
 
 #### Problem: Slow build times
 

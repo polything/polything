@@ -23,6 +23,9 @@
 - `lib/config/config-manager.js` - Configuration management system
 - `lib/config/config-manager.test.js` - Unit tests for configuration management (21 tests, all passing)
 - `scripts/test-config-integration.js` - Integration test for configuration system
+- `lib/api/api-client.js` - API client with retry logic and error handling
+- `lib/api/api-client.test.js` - Unit tests for API client (23 tests, all passing)
+- `scripts/test-api-client-integration.js` - Integration test for API client system
 - `lib/content/transformers.js` - Content transformation utilities
 - `lib/content/transformers.test.js` - Unit tests for transformation functions
 - `lib/content/schema.ts` - TypeScript definitions for content schema
@@ -51,8 +54,20 @@
 - `app/blog/[slug]/page.test.tsx` - Tests for blog post page
 - `app/[slug]/page.tsx` - Static page template
 - `app/[slug]/page.test.tsx` - Tests for static page
+- `app/loading.tsx` - Root loading state
+- `app/error.tsx` - Root error boundary
+- `app/work/[slug]/loading.tsx` - Project loading state
+- `app/work/[slug]/error.tsx` - Project error boundary
+- `app/blog/[slug]/loading.tsx` - Blog loading state
+- `app/blog/[slug]/error.tsx` - Blog error boundary
+- `app/[slug]/loading.tsx` - Page loading state
+- `app/[slug]/error.tsx` - Page error boundary
 - `components/hero.tsx` - Hero component for consuming hero.* fields
 - `components/hero.test.tsx` - Unit tests for hero component (7 test cases)
+- `components/error-boundary.tsx` - Error boundary component with retry functionality
+- `components/error-boundary.test.tsx` - Unit tests for error boundary (7 test cases)
+- `components/loading.tsx` - Loading component with multiple variants
+- `components/loading.test.tsx` - Unit tests for loading component (9 test cases)
 - `components/project-detail.tsx` - Project detail layout component
 - `components/project-detail.test.tsx` - Unit tests for project detail
 - `components/blog-post.tsx` - Blog post layout component
@@ -61,6 +76,11 @@
 - `lib/seo/metadata.test.ts` - Unit tests for SEO functions
 - `lib/seo/sitemap.ts` - XML sitemap generation
 - `lib/seo/sitemap.test.ts` - Unit tests for sitemap
+- `app/sitemap.ts` - Dynamic sitemap generation with contentlayer integration
+- `app/sitemap.test.ts` - Unit tests for sitemap (8 test cases)
+- `app/sitemap-simple.ts` - Simplified sitemap for testing without contentlayer
+- `app/robots.ts` - Robots.txt configuration with AI bot blocking
+- `app/robots.test.ts` - Unit tests for robots.txt (7 test cases)
 - `lib/seo/structured-data.ts` - JSON-LD structured data
 - `lib/seo/structured-data.test.ts` - Unit tests for structured data
 - `public/images/` - Directory for mirrored media assets
@@ -94,7 +114,7 @@
 
 ## Tasks
 
-- [ ] 1.0 Set up WordPress Content Export Infrastructure
+- [x] 1.0 Set up WordPress Content Export Infrastructure
   - [x] 1.1 Audit WordPress sites and confirm which subsites to migrate (polything.co.uk only for this phase)
   - [x] 1.2 Enable/confirm WP REST API access for posts, pages, and projects
   - [x] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
@@ -103,7 +123,7 @@
   - [x] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
   - [x] 1.7 Set up logging for broken/missing media or content errors
   - [x] 1.8 Create configuration file for WordPress API endpoints and credentials
-  - [ ] 1.9 Add error handling and retry logic for API calls
+  - [x] 1.9 Add error handling and retry logic for API calls
 
 - [ ] 2.0 Implement Content Transformation and Field Mapping
   - [ ] 2.1 Define normalised front-matter schema (hero, links, featured, etc.)
@@ -136,13 +156,15 @@
   - [x] 3.13 Implement canonical URLs using the App Router Metadata API
   - [x] 3.14 Add responsive design and mobile optimization
   - [x] 3.15 Implement image optimization with Next.js Image component
-  - [ ] 3.16 Add loading states and error boundaries
+  - [x] 3.16 Add loading states and error boundaries
+  - [x] 3.17 Add sitemap and robots.txt generation
 
 - [ ] 4.0 Create Content Validation and Testing Framework
   - [x] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)
   - [ ] 4.2 Unit tests for transformation functions (field mapping, media resolution)
   - [ ] 4.3 Integration tests for WP API → MDX export
   - [x] 4.4 Component tests for hero, project, blog post layouts
+  - [x] 4.4.1 Component tests for error boundary and loading states (31 tests)
   - [ ] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
   - [ ] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
   - [ ] 4.7 Unit tests for JSON builders (Page/Post/Project)

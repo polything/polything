@@ -1,0 +1,2 @@
+[2025-09-08T12:10:11.010Z] ERROR: API_ERROR: Simulated API error for testing {"type":"api_request","endpoint":"/test-endpoint","method":"GET","details":{}}
+[2025-09-08T12:10:11.011Z] ERROR: API_ERROR: Network timeout {"type":"api_request","endpoint":"/another-endpoint","method":"POST","details":{}}
