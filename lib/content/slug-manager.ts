@@ -54,8 +54,9 @@ export function resolveSlugConflicts(contentItems: ContentItem[]): SlugResolutio
       resolved[slug] = conflict.resolution.primary;
       
       // Add conflicted items with modified slugs
-      for (const conflictedItem of conflict.resolution.conflicts) {
-        const newSlug = generateUniqueSlug(conflictedItem, resolved);
+      for (let i = 0; i < conflict.resolution.conflicts.length; i++) {
+        const conflictedItem = conflict.resolution.conflicts[i];
+        const newSlug = generateUniqueSlug(conflictedItem, resolved, i + 1);
         resolved[newSlug] = { ...conflictedItem, slug: newSlug };
       }
     }
@@ -120,12 +121,18 @@ function resolveSlugConflict(slug: string, items: ContentItem[]): SlugConflict {
  * Generates a unique slug for a conflicted item
  * @param item - The item that needs a new slug
  * @param existingSlugs - Already resolved slugs
+ * @param startCounter - Starting counter value (default: 1)
  * @returns Unique slug
  */
-function generateUniqueSlug(item: ContentItem, existingSlugs: Record<string, ContentItem>): string {
+function generateUniqueSlug(item: ContentItem, existingSlugs: Record<string, ContentItem>, startCounter: number = 1): string {
   const baseSlug = item.slug;
-  let counter = 1;
+  let counter = startCounter;
   let newSlug = `${baseSlug}-${item.type}`;
+  
+  // If startCounter > 1, add it immediately
+  if (startCounter > 1) {
+    newSlug = `${baseSlug}-${item.type}-${counter}`;
+  }
   
   // Keep trying until we find a unique slug
   while (existingSlugs[newSlug]) {
