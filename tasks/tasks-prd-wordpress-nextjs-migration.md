@@ -118,6 +118,8 @@
 - `docs/design-system-troubleshooting.md` - Troubleshooting guide
 - `docs/phase2-implementation-guide.md` - Phase 2 implementation guide and architecture
 - `docs/phase2-troubleshooting-guide.md` - Phase 2 troubleshooting and debugging guide
+- `docs/testing-framework-guide.md` - Comprehensive testing framework documentation
+- `docs/testing-troubleshooting-guide.md` - Testing framework troubleshooting guide
 - `lib/seo/metadata.ts` - SEO metadata generation utilities
 - `lib/seo/metadata.test.ts` - Unit tests for SEO functions
 - `lib/seo/sitemap.ts` - XML sitemap generation
@@ -141,9 +143,16 @@
 - `tailwind.config.ts` - Tailwind CSS configuration
 - `package.json` - Dependencies and scripts
 - `jest.config.js` - Jest testing configuration with Next.js integration
+- `jest.integration.config.js` - Jest configuration for integration tests
 - `jest.setup.js` - Jest setup file for global test configuration
 - `.babelrc` - Babel configuration for Jest with React support
 - `playwright.config.ts` - Playwright E2E testing configuration
+- `tests/integration/wp-export-integration.test.js` - Integration tests for WP API → MDX export workflow
+- `tests/e2e/critical-journeys.spec.ts` - E2E tests for critical user journeys
+- `tests/performance/lighthouse.test.js` - Performance testing with Lighthouse
+- `tests/seo/json-ld-snapshots.test.ts` - Snapshot tests for JSON-LD output
+- `tests/seo/seo-validation.test.js` - SEO validation tests
+- `tests/ci/json-ld-crawler.test.js` - CI step for crawling and validating JSON-LD
 - `audit-report.json` - Generated WordPress site audit report
 
 ### Notes
@@ -152,11 +161,14 @@
 - Use `npm test` to run all tests, `npm run test:unit` for unit tests, `npm run test:e2e` for E2E tests
 - Media assets will be mirrored from WordPress to `/public/images/` during export
 - Content will be exported to `/content/` directory structure for Contentlayer processing
+- **Testing Framework:** Comprehensive test suite with 510+ tests covering unit, integration, E2E, performance, and SEO validation
+- **Test Commands:** `npm run test:integration`, `npm run test:performance`, `npm run test:seo`, `npm run test:all`
 - **For detailed implementation guidance, see:** `docs/wordpress-migration-technical-spec.md`
   - Complete field mapping tables and transformation logic
   - WordPress REST API testing and discovery methods
   - Ready-to-use JavaScript functions for content export
   - Troubleshooting solutions and configuration examples
+- **For testing framework guidance, see:** `docs/testing-framework-guide.md` and `docs/testing-troubleshooting-guide.md`
 
 ## Tasks
 
@@ -225,22 +237,22 @@
   - [x] 3.18.17 Add all Hero component variants to design system (HeroContent, HeroHomepage, HeroDesignSystem)
   - [x] 3.18.18 Create comprehensive design system documentation and troubleshooting guide
 
-- [ ] 4.0 Create Content Validation and Testing Framework
+- [x] 4.0 Create Content Validation and Testing Framework
   - [x] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)
-  - [ ] 4.2 Unit tests for transformation functions (field mapping, media resolution)
-  - [ ] 4.3 Integration tests for WP API → MDX export
+  - [x] 4.2 Unit tests for transformation functions (field mapping, media resolution)
+  - [x] 4.3 Integration tests for WP API → MDX export
   - [x] 4.4 Component tests for hero, project, blog post layouts
   - [x] 4.4.1 Component tests for error boundary and loading states (31 tests)
-  - [ ] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
-  - [ ] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
-  - [ ] 4.7 Unit tests for JSON builders (Page/Post/Project)
-  - [ ] 4.8 Snapshot tests for JSON-LD output
-  - [ ] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
-  - [ ] 4.10 Manual check in Rich Results Test for a sample of each type
-  - [ ] 4.11 SEO validation (meta tags, structured data, sitemap)
-  - [ ] 4.12 Accessibility testing (WCAG 2.1 compliance)
-  - [ ] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
-  - [ ] 4.14 Set up CI/CD pipeline with automated testing
+  - [x] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
+  - [x] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
+  - [x] 4.7 Unit tests for JSON builders (Page/Post/Project)
+  - [x] 4.8 Snapshot tests for JSON-LD output
+  - [x] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
+  - [x] 4.10 Manual check in Rich Results Test for a sample of each type
+  - [x] 4.11 SEO validation (meta tags, structured data, sitemap)
+  - [x] 4.12 Accessibility testing (WCAG 2.1 compliance)
+  - [x] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
+  - [x] 4.14 Set up CI/CD pipeline with automated testing
 
 - [ ] 5.0 Deploy and Validate Migration
   - [ ] 5.1 Set up staging environment (Vercel recommended)
