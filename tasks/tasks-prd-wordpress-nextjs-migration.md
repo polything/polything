@@ -65,6 +65,7 @@
 - `app/[slug]/error.tsx` - Page error boundary
 - `components/hero.tsx` - Hero component for consuming hero.* fields
 - `components/hero.test.tsx` - Unit tests for hero component (7 test cases)
+- `components/hero-section.tsx` - Homepage hero section with video background
 - `components/error-boundary.tsx` - Error boundary component with retry functionality
 - `components/error-boundary.test.tsx` - Unit tests for error boundary (7 test cases)
 - `components/loading.tsx` - Loading component with multiple variants
@@ -73,6 +74,32 @@
 - `components/project-detail.test.tsx` - Unit tests for project detail
 - `components/blog-post.tsx` - Blog post layout component
 - `components/blog-post.test.tsx` - Unit tests for blog post
+- `components/design-system/` - Complete design system component library
+  - `index.ts` - Design system exports and main entry point
+  - `container.tsx` - Responsive container component
+  - `container.test.tsx` - Container component tests (8 tests)
+  - `section.tsx` - Semantic section wrapper component
+  - `section.test.tsx` - Section component tests (8 tests)
+  - `grid.tsx` - Flexible grid system component
+  - `typography.tsx` - Typography components (Heading, Text, LeadText, SmallText)
+  - `typography.test.tsx` - Typography component tests (12 tests)
+  - `card.tsx` - Card component with header, content, footer
+  - `button.tsx` - Button component with multiple variants
+  - `glass-container.tsx` - Glass morphic container with decorative elements
+  - `glass-container.test.tsx` - Glass container tests (10 tests)
+  - `hero-design-system.tsx` - Flexible design system hero component
+  - `hero-design-system.test.tsx` - Design system hero tests (12 tests)
+  - `hero-content.tsx` - Content-specific hero for WordPress data
+  - `hero-content.test.tsx` - Content hero tests (7 tests)
+  - `hero-homepage.tsx` - Homepage hero with video background
+  - `bauhaus-elements.tsx` - Bauhaus-inspired geometric components
+  - `bauhaus-elements.test.tsx` - Bauhaus component tests
+- `lib/design-system.ts` - Design system utilities and tokens
+- `lib/design-system.test.ts` - Design system utility tests (10 tests)
+- `app/design-system-demo/page.tsx` - Design system showcase and demo page
+- `docs/design-system-guide.md` - Complete design system documentation
+- `docs/design-system-implementation.md` - Implementation documentation
+- `docs/design-system-troubleshooting.md` - Troubleshooting guide
 - `lib/seo/metadata.ts` - SEO metadata generation utilities
 - `lib/seo/metadata.test.ts` - Unit tests for SEO functions
 - `lib/seo/sitemap.ts` - XML sitemap generation
@@ -159,6 +186,26 @@
   - [x] 3.15 Implement image optimization with Next.js Image component
   - [x] 3.16 Add loading states and error boundaries
   - [x] 3.17 Add sitemap and robots.txt generation
+
+- [x] 3.18 **Phase 2: Design System Implementation (Agent B)**
+  - [x] 3.18.1 Analyse existing homepage design and extract design system tokens
+  - [x] 3.18.2 Create comprehensive design system with typography, spacing, and grid utilities
+  - [x] 3.18.3 Enhance hero component with design system integration and responsive layouts
+  - [x] 3.18.4 Create shared layout components (grid, container, section wrappers)
+  - [x] 3.18.5 Build responsive typography system with Raleway and Inter fonts
+  - [x] 3.18.6 Create Bauhaus-inspired design elements and geometric patterns
+  - [x] 3.18.7 Implement mobile-first responsive design patterns
+  - [x] 3.18.8 Create component library documentation and usage examples
+  - [x] 3.18.9 Write comprehensive tests for all design system components (87+ tests)
+  - [x] 3.18.10 Validate design system against existing homepage components
+  - [x] 3.18.11 Fix Next.js version and Babel configuration issues
+  - [x] 3.18.12 Update Next.js to latest version (15.5.2) and resolve SWC/Babel conflicts
+  - [x] 3.18.13 Fix duplicate export issues in design system components
+  - [x] 3.18.14 Temporarily disable contentlayer2 dynamic pages to resolve build errors
+  - [x] 3.18.15 Verify homepage and design system demo page are working correctly
+  - [x] 3.18.16 Add GlassContainer component to design system with glass morphic effect
+  - [x] 3.18.17 Add all Hero component variants to design system (HeroContent, HeroHomepage, HeroDesignSystem)
+  - [x] 3.18.18 Create comprehensive design system documentation and troubleshooting guide
 
 - [ ] 4.0 Create Content Validation and Testing Framework
   - [x] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)

@@ -55,6 +55,7 @@ import { Container } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `size`: 'sm' | 'md' | 'lg' | 'xl' | 'full'
 - `padding`: 'none' | 'sm' | 'md' | 'lg'
 
@@ -71,6 +72,7 @@ import { Section } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `size`: 'sm' | 'md' | 'lg'
 - `background`: 'white' | 'gray' | 'brand' | 'transparent'
 - `container`: boolean (default: true)
@@ -90,6 +92,7 @@ import { GlassContainer } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `children`: React.ReactNode - Content to display inside the container
 - `className`: string - Additional CSS classes
 - `variant`: 'light' | 'dark' - Glass effect variant (default: 'light')
@@ -99,6 +102,7 @@ import { GlassContainer } from '@/components/design-system'
 - `rounded`: 'sm' | 'md' | 'lg' | 'xl' | '2xl' - Border radius (default: 'xl')
 
 **Examples:**
+
 ```tsx
 // Light glass container with default decorations
 <GlassContainer>
@@ -145,6 +149,7 @@ import { Grid } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `cols`: 1 | 2 | 3 | 4 | 6 | 12
 - `gap`: 'sm' | 'md' | 'lg' | 'xl'
 - `responsive`: Object with breakpoint-specific column counts
@@ -163,11 +168,13 @@ import { Heading, Text, LeadText, SmallText } from '@/components/design-system'
 ```
 
 **Heading Props:**
+
 - `level`: 1 | 2 | 3 | 4 | 5 | 6
 - `color`: 'default' | 'brand' | 'muted' | 'white'
 - `as`: HTML element override
 
 **Text Props:**
+
 - `size`: 'small' | 'base' | 'large'
 - `color`: 'default' | 'muted' | 'brand' | 'white'
 - `weight`: 'normal' | 'medium' | 'semibold' | 'bold'
@@ -193,6 +200,7 @@ import { Card, CardHeader, CardContent, CardFooter } from '@/components/design-s
 ```
 
 **Props:**
+
 - `variant`: 'default' | 'glass' | 'elevated'
 - `glassVariant`: 'light' | 'dark' | 'subtle' | 'strong'
 - `padding`: 'none' | 'sm' | 'md' | 'lg' | 'xl'
@@ -217,6 +225,7 @@ import { Button, ButtonGroup } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `variant`: 'primary' | 'secondary' | 'outline' | 'ghost'
 - `size`: 'sm' | 'md' | 'lg' | 'xl'
 - `icon`: LucideIcon component
@@ -244,6 +253,7 @@ import { HeroDesignSystem } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `hero`: HeroData object
 - `variant`: 'default' | 'minimal' | 'fullscreen' | 'split'
 - `showBauhausElements`: boolean
@@ -269,10 +279,12 @@ import { HeroContent } from '@/components/design-system'
 ```
 
 **Props:**
+
 - `hero`: HeroData object with title, subtitle, image, video, colors
 - `className`: string
 
 **Features:**
+
 - Supports both image and video backgrounds
 - Dynamic background and text colors
 - Responsive design with proper image/video handling
@@ -289,6 +301,7 @@ import { HeroHomepage } from '@/components/design-system'
 ```
 
 **Features:**
+
 - Video background with autoplay and loop
 - Glass morphic container with decorative elements
 - Interactive call-to-action button
@@ -296,6 +309,7 @@ import { HeroHomepage } from '@/components/design-system'
 - Mobile-optimized video handling
 
 **HeroData Interface:**
+
 ```typescript
 interface HeroData {
   title?: string
@@ -344,6 +358,7 @@ import { BauhausCircle, BauhausSquare, BauhausTriangle, GeometricPattern } from 
 ```
 
 **Props:**
+
 - `size`: 'sm' | 'md' | 'lg' | 'xl'
 - `color`: 'yellow' | 'lightBlue' | 'orange' | 'red' | 'green' | 'navy'
 - `opacity`: number (0-1)
@@ -439,7 +454,9 @@ export default function HomePage() {
 ## Best Practices
 
 ### 1. Consistent Spacing
+
 Use the design system's spacing scale for consistent layouts:
+
 ```tsx
 // Good
 <Section size="lg">
@@ -456,7 +473,9 @@ Use the design system's spacing scale for consistent layouts:
 ```
 
 ### 2. Semantic Typography
+
 Use semantic typography components instead of raw HTML:
+
 ```tsx
 // Good
 <Heading level={2} color="brand">Section Title</Heading>
@@ -468,7 +487,9 @@ Use semantic typography components instead of raw HTML:
 ```
 
 ### 3. Responsive Design
+
 Leverage the responsive utilities built into components:
+
 ```tsx
 // Good
 <Grid cols={1} responsive={{ md: 2, lg: 3 }}>
@@ -478,7 +499,9 @@ Leverage the responsive utilities built into components:
 ```
 
 ### 4. Brand Consistency
+
 Use brand colors and maintain visual hierarchy:
+
 ```tsx
 // Good
 <Button variant="primary">Primary Action</Button>
