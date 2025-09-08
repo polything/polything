@@ -211,16 +211,31 @@ async function discoverMetaFields(baseUrl, restBase, itemId) {
     const metaFields = {};
     
     // Check for themerain_* fields in various locations
-    const candidates = { ...item, ...(item.meta || {}) };
+    const candidates = { 
+      ...item, 
+      ...(item.meta || {}), 
+      ...(item.acf || {}) // Also check ACF object
+    };
     
     for (const [key, value] of Object.entries(candidates)) {
       if (key.startsWith('themerain_')) {
         metaFields[key] = {
           value: value,
           type: typeof value,
-          available: true
+          available: true,
+          source: item.acf && item.acf[key] !== undefined ? 'acf' : 'meta'
         };
       }
+    }
+    
+    // Check if ACF is available but empty
+    if (item.acf && Object.keys(item.acf).length === 0) {
+      metaFields._acf_available_but_empty = {
+        value: true,
+        type: 'boolean',
+        available: true,
+        source: 'acf'
+      };
     }
     
     return metaFields;

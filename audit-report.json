@@ -1,5 +1,5 @@
 {
-  "siteUrl": "https://polything.co.uk",
+  "siteUrl": "https://mightybooth.com",
   "isWordPress": true,
   "restApiAvailable": true,
   "contentTypes": {
@@ -91,85 +91,104 @@
   "metaFields": {
     "posts": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/posts",
-      "metaFields": {}
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/posts",
+      "metaFields": {
+        "_acf_available_but_empty": {
+          "value": true,
+          "type": "boolean",
+          "available": true,
+          "source": "acf"
+        }
+      }
     },
     "pages": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/pages",
-      "metaFields": {}
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/pages",
+      "metaFields": {
+        "_acf_available_but_empty": {
+          "value": true,
+          "type": "boolean",
+          "available": true,
+          "source": "acf"
+        }
+      }
     },
     "media": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/media",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/media",
       "metaFields": {}
     },
     "menu-items": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/menu-items",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/menu-items",
       "metaFields": {}
     },
     "blocks": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/blocks",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/blocks",
       "metaFields": {}
     },
     "templates": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/templates",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/templates",
       "metaFields": {}
     },
     "template-parts": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/template-parts",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/template-parts",
       "metaFields": {}
     },
     "global-styles": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/global-styles",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/global-styles",
       "metaFields": {}
     },
     "navigation": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/navigation",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/navigation",
       "metaFields": {}
     },
     "font-families": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/font-families",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/font-families",
       "metaFields": {}
     },
     "font-families/(?P<font_family_id>[\\d]+)/font-faces": {
       "available": false,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/font-families/(?P<font_family_id>[\\d]+)/font-faces",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/font-families/(?P<font_family_id>[\\d]+)/font-faces",
       "metaFields": {}
     },
     "project": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/project",
-      "metaFields": {}
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/project",
+      "metaFields": {
+        "_acf_available_but_empty": {
+          "value": true,
+          "type": "boolean",
+          "available": true,
+          "source": "acf"
+        }
+      }
     },
     "rm_content_editor": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/rm_content_editor",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/rm_content_editor",
       "metaFields": {}
     },
     "rank_math_schema": {
       "available": true,
-      "endpoint": "https://polything.co.uk/wp-json/wp/v2/rank_math_schema",
+      "endpoint": "https://mightybooth.com/wp-json/wp/v2/rank_math_schema",
       "metaFields": {}
     }
   },
-  "mediaEndpoint": "https://polything.co.uk/wp-json/wp/v2/media",
+  "mediaEndpoint": "https://mightybooth.com/wp-json/wp/v2/media",
   "error": null,
-  "timestamp": "2025-09-08T10:08:03.031Z",
+  "timestamp": "2025-09-08T10:25:24.409Z",
   "summary": {
     "totalContentTypes": 14,
     "availableEndpoints": 8,
-    "themerainFieldsFound": 0,
+    "themerainFieldsFound": 3,
     "migrationReady": true
   },
-  "recommendations": [
-    "No themerain_* meta fields found - may need ACF to REST API plugin"
-  ]
+  "recommendations": []
 }
