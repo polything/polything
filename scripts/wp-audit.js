@@ -20,6 +20,7 @@ async function auditWordPressSite(siteUrl) {
     restApiAvailable: false,
     contentTypes: {},
     metaFields: {},
+    themerainFields: {},
     mediaEndpoint: null,
     error: null,
     timestamp: new Date().toISOString()
@@ -54,6 +55,9 @@ async function auditWordPressSite(siteUrl) {
     
     // Test media endpoint
     result.mediaEndpoint = await testMediaEndpoint(baseUrl);
+    
+    // Discover themerain fields via diagnostic endpoint
+    result.themerainFields = await discoverThemerainFieldsForSite(baseUrl, result.contentTypes);
 
   } catch (error) {
     result.error = error.message;
@@ -268,6 +272,63 @@ async function testMediaEndpoint(baseUrl) {
 }
 
 /**
+ * Discovers themerain fields for a specific post via diagnostic endpoint
+ * @param {string} baseUrl - The site base URL
+ * @param {string} contentType - The content type (e.g., 'project')
+ * @param {number} postId - The post ID to check
+ * @returns {Promise<Object>} Themerain fields data
+ */
+async function discoverThemerainFields(baseUrl, contentType, postId) {
+  try {
+    const response = await fetch(`${baseUrl}/wp-json/polything/v1/themerain-meta/${postId}`, {
+      headers: { 'Accept': 'application/json' },
+      signal: AbortSignal.timeout(10000)
+    });
+    
+    if (!response.ok) {
+      return { error: `HTTP ${response.status}: ${response.statusText}` };
+    }
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return { error: error.message };
+  }
+}
+
+/**
+ * Discovers themerain fields for all content types on a site
+ * @param {string} baseUrl - The site base URL
+ * @param {Object} contentTypes - Available content types
+ * @returns {Promise<Object>} Themerain fields for each content type
+ */
+async function discoverThemerainFieldsForSite(baseUrl, contentTypes) {
+  const themerainFields = {};
+  const siteKey = baseUrl;
+  themerainFields[siteKey] = {};
+  
+  // Test key content types with known post IDs
+  const testPosts = {
+    project: 10680, // Known project ID from polything.co.uk
+    post: null,     // We'll need to find a post ID
+    page: null      // We'll need to find a page ID
+  };
+  
+  for (const [contentType, postId] of Object.entries(testPosts)) {
+    if (contentTypes[contentType] && postId) {
+      try {
+        const fields = await discoverThemerainFields(baseUrl, contentType, postId);
+        themerainFields[siteKey][contentType] = fields;
+      } catch (error) {
+        themerainFields[siteKey][contentType] = { error: error.message };
+      }
+    }
+  }
+  
+  return themerainFields;
+}
+
+/**
  * Generates an audit report and saves it to file
  * @param {Object} auditResult - The audit result from auditWordPressSite
  * @param {string} outputPath - Path to save the report
@@ -331,6 +392,7 @@ module.exports = {
   auditWordPressSite,
   discoverContentTypes,
   validateRESTEndpoints,
+  discoverThemerainFields,
   generateAuditReport
 };
 

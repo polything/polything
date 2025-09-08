@@ -1,0 +1,49 @@
+{
+  "sites": {
+    "polything.co.uk": {
+      "url": "https://polything.co.uk",
+      "apiBase": "https://polything.co.uk/wp-json/wp/v2",
+      "diagnosticEndpoint": "https://polything.co.uk/wp-json/polything/v1",
+      "contentTypes": ["post", "page", "project"],
+      "testPostIds": {
+        "project": 10680,
+        "post": null,
+        "page": null
+      }
+    },
+    "mightybooth.com": {
+      "url": "https://mightybooth.com",
+      "apiBase": "https://mightybooth.com/wp-json/wp/v2",
+      "diagnosticEndpoint": "https://mightybooth.com/wp-json/polything/v1",
+      "contentTypes": ["post", "page", "project"],
+      "testPostIds": {
+        "project": 1615,
+        "post": null,
+        "page": null
+      }
+    }
+  },
+  "export": {
+    "outputDir": "./content",
+    "mediaDir": "./public/images",
+    "batchSize": 10,
+    "retryAttempts": 3,
+    "retryDelay": 1000,
+    "timeout": 30000
+  },
+  "fieldMapping": {
+    "hero": {
+      "title": ["themerain_hero_title", "themerain_page_title"],
+      "subtitle": ["themerain_hero_subtitle", "themerain_page_subtitle"],
+      "image": ["themerain_hero_image"],
+      "video": ["themerain_hero_video"],
+      "text_color": ["themerain_hero_text_color", "themerain_page_text_color"],
+      "background_color": ["themerain_hero_bg_color", "themerain_page_bg_color"]
+    },
+    "links": {
+      "url": ["themerain_project_link_url"],
+      "image": ["themerain_project_link_image"],
+      "video": ["themerain_project_link_video"]
+    }
+  }
+}
