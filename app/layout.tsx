@@ -28,8 +28,53 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Organization structured data
+  const organizationData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Polything Ltd',
+    url: 'https://polything.co.uk',
+    logo: 'https://polything.co.uk/logo.png',
+    description: 'Strategic Marketing for Visionary Brands',
+    sameAs: [
+      'https://linkedin.com/company/polything',
+      'https://twitter.com/polything',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+44-1234-567890',
+      contactType: 'customer service',
+      email: 'hello@polything.co.uk',
+    },
+  }
+
+  // Website structured data
+  const websiteData = {
+    '@context': 'https://schema.org',
+    '@type': 'Website',
+    name: 'Polything',
+    url: 'https://polything.co.uk',
+    description: 'Strategic Marketing for Visionary Brands',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Polything Ltd',
+    },
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Organization JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        />
+        {/* Website JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+        />
+      </head>
       <body className={`${inter.variable} ${raleway.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
