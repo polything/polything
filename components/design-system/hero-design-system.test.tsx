@@ -3,7 +3,7 @@
  */
 
 import { render, screen } from '@testing-library/react'
-import Hero from './hero'
+import Hero from './hero-design-system'
 
 const mockHeroData = {
   title: 'Test Hero Title',

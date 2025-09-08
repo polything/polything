@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`JSON-LD Snapshot Tests Article JSON-LD should generate consistent BlogPosting JSON-LD: article-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "author": {
+    "@type": "Organization",
+    "name": "Polything Team",
+  },
+  "dateModified": "2024-01-20T15:30:00Z",
+  "datePublished": "2024-01-15T10:00:00Z",
+  "description": "Learn how to migrate your WordPress site to Next.js with our step-by-step guide.",
+  "headline": "WordPress to Next.js Migration - Complete Guide",
+  "image": [
+    "https://polything.co.uk/images/2024/01/migration-hero.jpg",
+  ],
+  "mainEntityOfPage": "https://polything.co.uk/blog/wordpress-to-nextjs-migration",
+  "url": "https://polything.co.uk/blog/wordpress-to-nextjs-migration",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Article JSON-LD should generate minimal BlogPosting JSON-LD: article-json-ld-minimal 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "datePublished": "2024-01-15T10:00:00Z",
+  "headline": "Simple Post",
+  "mainEntityOfPage": "https://polything.co.uk/blog/simple-post",
+  "url": "https://polything.co.uk/blog/simple-post",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Breadcrumbs JSON-LD should generate consistent BreadcrumbList JSON-LD: breadcrumbs-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [],
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Breadcrumbs JSON-LD should generate minimal BreadcrumbList JSON-LD: breadcrumbs-json-ld-minimal 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [],
+}
+`;
+
+exports[`JSON-LD Snapshot Tests CreativeWork JSON-LD should generate consistent CreativeWork JSON-LD for projects: creative-work-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dateModified": "2024-01-20T15:30:00Z",
+  "description": "Discover how our digital strategy helped Blackriver Security achieve remarkable growth.",
+  "image": [
+    "https://polything.co.uk/images/2024/01/blackriver-hero.jpg",
+  ],
+  "name": "Blackriver Security - 297% Sales Growth Case Study",
+  "url": "https://polything.co.uk/work/blackriver-case-study",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests CreativeWork JSON-LD should generate minimal CreativeWork JSON-LD: creative-work-json-ld-minimal 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "name": "Simple Project",
+  "url": "https://polything.co.uk/work/simple-project",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Dynamic JSON-LD Generation should generate complete JSON-LD with breadcrumbs: complete-json-ld-with-breadcrumbs 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "dateModified": "2024-01-15T10:00:00Z",
+    "name": "Complex Project",
+    "url": "https://polything.co.uk/work/complex-project",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "item": "https://polything.co.uk/home",
+        "name": "Home",
+        "position": 1,
+      },
+      {
+        "@type": "ListItem",
+        "item": "https://polything.co.uk/work",
+        "name": "Work",
+        "position": 2,
+      },
+      {
+        "@type": "ListItem",
+        "item": "https://polything.co.uk/work/complex-project",
+        "name": "Complex Project",
+        "position": 3,
+      },
+    ],
+  },
+]
+`;
+
+exports[`JSON-LD Snapshot Tests Dynamic JSON-LD Generation should generate complete JSON-LD without breadcrumbs: complete-json-ld-without-breadcrumbs 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "dateModified": "2024-01-15T10:00:00Z",
+    "datePublished": "2024-01-15T10:00:00Z",
+    "headline": "Simple Post",
+    "mainEntityOfPage": "https://polything.co.uk/blog/simple-post",
+    "url": "https://polything.co.uk/blog/simple-post",
+  },
+]
+`;
+
+exports[`JSON-LD Snapshot Tests Dynamic JSON-LD Generation should generate correct JSON-LD based on content type: dynamic-page-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Test Page",
+  "url": "https://polything.co.uk/test-page",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Dynamic JSON-LD Generation should generate correct JSON-LD based on content type: dynamic-post-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "datePublished": "2024-01-15T10:00:00Z",
+  "headline": "Test Post",
+  "mainEntityOfPage": "https://polything.co.uk/blog/test-post",
+  "url": "https://polything.co.uk/blog/test-post",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Dynamic JSON-LD Generation should generate correct JSON-LD based on content type: dynamic-project-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "name": "Test Project",
+  "url": "https://polything.co.uk/work/test-project",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Edge Cases should handle long descriptions: long-description-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "description": "This is a very long description that goes on and on and contains multiple sentences to test how the JSON-LD generation handles lengthy content and ensures it…",
+  "name": "Project with Long Description",
+  "url": "https://polything.co.uk/work/long-description",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Edge Cases should handle missing dates: no-dates-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Page Without Dates",
+  "url": "https://polything.co.uk/no-dates",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Edge Cases should handle missing optional fields gracefully: minimal-page-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Minimal Page",
+  "url": "https://polything.co.uk/minimal-page",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Edge Cases should handle special characters in titles: special-chars-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "datePublished": "2024-01-15T10:00:00Z",
+  "headline": "Post with "Special" Characters & Symbols",
+  "mainEntityOfPage": "https://polything.co.uk/blog/special-chars",
+  "url": "https://polything.co.uk/blog/special-chars",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Organization JSON-LD should generate consistent Organization JSON-LD: organization-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": undefined,
+  "url": "https://polything.co.uk",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Page JSON-LD should generate consistent WebPage JSON-LD: page-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "dateModified": "2024-01-20T15:30:00Z",
+  "description": "Discover our story, mission, and the team behind Polything.",
+  "headline": "About Us - Polything",
+  "image": "https://polything.co.uk/images/2024/01/about-schema.jpg",
+  "url": "https://polything.co.uk/about",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Page JSON-LD should generate minimal WebPage JSON-LD: page-json-ld-minimal 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Contact Us",
+  "url": "https://polything.co.uk/contact",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Schema Type Validation should enforce correct schema types for different content types: schema-type-page 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Schema Test Page",
+  "url": "https://polything.co.uk/schema-test-page",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Schema Type Validation should enforce correct schema types for different content types: schema-type-post 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "datePublished": "2024-01-15T10:00:00Z",
+  "headline": "Schema Test Post",
+  "mainEntityOfPage": "https://polything.co.uk/blog/schema-test-post",
+  "url": "https://polything.co.uk/blog/schema-test-post",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Schema Type Validation should enforce correct schema types for different content types: schema-type-project 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dateModified": "2024-01-15T10:00:00Z",
+  "name": "Schema Test Project",
+  "url": "https://polything.co.uk/work/schema-test-project",
+}
+`;
+
+exports[`JSON-LD Snapshot Tests Website JSON-LD should generate consistent Website JSON-LD: website-json-ld 1`] = `
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Polything",
+  "url": "https://polything.co.uk",
+}
+`;

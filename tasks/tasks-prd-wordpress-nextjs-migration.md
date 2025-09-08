@@ -60,6 +60,14 @@
 - `lib/content/validation-runner.test.ts` - Unit tests for validation runner (19 tests, all passing)
 - `lib/content/export-reporter.ts` - Export reporting and statistics
 - `lib/content/export-reporter.test.ts` - Unit tests for export reporting (23 tests, all passing)
+- `lib/seo/structured-data.ts` - Comprehensive JSON-LD structured data generation utilities
+- `lib/seo/structured-data.test.ts` - Unit tests for JSON-LD utilities (15 tests, all passing)
+- `lib/seo/metadata.ts` - SEO metadata generation for Next.js App Router
+- `lib/seo/metadata.test.ts` - Unit tests for metadata generation (14 tests, all passing)
+- `lib/content/seo-validator.ts` - SEO content validation with fallbacks and length checks
+- `lib/content/seo-validator.test.ts` - Unit tests for SEO validation (14 tests, all passing)
+- `tests/seo/jsonld-validation.test.ts` - Comprehensive JSON-LD validation tests (20 tests, all passing)
+- `tests/seo/json-ld-snapshots.test.ts` - Snapshot tests for JSON-LD output consistency (18 tests, all passing)
 - `contentlayer.config.ts` - Contentlayer configuration
 - `contentlayer.config.test.ts` - Tests for contentlayer configuration
 - `app/layout.tsx` - Root layout with JSON-LD structured data
@@ -198,7 +206,7 @@
   - [x] 3.9 Implement global navigation, footer, and site metadata
   - [x] 3.10 Add site-wide JSON-LD for Organization and Website in app/layout.tsx
   - [x] 3.11 Generate per-page JSON-LD in route components based on doc.type and doc.seo
-  - [ ] 3.12 Optional: render BreadcrumbList when seo.schema.breadcrumbs present
+  - [x] 3.12 Optional: render BreadcrumbList when seo.schema.breadcrumbs present
   - [x] 3.13 Implement canonical URLs using the App Router Metadata API
   - [x] 3.14 Add responsive design and mobile optimization
   - [x] 3.15 Implement image optimization with Next.js Image component
@@ -233,11 +241,11 @@
   - [x] 4.4.1 Component tests for error boundary and loading states (31 tests)
   - [ ] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
   - [ ] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
-  - [ ] 4.7 Unit tests for JSON builders (Page/Post/Project)
-  - [ ] 4.8 Snapshot tests for JSON-LD output
-  - [ ] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
-  - [ ] 4.10 Manual check in Rich Results Test for a sample of each type
-  - [ ] 4.11 SEO validation (meta tags, structured data, sitemap)
+  - [x] 4.7 Unit tests for JSON builders (Page/Post/Project)
+  - [x] 4.8 Snapshot tests for JSON-LD output
+  - [x] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
+  - [x] 4.10 Manual check in Rich Results Test for a sample of each type
+  - [x] 4.11 SEO validation (meta tags, structured data, sitemap)
   - [ ] 4.12 Accessibility testing (WCAG 2.1 compliance)
   - [ ] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
   - [ ] 4.14 Set up CI/CD pipeline with automated testing

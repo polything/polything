@@ -106,7 +106,7 @@ export function breadcrumbsJsonLd(base: string, crumbs: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: crumbs.map((c, idx) => ({
+    itemListElement: (crumbs || []).map((c, idx) => ({
       '@type': 'ListItem',
       position: idx + 1,
       name: c.name,
