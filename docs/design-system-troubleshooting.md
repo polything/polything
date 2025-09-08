@@ -27,6 +27,7 @@ Import trace for requested module:
 ```
 
 **Causes:**
+
 - Missing or incorrect import path
 - Design system index file not properly exporting components
 - TypeScript path mapping issues
@@ -71,6 +72,7 @@ Element type is invalid: expected a string (for built-in components) or a class/
 ```
 
 **Causes:**
+
 - Component not properly exported
 - Mixed up default vs named imports
 - Circular dependency issues
@@ -120,6 +122,7 @@ Syntax error: Unexpected token, expected ","
 ```
 
 **Causes:**
+
 - Babel configuration conflicts with TypeScript
 - Missing TypeScript preset in Babel
 - SWC/Babel configuration issues
@@ -167,6 +170,7 @@ Syntax error: Unexpected token, expected ","
 - Decorative elements not showing
 
 **Causes:**
+
 - Browser doesn't support `backdrop-filter`
 - CSS classes not properly applied
 - Missing Tailwind CSS configuration
@@ -210,6 +214,7 @@ Syntax error: Unexpected token, expected ","
 - Console errors about font loading
 
 **Causes:**
+
 - `next/font` configuration issues
 - Network connectivity problems
 - Font file corruption
@@ -260,6 +265,7 @@ Syntax error: Unexpected token, expected ","
 - Responsive classes not applied
 
 **Causes:**
+
 - Missing viewport meta tag
 - Incorrect Tailwind breakpoint configuration
 - CSS specificity issues

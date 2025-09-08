@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation'
 import { allPages } from 'contentlayer2/generated'
 import Hero from '@/components/hero'
 import { MDXContent } from 'next-contentlayer2/hooks'
+import { generateStaticPageMetadata } from '@/lib/seo/metadata'
+import { generateAllJsonLd } from '@/lib/seo/structured-data'
+import Script from 'next/script'
 
 interface StaticPageProps {
   params: {

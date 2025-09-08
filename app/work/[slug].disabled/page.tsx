@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation'
 import { allProjects } from 'contentlayer2/generated'
 import Hero from '@/components/hero'
 import { MDXContent } from 'next-contentlayer2/hooks'
+import { generateProjectMetadata } from '@/lib/seo/metadata'
+import { generateAllJsonLd } from '@/lib/seo/structured-data'
+import Script from 'next/script'
 
 interface ProjectDetailPageProps {
   params: {
@@ -24,16 +27,13 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
     }
   }
 
-  return {
-    title: project.seo?.title || project.title,
-    description: project.seo?.description || `Learn more about ${project.title}`,
-    openGraph: {
-      title: project.seo?.title || project.title,
-      description: project.seo?.description || `Learn more about ${project.title}`,
-      images: project.seo?.schema?.image ? [project.seo.schema.image] : [],
-    },
-    canonical: project.seo?.canonical,
-  }
+  return generateProjectMetadata(project as any, {
+    baseUrl: 'https://polything.co.uk',
+    siteName: 'Polything',
+    defaultDescription: 'Strategic Marketing for Visionary Brands',
+    defaultImage: '/images/og-default.jpg',
+    twitterHandle: '@polything'
+  })
 }
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
@@ -44,28 +44,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   }
 
   // Generate JSON-LD structured data
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': project.seo?.schema?.type || 'CreativeWork',
-    name: project.title,
-    url: `https://polything.co.uk${project.url}`,
-    description: project.seo?.description,
-    image: project.seo?.schema?.image,
-    author: {
-      '@type': 'Organization',
-      name: project.seo?.schema?.author || 'Polything Ltd',
-    },
-    datePublished: project.seo?.schema?.publishDate || project.date,
-    dateModified: project.seo?.schema?.modifiedDate || project.updated || project.date,
-  }
+  const jsonLdArray = generateAllJsonLd('https://polything.co.uk', project as any)
 
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      {jsonLdArray.map((jsonLd, index) => (
+        <Script
+          key={`jsonld-${index}`}
+          id={`ld-project-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ))}
 
       <main className="min-h-screen">
         {/* Hero Section */}

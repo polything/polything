@@ -52,13 +52,13 @@ GET /wp/v2/media/{id}
 GET /polything/v1/themerain-meta/{post_id}
 ```
 
-**Example Request**:
+**Example Request:**
 
 ```bash
 curl "https://polything.co.uk/wp-json/polything/v1/themerain-meta/10680"
 ```
 
-**Example Response**:
+**Example Response:**
 
 ```json
 {

@@ -5,17 +5,17 @@
 
 export interface HeroFields {
   title: string;
-  subtitle: string;
-  image: string;   // /images/* path
-  video: string;   // /images/* path
-  text_color: string;
-  background_color: string;
+  subtitle?: string;
+  image?: string;   // /images/* path
+  video?: string;   // /images/* path
+  text_color?: string;
+  background_color?: string;
 }
 
 export interface ProjectLinks {
-  url: string;
-  image: string;   // /images/* path
-  video: string;   // /images/* path
+  url?: string;
+  image?: string;   // /images/* path
+  video?: string;   // /images/* path
 }
 
 export interface SEOSchema {
@@ -44,7 +44,7 @@ export interface BaseContent {
   categories: number[];
   tags: number[];
   hero: HeroFields;
-  seo: SEOSchema;
+  seo?: SEOSchema;
   theme_meta?: Record<string, any>; // Optional: full raw export of WP meta
 }
 

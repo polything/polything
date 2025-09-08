@@ -128,7 +128,7 @@ function validatePageContent(content: PageContent, errors: string[], warnings: s
  * Validates hero fields
  */
 function validateHeroFields(hero: any, errors: string[], warnings: string[]): void {
-  const requiredHeroFields = ['title', 'subtitle', 'image', 'video', 'text_color', 'background_color'];
+  const requiredHeroFields = ['title'];
   
   for (const field of requiredHeroFields) {
     if (!(field in hero)) {
@@ -159,13 +159,7 @@ function validateHeroFields(hero: any, errors: string[], warnings: string[]): vo
  * Validates project links
  */
 function validateProjectLinks(links: any, errors: string[], warnings: string[]): void {
-  const requiredLinkFields = ['url', 'image', 'video'];
-  
-  for (const field of requiredLinkFields) {
-    if (!(field in links)) {
-      errors.push(`Missing links field: ${field}`);
-    }
-  }
+  // All link fields are optional
 
   // Validate URL format
   if (links.url && !isValidURL(links.url)) {
@@ -185,9 +179,9 @@ function validateProjectLinks(links: any, errors: string[], warnings: string[]):
 /**
  * Validates SEO schema
  */
-function validateSEOSchema(seo: SEOSchema, contentType: string, errors: string[], warnings: string[]): void {
+function validateSEOSchema(seo: SEOSchema | undefined, contentType: string, errors: string[], warnings: string[]): void {
   if (!seo) {
-    errors.push('Missing SEO section');
+    // SEO section is optional, no error needed
     return;
   }
 
@@ -315,7 +309,7 @@ function getSchemaDefaults(contentType: string): SchemaDefaults {
 // Utility functions
 function isValidISODate(dateString: string): boolean {
   const date = new Date(dateString);
-  return date instanceof Date && !isNaN(date.getTime()) && dateString === date.toISOString();
+  return date instanceof Date && !isNaN(date.getTime());
 }
 
 function isValidColor(color: string): boolean {

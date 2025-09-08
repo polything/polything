@@ -41,9 +41,25 @@
 - `docs/implementation-status.md` - Current implementation status and progress
 - `wordpress-plugin-fix.php` - WordPress plugin to expose themerain_* fields via REST API
 - `lib/content/media-resolver.ts` - Media ID to URL resolution
-- `lib/content/media-resolver.test.ts` - Unit tests for media resolution
+- `lib/content/media-resolver.test.ts` - Unit tests for media resolution (29 tests, all passing)
 - `lib/content/slug-manager.ts` - Slug collision handling
-- `lib/content/slug-manager.test.ts` - Unit tests for slug management
+- `lib/content/slug-manager.test.ts` - Unit tests for slug management (17 tests, all passing)
+- `lib/content/html-to-mdx.ts` - HTML to MDX conversion with embed preservation
+- `lib/content/html-to-mdx.test.ts` - Unit tests for HTML to MDX conversion (25 tests, all passing)
+- `lib/content/html-sanitizer.ts` - WordPress artifact removal and link fixing
+- `lib/content/html-sanitizer.test.ts` - Unit tests for HTML sanitization (18 tests, all passing)
+- `lib/content/front-matter-writer.ts` - YAML front-matter generation with nested objects
+- `lib/content/front-matter-writer.test.ts` - Unit tests for front-matter generation (19 tests, all passing)
+- `lib/content/content-validator.ts` - Comprehensive content validation with SEO fallbacks
+- `lib/content/content-validator.test.ts` - Unit tests for content validation (19 tests, all passing)
+- `lib/content/schema-validator.ts` - Schema validation logic
+- `lib/content/schema-validator.test.ts` - Unit tests for schema validation (22 tests, all passing)
+- `lib/content/schema-defaults-enforcer.ts` - Automatic schema type defaults
+- `lib/content/schema-defaults-enforcer.test.ts` - Unit tests for schema defaults (19 tests, all passing)
+- `lib/content/validation-runner.ts` - Orchestrated validation system
+- `lib/content/validation-runner.test.ts` - Unit tests for validation runner (19 tests, all passing)
+- `lib/content/export-reporter.ts` - Export reporting and statistics
+- `lib/content/export-reporter.test.ts` - Unit tests for export reporting (23 tests, all passing)
 - `contentlayer.config.ts` - Contentlayer configuration
 - `contentlayer.config.test.ts` - Tests for contentlayer configuration
 - `app/layout.tsx` - Root layout with JSON-LD structured data
@@ -100,6 +116,8 @@
 - `docs/design-system-guide.md` - Complete design system documentation
 - `docs/design-system-implementation.md` - Implementation documentation
 - `docs/design-system-troubleshooting.md` - Troubleshooting guide
+- `docs/phase2-implementation-guide.md` - Phase 2 implementation guide and architecture
+- `docs/phase2-troubleshooting-guide.md` - Phase 2 troubleshooting and debugging guide
 - `lib/seo/metadata.ts` - SEO metadata generation utilities
 - `lib/seo/metadata.test.ts` - Unit tests for SEO functions
 - `lib/seo/sitemap.ts` - XML sitemap generation
@@ -153,20 +171,20 @@
   - [x] 1.8 Create configuration file for WordPress API endpoints and credentials
   - [x] 1.9 Add error handling and retry logic for API calls
 
-- [ ] 2.0 Implement Content Transformation and Field Mapping
-  - [ ] 2.1 Define normalised front-matter schema (hero, links, featured, etc.)
-  - [ ] 2.2 Create TypeScript interfaces for content types (Post, Page, Project)
-  - [ ] 2.3 Implement field mapping logic (themerain_* → clean schema)
-  - [ ] 2.4 Resolve media IDs → URLs → /images/** paths
-  - [ ] 2.5 Handle slug collisions (define precedence: page > project > post)
-  - [ ] 2.6 Add raw theme_meta block for traceability (optional toggle)
-  - [ ] 2.7 Convert WP HTML content body → MDX (preserve embeds, headings, images)
-  - [ ] 2.8 Extend front-matter writer to include seo block (defaults + overrides)
-  - [ ] 2.9 Add content validator to ensure seo.title/description fallbacks work and lengths are sane
-  - [ ] 2.10 Enforce schema type defaults by content type when unspecified
-  - [ ] 2.11 Sanitize and clean HTML content (remove WP-specific classes, fix broken links)
-  - [ ] 2.12 Run content validation (lint MDX, check YAML schema)
-  - [ ] 2.13 Generate content export report (success/failure counts, error summary)
+- [x] 2.0 Implement Content Transformation and Field Mapping
+  - [x] 2.1 Define normalised front-matter schema (hero, links, featured, etc.)
+  - [x] 2.2 Create TypeScript interfaces for content types (Post, Page, Project)
+  - [x] 2.3 Implement field mapping logic (themerain_* → clean schema)
+  - [x] 2.4 Resolve media IDs → URLs → /images/** paths
+  - [x] 2.5 Handle slug collisions (define precedence: page > project > post)
+  - [x] 2.6 Add raw theme_meta block for traceability (optional toggle)
+  - [x] 2.7 Convert WP HTML content body → MDX (preserve embeds, headings, images)
+  - [x] 2.8 Extend front-matter writer to include seo block (defaults + overrides)
+  - [x] 2.9 Add content validator to ensure seo.title/description fallbacks work and lengths are sane
+  - [x] 2.10 Enforce schema type defaults by content type when unspecified
+  - [x] 2.11 Sanitize and clean HTML content (remove WP-specific classes, fix broken links)
+  - [x] 2.12 Run content validation (lint MDX, check YAML schema)
+  - [x] 2.13 Generate content export report (success/failure counts, error summary)
 
 - [x] 3.0 Build Next.js Application with Contentlayer Integration
   - [x] 3.1 Initialise Next.js 14 App Router project
