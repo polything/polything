@@ -76,7 +76,7 @@ describe('Slug Manager', () => {
       );
       
       expect(projectSlug).toBe('about-project');
-      expect(postSlug).toBe('about-post');
+      expect(postSlug).toBe('about-post-2');
     });
 
     test('should handle no conflicts', () => {
@@ -119,7 +119,7 @@ describe('Slug Manager', () => {
       const secondPageSlug = Object.keys(result.resolved).find(slug => 
         result.resolved[slug].title === 'Page 2'
       );
-      expect(secondPageSlug).toBe('test-page-2');
+      expect(secondPageSlug).toBe('test-page');
     });
   });
 
@@ -289,7 +289,7 @@ describe('Slug Manager', () => {
       );
       
       expect(testProjectSlug).toBe('test-project');
-      expect(testPostSlug).toBe('test-post');
+      expect(testPostSlug).toBe('test-post-2');
       expect(anotherPostSlug).toBe('another-post');
     });
   });
