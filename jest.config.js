@@ -25,6 +25,12 @@ const customJestConfig = {
     '!**/node_modules/**'
   ],
   testTimeout: 30000, // 30 seconds for network requests
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest'
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!(contentlayer2|@contentlayer2)/)'
+  ]
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

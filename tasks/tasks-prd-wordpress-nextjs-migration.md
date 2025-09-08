@@ -12,8 +12,9 @@
 - `scripts/test-diagnostic-endpoint.js` - Test script for themerain_* field diagnostic endpoint
 - `scripts/test-themerain-fields.js` - Test script for themerain field detection
 - `scripts/compare-sites.js` - Comparison script for polything vs mightybooth sites
-- `scripts/wp-export.mjs` - Main WordPress content export script
-- `scripts/wp-export.test.js` - Unit tests for export functionality
+- `scripts/wp-export.mjs` - Main WordPress content export script (ES modules)
+- `scripts/wp-export.js` - WordPress content export script (CommonJS for testing)
+- `scripts/wp-export.test.js` - Unit tests for export functionality (21 tests)
 - `scripts/media-fetcher.mjs` - Media download and mirroring script
 - `scripts/media-fetcher.test.js` - Unit tests for media handling
 - `lib/content/transformers.js` - Content transformation utilities
@@ -92,7 +93,7 @@
   - [x] 1.2 Enable/confirm WP REST API access for posts, pages, and projects
   - [x] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
   - [x] 1.4 Create project directory structure (scripts/, lib/content/, content/, public/images/)
-  - [ ] 1.5 Implement Node.js exporter script (scripts/wp-export.mjs)
+  - [x] 1.5 Implement Node.js exporter script (scripts/wp-export.mjs)
   - [ ] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
   - [ ] 1.7 Set up logging for broken/missing media or content errors
   - [ ] 1.8 Create configuration file for WordPress API endpoints and credentials
