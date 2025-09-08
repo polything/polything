@@ -23,7 +23,7 @@ export interface SEOSchema {
   description?: string;
   canonical?: string;
   schema?: {
-    type: 'WebPage' | 'Article' | 'BlogPosting' | 'CreativeWork';
+    type?: 'WebPage' | 'Article' | 'BlogPosting' | 'CreativeWork';
     image?: string;
     author?: string;
     publishDate?: string;
@@ -45,6 +45,7 @@ export interface BaseContent {
   tags: number[];
   hero: HeroFields;
   seo: SEOSchema;
+  theme_meta?: Record<string, any>; // Optional: full raw export of WP meta
 }
 
 export interface ProjectContent extends BaseContent {
