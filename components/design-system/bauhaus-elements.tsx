@@ -286,5 +286,3 @@ export const GeometricPattern: React.FC<GeometricPatternProps> = ({
   )
 }
 
-// Export all components
-export { BauhausCircle, BauhausSquare, BauhausTriangle, GeometricPattern }

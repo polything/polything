@@ -96,4 +96,3 @@ export const CardFooter: React.FC<CardFooterProps> = ({ children, className }) =
 }
 
 export default Card
-export { CardHeader, CardContent, CardFooter }

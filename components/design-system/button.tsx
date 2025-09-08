@@ -149,4 +149,3 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
 }
 
 export default Button
-export { ButtonGroup }
