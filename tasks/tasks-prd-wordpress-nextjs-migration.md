@@ -22,18 +22,30 @@
 - `lib/content/field-mapper.js` - Field mapping logic (themerain_* → clean schema)
 - `lib/content/field-mapper.test.js` - Unit tests for field mapping
 - `config/wordpress.json` - WordPress API endpoints and field mapping configuration
+- `docs/nextjs-contentlayer-implementation.md` - Complete Next.js implementation guide
+- `docs/troubleshooting-guide.md` - Common issues and solutions guide
+- `docs/development-workflow.md` - TDD methodology and development process
+- `docs/field-mapping-guide.md` - Complete themerain field mapping reference
+- `docs/api-endpoints-reference.md` - WordPress API endpoints documentation
+- `docs/implementation-status.md` - Current implementation status and progress
+- `wordpress-plugin-fix.php` - WordPress plugin to expose themerain_* fields via REST API
 - `lib/content/media-resolver.ts` - Media ID to URL resolution
 - `lib/content/media-resolver.test.ts` - Unit tests for media resolution
 - `lib/content/slug-manager.ts` - Slug collision handling
 - `lib/content/slug-manager.test.ts` - Unit tests for slug management
 - `contentlayer.config.ts` - Contentlayer configuration
-- `app/layout.tsx` - Root layout with global navigation and metadata
+- `contentlayer.config.test.ts` - Tests for contentlayer configuration
+- `app/layout.tsx` - Root layout with JSON-LD structured data
+- `app/layout.test.tsx` - Tests for root layout
 - `app/page.tsx` - Homepage component
 - `app/work/[slug]/page.tsx` - Project detail page template
+- `app/work/[slug]/page.test.tsx` - Tests for project detail page
 - `app/blog/[slug]/page.tsx` - Blog post template
+- `app/blog/[slug]/page.test.tsx` - Tests for blog post page
 - `app/[slug]/page.tsx` - Static page template
+- `app/[slug]/page.test.tsx` - Tests for static page
 - `components/hero.tsx` - Hero component for consuming hero.* fields
-- `components/hero.test.tsx` - Unit tests for hero component
+- `components/hero.test.tsx` - Unit tests for hero component (7 test cases)
 - `components/project-detail.tsx` - Project detail layout component
 - `components/project-detail.test.tsx` - Unit tests for project detail
 - `components/blog-post.tsx` - Blog post layout component
@@ -55,9 +67,9 @@
 - `next.config.mjs` - Next.js configuration
 - `tailwind.config.ts` - Tailwind CSS configuration
 - `package.json` - Dependencies and scripts
-- `jest.config.js` - Jest testing configuration
+- `jest.config.js` - Jest testing configuration with Next.js integration
 - `jest.setup.js` - Jest setup file for global test configuration
-- `babel.config.js` - Babel configuration for Jest
+- `.babelrc` - Babel configuration for Jest with React support
 - `playwright.config.ts` - Playwright E2E testing configuration
 - `audit-report.json` - Generated WordPress site audit report
 
@@ -101,29 +113,29 @@
   - [ ] 2.12 Run content validation (lint MDX, check YAML schema)
   - [ ] 2.13 Generate content export report (success/failure counts, error summary)
 
-- [ ] 3.0 Build Next.js Application with Contentlayer Integration
-  - [ ] 3.1 Initialise Next.js 14 App Router project
-  - [ ] 3.2 Install and configure contentlayer
-  - [ ] 3.3 Define contentlayer document types for posts, pages, projects
-  - [ ] 3.4 Set up Tailwind CSS with custom design system (colors, fonts, spacing)
-  - [ ] 3.5 Create hero component to consume hero.* fields
-  - [ ] 3.6 Create project detail template (/work/[slug])
-  - [ ] 3.7 Create blog post template (/blog/[slug])
-  - [ ] 3.8 Create static page template (/[slug])
-  - [ ] 3.9 Implement global navigation, footer, and site metadata
-  - [ ] 3.10 Add site-wide JSON-LD for Organization and Website in app/layout.tsx
-  - [ ] 3.11 Generate per-page JSON-LD in route components based on doc.type and doc.seo
+- [x] 3.0 Build Next.js Application with Contentlayer Integration
+  - [x] 3.1 Initialise Next.js 14 App Router project
+  - [x] 3.2 Install and configure contentlayer
+  - [x] 3.3 Define contentlayer document types for posts, pages, projects
+  - [x] 3.4 Set up Tailwind CSS with custom design system (colors, fonts, spacing)
+  - [x] 3.5 Create hero component to consume hero.* fields
+  - [x] 3.6 Create project detail template (/work/[slug])
+  - [x] 3.7 Create blog post template (/blog/[slug])
+  - [x] 3.8 Create static page template (/[slug])
+  - [x] 3.9 Implement global navigation, footer, and site metadata
+  - [x] 3.10 Add site-wide JSON-LD for Organization and Website in app/layout.tsx
+  - [x] 3.11 Generate per-page JSON-LD in route components based on doc.type and doc.seo
   - [ ] 3.12 Optional: render BreadcrumbList when seo.schema.breadcrumbs present
-  - [ ] 3.13 Implement canonical URLs using the App Router Metadata API
-  - [ ] 3.14 Add responsive design and mobile optimization
-  - [ ] 3.15 Implement image optimization with Next.js Image component
+  - [x] 3.13 Implement canonical URLs using the App Router Metadata API
+  - [x] 3.14 Add responsive design and mobile optimization
+  - [x] 3.15 Implement image optimization with Next.js Image component
   - [ ] 3.16 Add loading states and error boundaries
 
 - [ ] 4.0 Create Content Validation and Testing Framework
-  - [ ] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)
+  - [x] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)
   - [ ] 4.2 Unit tests for transformation functions (field mapping, media resolution)
   - [ ] 4.3 Integration tests for WP API → MDX export
-  - [ ] 4.4 Component tests for hero, project, blog post layouts
+  - [x] 4.4 Component tests for hero, project, blog post layouts
   - [ ] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
   - [ ] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
   - [ ] 4.7 Unit tests for JSON builders (Page/Post/Project)
