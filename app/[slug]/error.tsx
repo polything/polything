@@ -2,13 +2,12 @@
 
 import { ErrorBoundary } from '@/components/error-boundary'
 
-export default function Error({
-  error,
-  reset,
-}: {
+interface ErrorProps {
   error: Error & { digest?: string }
   reset: () => void
-}) {
+}
+
+export default function Error({ error, reset }: ErrorProps) {
   return (
     <ErrorBoundary onRetry={reset}>
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
