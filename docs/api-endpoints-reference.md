@@ -3,6 +3,7 @@
 ## Base URLs
 
 ### Polything.co.uk (Primary Target)
+
 - **Site URL**: `https://polything.co.uk`
 - **REST API Base**: `https://polything.co.uk/wp-json/wp/v2`
 - **Diagnostic Endpoint**: `https://polything.co.uk/wp-json/polything/v1`

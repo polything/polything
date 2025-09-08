@@ -15,8 +15,8 @@
 - `scripts/wp-export.mjs` - Main WordPress content export script (ES modules)
 - `scripts/wp-export.js` - WordPress content export script (CommonJS for testing)
 - `scripts/wp-export.test.js` - Unit tests for export functionality (21 tests)
-- `scripts/media-fetcher.mjs` - Media download and mirroring script
-- `scripts/media-fetcher.test.js` - Unit tests for media handling
+- `scripts/wp-media-fetcher.js` - Media download and mirroring script (CommonJS for testing)
+- `scripts/wp-media-fetcher.test.js` - Unit tests for media handling (11 tests, 9 passing)
 - `lib/content/transformers.js` - Content transformation utilities
 - `lib/content/transformers.test.js` - Unit tests for transformation functions
 - `lib/content/schema.ts` - TypeScript definitions for content schema
@@ -94,7 +94,7 @@
   - [x] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
   - [x] 1.4 Create project directory structure (scripts/, lib/content/, content/, public/images/)
   - [x] 1.5 Implement Node.js exporter script (scripts/wp-export.mjs)
-  - [ ] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
+  - [x] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
   - [ ] 1.7 Set up logging for broken/missing media or content errors
   - [ ] 1.8 Create configuration file for WordPress API endpoints and credentials
   - [ ] 1.9 Add error handling and retry logic for API calls

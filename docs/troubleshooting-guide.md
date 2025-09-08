@@ -258,7 +258,125 @@ tags: ["tag1", "tag2"]                   # Array of strings
 featured: true                           # Boolean
 ```
 
-### 5. Performance Issues
+### 5. Media Fetcher Issues
+
+#### Problem: Media download failures
+**Error**: `Failed to download media: 403 Forbidden` or `404 Not Found`
+
+**Causes**:
+- WordPress access restrictions on certain files
+- Files no longer exist on WordPress
+- Network connectivity issues
+- Timeout errors
+
+**Solutions**:
+1. Check WordPress file permissions:
+```bash
+# Test WordPress REST API access
+curl -I https://polything.co.uk/wp-json/wp/v2/media
+```
+
+2. Handle protected files gracefully:
+```javascript
+// The media fetcher already handles these errors
+// Check the generated report for details
+cat media-fetch-report.md
+```
+
+3. Increase timeout for large files:
+```javascript
+const results = await fetchAndMirrorMedia(siteUrl, {
+  timeout: 60000 // 60 seconds
+});
+```
+
+#### Problem: Memory issues with large media collections
+**Error**: Out of memory errors during processing
+
+**Causes**:
+- Processing too many files simultaneously
+- Large file sizes
+- Insufficient system memory
+
+**Solutions**:
+1. Reduce batch size:
+```javascript
+const results = await fetchAndMirrorMedia(siteUrl, {
+  batchSize: 5 // Smaller batches
+});
+```
+
+2. Process in smaller chunks:
+```bash
+# Process specific date ranges
+node scripts/wp-media-fetcher.js https://polything.co.uk --date-range=2024
+```
+
+3. Monitor system resources:
+```bash
+# Check memory usage
+top -p $(pgrep node)
+```
+
+#### Problem: Directory permission errors
+**Error**: `EACCES: permission denied, mkdir`
+
+**Causes**:
+- Insufficient permissions to create directories
+- Read-only file system
+- Incorrect ownership
+
+**Solutions**:
+1. Fix directory permissions:
+```bash
+# Ensure write permissions
+chmod -R 755 public/images/
+sudo chown -R $USER:$USER public/images/
+```
+
+2. Check available disk space:
+```bash
+df -h public/images/
+```
+
+3. Verify output directory:
+```javascript
+// Use absolute path
+const results = await fetchAndMirrorMedia(siteUrl, {
+  outputDir: path.resolve('./public/images')
+});
+```
+
+#### Problem: Incomplete downloads
+**Error**: Some files downloaded but others failed
+
+**Causes**:
+- Network interruptions
+- WordPress server issues
+- File access restrictions
+
+**Solutions**:
+1. Re-run the fetcher (it skips existing files):
+```bash
+node scripts/wp-media-fetcher.js https://polything.co.uk
+```
+
+2. Check the report for specific errors:
+```bash
+grep "Errors:" media-fetch-report.md
+```
+
+3. Manual retry for specific files:
+```javascript
+// Download specific media item
+const { downloadMediaFile } = require('./scripts/wp-media-fetcher.js');
+await downloadMediaFile(
+  'https://polything.co.uk/wp-content/uploads/2024/01/image.jpg',
+  './public/images/2024/01/image.jpg'
+);
+```
+
+### 6. Performance Issues
 
 #### Problem: Slow build times
 **Causes**:
