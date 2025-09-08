@@ -9,6 +9,9 @@
 
 - `scripts/wp-audit.js` - WordPress site audit and discovery script
 - `scripts/wp-audit.test.js` - Unit tests for WordPress audit functionality
+- `scripts/test-diagnostic-endpoint.js` - Test script for themerain_* field diagnostic endpoint
+- `scripts/test-themerain-fields.js` - Test script for themerain field detection
+- `scripts/compare-sites.js` - Comparison script for polything vs mightybooth sites
 - `scripts/wp-export.mjs` - Main WordPress content export script
 - `scripts/wp-export.test.js` - Unit tests for export functionality
 - `scripts/media-fetcher.mjs` - Media download and mirroring script
@@ -73,8 +76,8 @@
 
 - [ ] 1.0 Set up WordPress Content Export Infrastructure
   - [x] 1.1 Audit WordPress sites and confirm which subsites to migrate (polything.co.uk only for this phase)
-  - [ ] 1.2 Enable/confirm WP REST API access for posts, pages, and projects
-  - [ ] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
+  - [x] 1.2 Enable/confirm WP REST API access for posts, pages, and projects
+  - [x] 1.3 Ensure themerain_* meta is exposed via REST (register_post_meta or ACF to REST API plugin)
   - [ ] 1.4 Create project directory structure (scripts/, lib/content/, content/, public/images/)
   - [ ] 1.5 Implement Node.js exporter script (scripts/wp-export.mjs)
   - [ ] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
