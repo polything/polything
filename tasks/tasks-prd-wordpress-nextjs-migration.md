@@ -17,6 +17,9 @@
 - `scripts/wp-export.test.js` - Unit tests for export functionality (21 tests)
 - `scripts/wp-media-fetcher.js` - Media download and mirroring script (CommonJS for testing)
 - `scripts/wp-media-fetcher.test.js` - Unit tests for media handling (11 tests, 9 passing)
+- `lib/logging/error-logger.js` - Comprehensive error logging system
+- `lib/logging/error-logger.test.js` - Unit tests for error logging (19 tests, all passing)
+- `scripts/test-logging-integration.js` - Integration test for logging system
 - `lib/content/transformers.js` - Content transformation utilities
 - `lib/content/transformers.test.js` - Unit tests for transformation functions
 - `lib/content/schema.ts` - TypeScript definitions for content schema
@@ -95,7 +98,7 @@
   - [x] 1.4 Create project directory structure (scripts/, lib/content/, content/, public/images/)
   - [x] 1.5 Implement Node.js exporter script (scripts/wp-export.mjs)
   - [x] 1.6 Add media fetcher to download /wp-content/uploads/** and mirror under /public/images/**
-  - [ ] 1.7 Set up logging for broken/missing media or content errors
+  - [x] 1.7 Set up logging for broken/missing media or content errors
   - [ ] 1.8 Create configuration file for WordPress API endpoints and credentials
   - [ ] 1.9 Add error handling and retry logic for API calls
 
