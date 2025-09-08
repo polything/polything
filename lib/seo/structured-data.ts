@@ -55,10 +55,10 @@ export function canonicalFor(base: string, doc: Doc): string {
 }
 
 /**
- * Picks SEO title with fallback to document title
+ * Picks SEO title with fallback to hero title, then document title
  */
 export function pickSeoTitle(doc: Doc): string {
-  return doc?.seo?.title || doc.title
+  return doc?.seo?.title || doc?.hero?.title || doc.title
 }
 
 /**
