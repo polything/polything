@@ -1,0 +1,175 @@
+{
+  "siteUrl": "https://polything.co.uk",
+  "isWordPress": true,
+  "restApiAvailable": true,
+  "contentTypes": {
+    "post": {
+      "name": "Posts",
+      "rest_base": "posts",
+      "description": "",
+      "public": false
+    },
+    "page": {
+      "name": "Pages",
+      "rest_base": "pages",
+      "description": "",
+      "public": false
+    },
+    "attachment": {
+      "name": "Media",
+      "rest_base": "media",
+      "description": "",
+      "public": false
+    },
+    "nav_menu_item": {
+      "name": "Navigation Menu Items",
+      "rest_base": "menu-items",
+      "description": "",
+      "public": false
+    },
+    "wp_block": {
+      "name": "Patterns",
+      "rest_base": "blocks",
+      "description": "",
+      "public": false
+    },
+    "wp_template": {
+      "name": "Templates",
+      "rest_base": "templates",
+      "description": "Templates to include in your theme.",
+      "public": false
+    },
+    "wp_template_part": {
+      "name": "Template parts",
+      "rest_base": "template-parts",
+      "description": "Template parts to include in your templates.",
+      "public": false
+    },
+    "wp_global_styles": {
+      "name": "Global styles",
+      "rest_base": "global-styles",
+      "description": "Global styles to include in themes.",
+      "public": false
+    },
+    "wp_navigation": {
+      "name": "Navigation menus",
+      "rest_base": "navigation",
+      "description": "Navigation menus that can be inserted into your site.",
+      "public": false
+    },
+    "wp_font_family": {
+      "name": "Font families",
+      "rest_base": "font-families",
+      "description": "",
+      "public": false
+    },
+    "wp_font_face": {
+      "name": "Font faces",
+      "rest_base": "font-families/(?P<font_family_id>[\\d]+)/font-faces",
+      "description": "",
+      "public": false
+    },
+    "project": {
+      "name": "Projects",
+      "rest_base": "project",
+      "description": "",
+      "public": false
+    },
+    "rm_content_editor": {
+      "name": "RM Content Editor",
+      "rest_base": "rm_content_editor",
+      "description": "",
+      "public": false
+    },
+    "rank_math_schema": {
+      "name": "Schemas",
+      "rest_base": "rank_math_schema",
+      "description": "Rank Math Schema Templates",
+      "public": false
+    }
+  },
+  "metaFields": {
+    "posts": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/posts",
+      "metaFields": {}
+    },
+    "pages": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/pages",
+      "metaFields": {}
+    },
+    "media": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/media",
+      "metaFields": {}
+    },
+    "menu-items": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/menu-items",
+      "metaFields": {}
+    },
+    "blocks": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/blocks",
+      "metaFields": {}
+    },
+    "templates": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/templates",
+      "metaFields": {}
+    },
+    "template-parts": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/template-parts",
+      "metaFields": {}
+    },
+    "global-styles": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/global-styles",
+      "metaFields": {}
+    },
+    "navigation": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/navigation",
+      "metaFields": {}
+    },
+    "font-families": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/font-families",
+      "metaFields": {}
+    },
+    "font-families/(?P<font_family_id>[\\d]+)/font-faces": {
+      "available": false,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/font-families/(?P<font_family_id>[\\d]+)/font-faces",
+      "metaFields": {}
+    },
+    "project": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/project",
+      "metaFields": {}
+    },
+    "rm_content_editor": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/rm_content_editor",
+      "metaFields": {}
+    },
+    "rank_math_schema": {
+      "available": true,
+      "endpoint": "https://polything.co.uk/wp-json/wp/v2/rank_math_schema",
+      "metaFields": {}
+    }
+  },
+  "mediaEndpoint": "https://polything.co.uk/wp-json/wp/v2/media",
+  "error": null,
+  "timestamp": "2025-09-08T10:08:03.031Z",
+  "summary": {
+    "totalContentTypes": 14,
+    "availableEndpoints": 8,
+    "themerainFieldsFound": 0,
+    "migrationReady": true
+  },
+  "recommendations": [
+    "No themerain_* meta fields found - may need ACF to REST API plugin"
+  ]
+}
