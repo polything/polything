@@ -12,7 +12,9 @@ import {
   SmallText,
   Button,
   ButtonGroup,
-  Hero,
+  HeroDesignSystem,
+  HeroContent,
+  HeroHomepage,
   GlassContainer,
   BauhausCircle,
   BauhausSquare,
@@ -60,7 +62,7 @@ export default function DesignSystemDemo() {
       <GeometricPattern pattern="grid" opacity={0.05} color="gray" />
       
       {/* Hero Section */}
-      <Hero 
+      <HeroDesignSystem 
         hero={heroData}
         variant="fullscreen"
         showBauhausElements={true}
@@ -271,6 +273,77 @@ export default function DesignSystemDemo() {
                   </Text>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Hero Variants Showcase */}
+      <Section background="white">
+        <Container>
+          <div className="text-center mb-16">
+            <Heading level={2} color="brand" className="mb-6">
+              Hero Component Variants
+            </Heading>
+            <Text color="muted">
+              Three different hero components for different use cases and content types.
+            </Text>
+          </div>
+
+          <div className="space-y-16">
+            {/* Design System Hero */}
+            <div>
+              <Heading level={3} color="brand" className="mb-6 text-center">
+                Design System Hero
+              </Heading>
+              <Text color="muted" className="text-center mb-8">
+                Flexible hero component with design system integration, supporting multiple variants and layouts.
+              </Text>
+              <div className="max-w-4xl mx-auto">
+                <HeroDesignSystem 
+                  hero={{
+                    title: "Design System Hero",
+                    subtitle: "Flexible hero component with design system integration",
+                    background_color: "#2A2F67",
+                    text_color: "#ffffff"
+                  }}
+                  variant="centered"
+                  showBauhausElements={true}
+                />
+              </div>
+            </div>
+
+            {/* Content Hero */}
+            <div>
+              <Heading level={3} color="brand" className="mb-6 text-center">
+                Content Hero (WordPress Content)
+              </Heading>
+              <Text color="muted" className="text-center mb-8">
+                Designed for extracted WordPress content with dynamic background colors, images, and videos.
+              </Text>
+              <div className="max-w-4xl mx-auto">
+                <HeroContent 
+                  hero={{
+                    title: "Strategic Marketing for Visionary Brands",
+                    subtitle: "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+                    background_color: "#1a1a1a",
+                    text_color: "#ffffff"
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Homepage Hero */}
+            <div>
+              <Heading level={3} color="brand" className="mb-6 text-center">
+                Homepage Hero (Video Background)
+              </Heading>
+              <Text color="muted" className="text-center mb-8">
+                Homepage-specific hero with video background, glass morphic effects, and interactive elements.
+              </Text>
+              <div className="max-w-4xl mx-auto">
+                <HeroHomepage />
+              </div>
             </div>
           </div>
         </Container>

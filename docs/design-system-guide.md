@@ -224,14 +224,18 @@ import { Button, ButtonGroup } from '@/components/design-system'
 - `loading`: boolean
 - `href`: string (renders as link)
 
-### Hero
+### Hero Components
 
-Enhanced hero component with multiple variants and Bauhaus elements.
+Three different hero components for different use cases and content types.
+
+#### HeroDesignSystem
+
+Enhanced hero component with design system integration and flexible layouts.
 
 ```tsx
-import { Hero } from '@/components/design-system'
+import { HeroDesignSystem } from '@/components/design-system'
 
-<Hero 
+<HeroDesignSystem 
   hero={heroData}
   variant="default"
   showBauhausElements={true}
@@ -244,6 +248,52 @@ import { Hero } from '@/components/design-system'
 - `variant`: 'default' | 'minimal' | 'fullscreen' | 'split'
 - `showBauhausElements`: boolean
 - `showGlassEffect`: boolean
+
+#### HeroContent
+
+Content-specific hero component designed for extracted WordPress content with dynamic backgrounds.
+
+```tsx
+import { HeroContent } from '@/components/design-system'
+
+<HeroContent 
+  hero={{
+    title: "Strategic Marketing for Visionary Brands",
+    subtitle: "We help founders and teams cut through the noise",
+    image: "/images/hero-bg.jpg",
+    video: "/videos/hero-bg.mp4",
+    background_color: "#1a1a1a",
+    text_color: "#ffffff"
+  }}
+/>
+```
+
+**Props:**
+- `hero`: HeroData object with title, subtitle, image, video, colors
+- `className`: string
+
+**Features:**
+- Supports both image and video backgrounds
+- Dynamic background and text colors
+- Responsive design with proper image/video handling
+- Graceful fallback when no hero data is provided
+
+#### HeroHomepage
+
+Homepage-specific hero component with video background and glass morphic effects.
+
+```tsx
+import { HeroHomepage } from '@/components/design-system'
+
+<HeroHomepage />
+```
+
+**Features:**
+- Video background with autoplay and loop
+- Glass morphic container with decorative elements
+- Interactive call-to-action button
+- Bauhaus-inspired geometric decorations
+- Mobile-optimized video handling
 
 **HeroData Interface:**
 ```typescript
