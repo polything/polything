@@ -76,6 +76,60 @@ import { Section } from '@/components/design-system'
 - `container`: boolean (default: true)
 - `containerSize`: 'sm' | 'md' | 'lg' | 'xl' | 'full'
 
+### GlassContainer
+
+Beautiful glass morphic container with decorative geometric elements, perfect for creating modern, elegant layouts.
+
+```tsx
+import { GlassContainer } from '@/components/design-system'
+
+<GlassContainer>
+  <h3>Glass Morphic Content</h3>
+  <p>Beautiful frosted glass effect with decorative elements</p>
+</GlassContainer>
+```
+
+**Props:**
+- `children`: React.ReactNode - Content to display inside the container
+- `className`: string - Additional CSS classes
+- `variant`: 'light' | 'dark' - Glass effect variant (default: 'light')
+- `showDecorations`: boolean - Show decorative geometric elements (default: true)
+- `decorationColors`: { topLeft?: string, bottomRight?: string } - Custom decoration colors
+- `padding`: 'sm' | 'md' | 'lg' | 'xl' - Container padding (default: 'lg')
+- `rounded`: 'sm' | 'md' | 'lg' | 'xl' | '2xl' - Border radius (default: 'xl')
+
+**Examples:**
+```tsx
+// Light glass container with default decorations
+<GlassContainer>
+  <p>Default glass container</p>
+</GlassContainer>
+
+// Dark glass container
+<GlassContainer variant="dark">
+  <p>Dark glass container</p>
+</GlassContainer>
+
+// Custom glass container without decorations
+<GlassContainer 
+  showDecorations={false}
+  padding="xl"
+  rounded="2xl"
+>
+  <p>Custom glass container</p>
+</GlassContainer>
+
+// Glass container with custom decoration colors
+<GlassContainer 
+  decorationColors={{
+    topLeft: '#FF0000',
+    bottomRight: '#00FF00'
+  }}
+>
+  <p>Custom colored decorations</p>
+</GlassContainer>
+```
+
 ### Grid
 
 Flexible grid system with responsive columns.

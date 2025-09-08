@@ -13,6 +13,7 @@ import {
   Button,
   ButtonGroup,
   Hero,
+  GlassContainer,
   BauhausCircle,
   BauhausSquare,
   BauhausTriangle,
@@ -271,6 +272,57 @@ export default function DesignSystemDemo() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Glass Container Showcase */}
+      <Section background="brand">
+        <Container>
+          <div className="text-center mb-16">
+            <Heading level={2} color="white" className="mb-6">
+              Glass Morphic Containers
+            </Heading>
+            <Text color="white" className="opacity-90">
+              Beautiful glass morphic containers with decorative geometric elements.
+            </Text>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            <GlassContainer>
+              <Heading level={3} color="brand" className="mb-4">
+                Light Glass Container
+              </Heading>
+              <Text>
+                This is a light glass container with the default glass morphic effect. 
+                It includes decorative geometric elements in the corners and maintains 
+                the beautiful frosted glass appearance.
+              </Text>
+            </GlassContainer>
+
+            <GlassContainer variant="dark">
+              <Heading level={3} color="white" className="mb-4">
+                Dark Glass Container
+              </Heading>
+              <Text color="white">
+                This is a dark glass container variant. Perfect for overlaying on 
+                darker backgrounds while maintaining the glass morphic aesthetic.
+              </Text>
+            </GlassContainer>
+
+            <GlassContainer 
+              showDecorations={false}
+              padding="xl"
+              rounded="2xl"
+            >
+              <Heading level={3} color="brand" className="mb-4">
+                Custom Glass Container
+              </Heading>
+              <Text>
+                This glass container has custom padding, rounded corners, and no 
+                decorative elements. It demonstrates the flexibility of the component.
+              </Text>
+            </GlassContainer>
           </div>
         </Container>
       </Section>
