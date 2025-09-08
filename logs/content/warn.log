@@ -1,0 +1,1 @@
+[2025-09-08T11:34:01.403Z] WARN: FIELD_ERROR: Field mapping failed {"type":"field_mapping","postId":125,"field":"themerain_hero_title","details":{"originalValue":null,"expectedType":"string"}}

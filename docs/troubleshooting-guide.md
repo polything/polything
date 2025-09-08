@@ -9,14 +9,17 @@
 ### 1. Contentlayer Issues
 
 #### Problem: `contentlayer2/generated` module not found
+
 **Error**: `Cannot find module 'contentlayer2/generated'`
 
 **Causes**:
+
 - Contentlayer hasn't generated types yet
 - Build process not run
 - Configuration issues
 
 **Solutions**:
+
 ```bash
 # Generate contentlayer types
 pnpm contentlayer build
@@ -29,6 +32,7 @@ pnpm contentlayer validate
 ```
 
 **Prevention**: Add to package.json scripts:
+
 ```json
 {
   "scripts": {
@@ -40,19 +44,23 @@ pnpm contentlayer validate
 ```
 
 #### Problem: MDX files not being processed
+
 **Error**: Content not appearing in generated types
 
 **Causes**:
+
 - Incorrect file paths in contentlayer config
 - Missing front-matter
 - Invalid MDX syntax
 
 **Solutions**:
+
 1. Check file paths match `filePathPattern` in config
 2. Ensure all MDX files have valid front-matter
 3. Validate MDX syntax
 
 **Debug**:
+
 ```bash
 # Check contentlayer processing
 pnpm contentlayer build --verbose
@@ -64,38 +72,47 @@ pnpm contentlayer validate content/posts/example.mdx
 ### 2. Testing Issues
 
 #### Problem: Jest tests failing with ES modules
+
 **Error**: `SyntaxError: Unexpected token 'export'`
 
 **Causes**:
+
 - Contentlayer uses ES modules
 - Jest configuration not handling ES modules properly
 
 **Solutions**:
+
 1. Update Jest config with transform patterns:
+
 ```javascript
 transformIgnorePatterns: [
   'node_modules/(?!(contentlayer2|@contentlayer2)/)'
 ]
 ```
 
-2. Use dynamic imports in tests:
+2.Use dynamic imports in tests:
+
 ```javascript
 const config = await import('./contentlayer.config')
 ```
 
 #### Problem: React Testing Library not rendering `<head>` content
+
 **Error**: JSON-LD scripts not found in tests
 
 **Causes**:
+
 - React Testing Library doesn't render head content
 - Testing approach not suitable for layout components
 
 **Solutions**:
+
 1. Test component structure instead of head content
 2. Use integration tests for full page rendering
 3. Mock head content for unit tests
 
 **Example**:
+
 ```javascript
 // Instead of testing head content
 const scripts = container.querySelectorAll('script[type="application/ld+json"]')
@@ -105,13 +122,16 @@ expect(container.firstChild).toBeInTheDocument()
 ```
 
 #### Problem: Next.js Image component tests failing
+
 **Error**: Image src attribute doesn't match expected value
 
 **Causes**:
+
 - Next.js transforms image URLs for optimization
 - Tests expecting original URL instead of transformed
 
 **Solutions**:
+
 ```javascript
 // Instead of exact match
 expect(heroImage).toHaveAttribute('src', '/images/hero.jpg')
@@ -123,20 +143,25 @@ expect(heroImage.getAttribute('src')).toContain('%2Fimages%2Fhero.jpg')
 ### 3. Build and Deployment Issues
 
 #### Problem: Build failing with TypeScript errors
+
 **Error**: Type errors in generated contentlayer types
 
 **Causes**:
+
 - Contentlayer types not generated
 - TypeScript configuration issues
 - Missing type definitions
 
 **Solutions**:
+
 1. Generate contentlayer types first:
+
 ```bash
 pnpm contentlayer build
 ```
 
-2. Check TypeScript configuration:
+2.Check TypeScript configuration:
+
 ```json
 {
   "compilerOptions": {
@@ -146,7 +171,8 @@ pnpm contentlayer build
 }
 ```
 
-3. Add type declarations if needed:
+3.Add type declarations if needed:
+
 ```typescript
 declare module 'contentlayer2/generated' {
   export const allPosts: Post[]
@@ -156,21 +182,26 @@ declare module 'contentlayer2/generated' {
 ```
 
 #### Problem: Images not loading in production
+
 **Error**: 404 errors for image assets
 
 **Causes**:
+
 - Images not properly copied to public directory
 - Incorrect image paths in content
 - Next.js image optimization issues
 
 **Solutions**:
+
 1. Verify image paths in content:
+
 ```yaml
 hero:
   image: "/images/hero.jpg"  # Must start with /
 ```
 
-2. Check public directory structure:
+2.Check public directory structure:
+
 ```
 public/
 └── images/
@@ -179,7 +210,8 @@ public/
         └── project-hero.jpg
 ```
 
-3. Use Next.js Image component:
+3.Use Next.js Image component:
+
 ```tsx
 import Image from 'next/image'
 
@@ -194,22 +226,27 @@ import Image from 'next/image'
 ### 4. Content Issues
 
 #### Problem: MDX content not rendering
+
 **Error**: Content appears as raw MDX instead of rendered HTML
 
 **Causes**:
+
 - Missing MDXContent component
 - Incorrect content structure
 - Contentlayer not processing content
 
 **Solutions**:
+
 1. Import and use MDXContent:
+
 ```tsx
 import { MDXContent } from 'next-contentlayer2/hooks'
 
 <MDXContent code={post.body.code} />
 ```
 
-2. Check content structure:
+2.Check content structure:
+
 ```yaml
 ---
 title: "Post Title"
@@ -221,21 +258,26 @@ title: "Post Title"
 This is the post content.
 ```
 
-3. Verify contentlayer processing:
+3.Verify contentlayer processing:
+
 ```bash
 pnpm contentlayer build
 ```
 
 #### Problem: Front-matter validation errors
+
 **Error**: Invalid front-matter structure
 
 **Causes**:
+
 - Missing required fields
 - Incorrect data types
 - Invalid YAML syntax
 
 **Solutions**:
+
 1. Check required fields:
+
 ```yaml
 ---
 title: "Required"  # Must be string
@@ -244,14 +286,16 @@ date: "2024-01-01T00:00:00.000Z"  # Must be valid date
 ---
 ```
 
-2. Validate YAML syntax:
+2.Validate YAML syntax:
+
 ```bash
 # Use online YAML validator
 # Or check with contentlayer
 pnpm contentlayer validate
 ```
 
-3. Use correct data types:
+3.Use correct data types:
+
 ```yaml
 categories: ["Category 1", "Category 2"]  # Array of strings
 tags: ["tag1", "tag2"]                   # Array of strings
@@ -261,29 +305,35 @@ featured: true                           # Boolean
 ### 5. Media Fetcher Issues
 
 #### Problem: Media download failures
+
 **Error**: `Failed to download media: 403 Forbidden` or `404 Not Found`
 
 **Causes**:
+
 - WordPress access restrictions on certain files
 - Files no longer exist on WordPress
 - Network connectivity issues
 - Timeout errors
 
 **Solutions**:
+
 1. Check WordPress file permissions:
+
 ```bash
 # Test WordPress REST API access
 curl -I https://polything.co.uk/wp-json/wp/v2/media
 ```
 
-2. Handle protected files gracefully:
+2.Handle protected files gracefully:
+
 ```javascript
 // The media fetcher already handles these errors
 // Check the generated report for details
 cat media-fetch-report.md
 ```
 
-3. Increase timeout for large files:
+3.Increase timeout for large files:
+
 ```javascript
 const results = await fetchAndMirrorMedia(siteUrl, {
   timeout: 60000 // 60 seconds
@@ -291,55 +341,67 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 ```
 
 #### Problem: Memory issues with large media collections
+
 **Error**: Out of memory errors during processing
 
 **Causes**:
+
 - Processing too many files simultaneously
 - Large file sizes
 - Insufficient system memory
 
 **Solutions**:
+
 1. Reduce batch size:
+
 ```javascript
 const results = await fetchAndMirrorMedia(siteUrl, {
   batchSize: 5 // Smaller batches
 });
 ```
 
-2. Process in smaller chunks:
+2.Process in smaller chunks:
+
 ```bash
 # Process specific date ranges
 node scripts/wp-media-fetcher.js https://polything.co.uk --date-range=2024
 ```
 
-3. Monitor system resources:
+3.Monitor system resources:
+
 ```bash
 # Check memory usage
 top -p $(pgrep node)
 ```
 
 #### Problem: Directory permission errors
+
 **Error**: `EACCES: permission denied, mkdir`
 
 **Causes**:
+
 - Insufficient permissions to create directories
 - Read-only file system
 - Incorrect ownership
 
 **Solutions**:
+
 1. Fix directory permissions:
+
 ```bash
 # Ensure write permissions
 chmod -R 755 public/images/
 sudo chown -R $USER:$USER public/images/
 ```
 
-2. Check available disk space:
+2.Check available disk space:
+
 ```bash
 df -h public/images/
 ```
 
-3. Verify output directory:
+3.Verify output directory:
+
 ```javascript
 // Use absolute path
 const results = await fetchAndMirrorMedia(siteUrl, {
@@ -348,25 +410,31 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 ```
 
 #### Problem: Incomplete downloads
+
 **Error**: Some files downloaded but others failed
 
 **Causes**:
+
 - Network interruptions
 - WordPress server issues
 - File access restrictions
 
 **Solutions**:
+
 1. Re-run the fetcher (it skips existing files):
+
 ```bash
 node scripts/wp-media-fetcher.js https://polything.co.uk
 ```
 
-2. Check the report for specific errors:
+2.Check the report for specific errors:
+
 ```bash
 grep "Errors:" media-fetch-report.md
 ```
 
-3. Manual retry for specific files:
+3.Manual retry for specific files:
+
 ```javascript
 // Download specific media item
 const { downloadMediaFile } = require('./scripts/wp-media-fetcher.js');
@@ -379,13 +447,17 @@ await downloadMediaFile(
 ### 6. Performance Issues
 
 #### Problem: Slow build times
+
 **Causes**:
+
 - Large number of content files
 - Inefficient content processing
 - Missing optimizations
 
 **Solutions**:
+
 1. Optimize contentlayer config:
+
 ```typescript
 export default makeSource({
   contentDirPath: './content',
@@ -395,7 +467,8 @@ export default makeSource({
 })
 ```
 
-2. Use incremental builds:
+Use incremental builds:
+
 ```bash
 # Development mode
 pnpm dev
@@ -404,32 +477,38 @@ pnpm dev
 pnpm build
 ```
 
-3. Optimize images:
+3.Optimize images:
+
 ```bash
 # Use image optimization tools
 npx @squoosh/cli --webp content/images/
 ```
 
 #### Problem: Large bundle sizes
+
 **Causes**:
+
 - Unused dependencies
 - Large images
 - Inefficient code splitting
 
 **Solutions**:
-1. Analyze bundle:
+1.Analyze bundle:
+
 ```bash
 pnpm build
 npx @next/bundle-analyzer
 ```
 
-2. Optimize imports:
+2.Optimize imports:
+
 ```tsx
 // Use dynamic imports for heavy components
 const HeavyComponent = dynamic(() => import('./HeavyComponent'))
 ```
 
-3. Optimize images:
+3.Optimize images:
+
 ```tsx
 // Use Next.js Image component
 <Image
@@ -444,6 +523,7 @@ const HeavyComponent = dynamic(() => import('./HeavyComponent'))
 ## Debug Commands
 
 ### Contentlayer Debugging
+
 ```bash
 # Build with verbose output
 pnpm contentlayer build --verbose
@@ -456,6 +536,7 @@ ls .contentlayer/generated/
 ```
 
 ### Next.js Debugging
+
 ```bash
 # Development with debug info
 DEBUG=* pnpm dev
@@ -468,6 +549,7 @@ pnpm build && ls .next/
 ```
 
 ### Testing Debugging
+
 ```bash
 # Run tests with verbose output
 pnpm test --verbose
@@ -482,18 +564,21 @@ pnpm test --watch
 ## Getting Help
 
 ### Logs and Debugging
+
 1. Check browser console for client-side errors
 2. Check terminal output for build errors
 3. Use Next.js debug mode for detailed information
 4. Check contentlayer logs for content processing issues
 
 ### Common Resources
+
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Contentlayer Documentation](https://www.contentlayer.dev/docs/)
 - [Jest Documentation](https://jestjs.io/docs/getting-started)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ### Project-Specific Help
+
 - Check `docs/nextjs-contentlayer-implementation.md` for implementation details
 - Review `contentlayer.config.ts` for configuration
 - Check `jest.config.js` for testing setup

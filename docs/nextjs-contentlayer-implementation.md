@@ -11,6 +11,7 @@ This document outlines the implementation of the Next.js application skeleton wi
 ## Architecture
 
 ### Content Management
+
 - **Contentlayer2**: Modern content management system for MDX files
 - **MDX Support**: Rich content with React components
 - **Type Safety**: Full TypeScript integration with generated types
@@ -18,18 +19,21 @@ This document outlines the implementation of the Next.js application skeleton wi
 ### Content Types
 
 #### 1. Posts (Blog Articles)
+
 - **Path**: `/content/posts/[slug]/index.mdx`
 - **Route**: `/blog/[slug]`
 - **Schema**: BlogPosting with author, publish date, categories, tags
 - **Features**: Featured posts, hero sections, SEO metadata
 
 #### 2. Projects (Case Studies)
+
 - **Path**: `/content/projects/[slug]/index.mdx`
 - **Route**: `/work/[slug]`
 - **Schema**: CreativeWork with project links, client information
 - **Features**: Project URLs, hero sections, case study content
 
 #### 3. Pages (Static Content)
+
 - **Path**: `/content/pages/[slug]/index.mdx`
 - **Route**: `/[slug]`
 - **Schema**: WebPage for general content
@@ -64,6 +68,7 @@ contentlayer.config.ts        # Contentlayer configuration
 **Location**: `components/hero.tsx`
 
 **Features**:
+
 - Image and video background support
 - Custom text and background colors
 - Responsive design with mobile optimization
@@ -71,6 +76,7 @@ contentlayer.config.ts        # Contentlayer configuration
 - Accessibility features
 
 **Props**:
+
 ```typescript
 interface HeroData {
   title?: string
@@ -83,6 +89,7 @@ interface HeroData {
 ```
 
 **Usage**:
+
 ```tsx
 <Hero hero={page.hero} />
 ```
@@ -109,6 +116,7 @@ All page templates follow a consistent pattern:
 ### Per-page Structured Data
 
 Each page template includes:
+
 - **BlogPosting**: For blog posts with author and publish dates
 - **CreativeWork**: For projects with client information
 - **WebPage**: For static pages
@@ -116,6 +124,7 @@ Each page template includes:
 ### Metadata API
 
 Using Next.js 14 App Router Metadata API:
+
 - Dynamic title and description generation
 - OpenGraph tags for social sharing
 - Canonical URLs for SEO
@@ -124,11 +133,13 @@ Using Next.js 14 App Router Metadata API:
 ## Testing Strategy
 
 ### Unit Tests
+
 - **Jest**: Testing framework with React Testing Library
 - **Component Tests**: Hero component with full test coverage
 - **Page Tests**: Template structure validation
 
 ### Test Coverage
+
 - Hero component: 7 test cases covering all features
 - Page templates: Structure and export validation
 - Layout: JSON-LD structured data verification
@@ -136,16 +147,19 @@ Using Next.js 14 App Router Metadata API:
 ## Performance Optimizations
 
 ### Image Optimization
+
 - Next.js Image component with WebP/AVIF support
 - Automatic responsive images
 - Lazy loading for better performance
 
 ### Code Splitting
+
 - Automatic route-based code splitting
 - Dynamic imports for heavy components
 - Optimized bundle sizes
 
 ### SEO Performance
+
 - Static generation for all content
 - Pre-rendered pages for instant loading
 - Optimized meta tags and structured data
@@ -153,11 +167,13 @@ Using Next.js 14 App Router Metadata API:
 ## Development Workflow
 
 ### TDD Approach
+
 1. **Red Phase**: Write failing tests first
 2. **Green Phase**: Implement minimum code to pass tests
 3. **Refactor Phase**: Improve code while maintaining test coverage
 
 ### Testing Commands
+
 ```bash
 # Run all tests
 pnpm test
@@ -217,18 +233,22 @@ seo:
 ### Common Issues
 
 #### 1. Contentlayer Not Generating Types
+
 **Problem**: `contentlayer2/generated` module not found
 **Solution**: Run `pnpm build` to generate types, or add to package.json scripts
 
 #### 2. Jest Tests Failing with ES Modules
+
 **Problem**: Contentlayer uses ES modules
 **Solution**: Updated Jest config with proper transform patterns
 
 #### 3. Hero Component Images Not Loading
+
 **Problem**: Next.js Image component transforms URLs
 **Solution**: Use `toContain()` in tests instead of exact URL matching
 
 #### 4. JSON-LD Not Appearing in Tests
+
 **Problem**: React Testing Library doesn't render `<head>` content
 **Solution**: Test component structure instead of head content
 
@@ -251,11 +271,13 @@ pnpm build
 ## Next Steps
 
 ### Immediate Tasks
+
 1. **Content Migration**: Implement WordPress export scripts (Task 1.0)
 2. **Field Mapping**: Create transformation utilities (Task 2.0)
 3. **Error Boundaries**: Add loading states and error handling (Task 3.16)
 
 ### Future Enhancements
+
 1. **CMS Integration**: Prepare for KeyStatic/Contentful migration
 2. **Performance Monitoring**: Add real-time performance tracking
 3. **Analytics**: Implement Google Analytics 4
@@ -264,18 +286,21 @@ pnpm build
 ## Dependencies
 
 ### Core Dependencies
+
 - `next`: 15.2.4
 - `react`: ^19
 - `contentlayer2`: 0.5.8
 - `next-contentlayer2`: 0.5.8
 
 ### Development Dependencies
+
 - `jest`: 30.1.3
 - `@testing-library/react`: 16.3.0
 - `@testing-library/jest-dom`: 6.8.0
 - `ts-jest`: 29.4.1
 
 ### Styling
+
 - `tailwindcss`: 3.4.17
 - `@tailwindcss/typography`: For prose styling
 - Custom design system with brand colors
@@ -283,15 +308,18 @@ pnpm build
 ## Configuration Files
 
 ### Jest Configuration
+
 - **File**: `jest.config.js`
 - **Features**: Next.js integration, TypeScript support, ES modules
 - **Test Environment**: jsdom for React components
 
 ### Contentlayer Configuration
+
 - **File**: `contentlayer.config.ts`
 - **Features**: Document type definitions, computed fields, content directory
 
 ### Next.js Configuration
+
 - **File**: `next.config.mjs`
 - **Features**: Image optimization, TypeScript support, ESLint integration
 

@@ -66,6 +66,7 @@ console.log(`Downloaded: ${results.downloaded}, Errors: ${results.errors}`);
 Fetches all media items from WordPress REST API.
 
 **Parameters:**
+
 - `siteUrl` (string) - WordPress site URL
 - `options` (object) - Fetch options
   - `perPage` (number) - Items per page (default: 100)
@@ -78,6 +79,7 @@ Fetches all media items from WordPress REST API.
 Downloads a single media file and saves it locally.
 
 **Parameters:**
+
 - `mediaUrl` (string) - URL of the media file
 - `localPath` (string) - Local path to save the file
 - `options` (object) - Download options
@@ -91,6 +93,7 @@ Downloads a single media file and saves it locally.
 Processes a single media item and downloads it.
 
 **Parameters:**
+
 - `mediaItem` (object) - WordPress media item
 - `options` (object) - Processing options
   - `outputDir` (string) - Output directory (default: './public/images')
@@ -103,6 +106,7 @@ Processes a single media item and downloads it.
 Main function that fetches and mirrors all media from a WordPress site.
 
 **Parameters:**
+
 - `siteUrl` (string) - WordPress site URL
 - `options` (object) - Processing options (see Configuration Options)
 
@@ -113,6 +117,7 @@ Main function that fetches and mirrors all media from a WordPress site.
 Generates a formatted report of the media fetch operation.
 
 **Parameters:**
+
 - `results` (object) - Results from fetchAndMirrorMedia
 
 **Returns:** string - Formatted markdown report
@@ -203,6 +208,7 @@ npm test -- scripts/wp-media-fetcher.test.js --testNamePattern="should fetch med
 **Cause:** WordPress site has access restrictions on certain files.
 
 **Solution:** 
+
 - Check WordPress file permissions
 - Verify REST API access
 - Some files may be intentionally protected
@@ -212,6 +218,7 @@ npm test -- scripts/wp-media-fetcher.test.js --testNamePattern="should fetch med
 **Cause:** Large files or slow network connections.
 
 **Solution:**
+
 ```javascript
 // Increase timeout
 const results = await fetchAndMirrorMedia(siteUrl, {
@@ -224,6 +231,7 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 **Cause:** Processing too many files simultaneously.
 
 **Solution:**
+
 ```javascript
 // Reduce batch size
 const results = await fetchAndMirrorMedia(siteUrl, {
@@ -236,6 +244,7 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 **Cause:** Insufficient permissions to create directories.
 
 **Solution:**
+
 ```bash
 # Ensure write permissions
 chmod -R 755 public/images/

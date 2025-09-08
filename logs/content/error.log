@@ -1,0 +1,2 @@
+[2025-09-08T11:34:01.401Z] ERROR: CONTENT_ERROR: Failed to transform content {"type":"content_export","postId":123,"postType":"project","slug":"test-project","details":{"field":"content","issue":"invalid_html"}}
+[2025-09-08T11:34:01.401Z] ERROR: CONTENT_ERROR: Failed to save MDX file {"type":"content_export","postId":124,"postType":"post","slug":"test-post","details":{"filePath":"./content/posts/test-post/index.mdx","issue":"permission_denied"}}

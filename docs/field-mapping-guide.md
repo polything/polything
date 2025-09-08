@@ -7,10 +7,12 @@ This guide documents the complete mapping from WordPress themerain_* fields to c
 ## Field Discovery Results
 
 ### Polything.co.uk
+
 - **46 themerain_* fields** discovered
 - **Key fields**: hero_title, hero_subtitle, hero_video (10681), hero_text_color (#ffffff)
 
 ### Mightybooth.com  
+
 - **22 themerain_* fields** discovered
 - **Key fields**: hero_image (1844), hero_bg_color (#000000)
 

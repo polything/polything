@@ -1,0 +1,33 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = https://polything.co.uk
+Data file = /opt/bitnami/apps/wordpress/htdocs/wp-content/uploads/sites/3/2021/09/demo-content-import-file_2021-09-29__10-57-44.xml
+Widget file = not defined!
+Customizer file = /opt/bitnami/apps/wordpress/htdocs/wp-content/uploads/sites/3/2021/09/demo-customizer-import-file_2021-09-29__10-57-44.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

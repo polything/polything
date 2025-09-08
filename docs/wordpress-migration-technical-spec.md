@@ -11,14 +11,17 @@ This document provides detailed technical specifications for migrating WordPress
 ## 1. Content Types & API Endpoints
 
 ### 1.1 Projects (Custom Post Type: project)
+
 - **Source:** `/wp-json/wp/v2/projects/:id` (+ ACF/Meta)
 - **Destination:** `/content/projects/[slug]/index.mdx`
 
 ### 1.2 Posts
+
 - **Source:** `/wp-json/wp/v2/posts/:id`
 - **Destination:** `/content/posts/[slug]/index.mdx`
 
 ### 1.3 Pages
+
 - **Source:** `/wp-json/wp/v2/pages/:id`
 - **Destination:** `/content/pages/[slug]/index.mdx`
 
@@ -132,7 +135,7 @@ theme_meta:
 
 1. **Fetch content via WP REST API:**
    - `wp/v2/posts`
-   - `wp/v2/pages` 
+   - `wp/v2/pages`
    - `wp/v2/projects`
    - Include `_embed` for author/terms
 
@@ -339,6 +342,7 @@ curl -s "https://polything.co.uk/wp-json/wp/v2/projects/123?_embed=author,wp:ter
 ```
 
 Expected response:
+
 ```json
 {
   "client_name": "Bluefort Security",
@@ -445,6 +449,7 @@ ORDER BY meta_key;
 ```
 
 **Important Notes:**
+
 - ACF stores the value under `meta_key = <field_name>`
 - It also stores the field key under an underscored meta key like `_<field_name>` (e.g., `_client_name`), whose value is something like `field_abc123`
 - This helps confirm the exact field names you'll see in REST (field name vs field key background)
@@ -454,6 +459,7 @@ ORDER BY meta_key;
 If your theme doesn't expose post meta via REST by default, you can:
 
 1. **Enable with register_post_meta:**
+
    ```php
    register_post_meta('project', 'themerain_hero_title', [
      'show_in_rest' => true
@@ -478,32 +484,38 @@ If your theme doesn't expose post meta via REST by default, you can:
 ### 9.1 ACF Integration Issues
 
 **No ACF object in the core endpoint:**
+
 - Ensure ACF ≥ 5.11 and "Show in REST API" is enabled for that field group
 - Install the ACF to REST API plugin as an alternative
 - Reference: [ACF REST API Integration](https://www.advancedcustomfields.com/resources/wp-rest-api-integration/)
 
 **404 on /acf/v3/...:**
+
 - The ACF to REST API plugin isn't active or is blocked
 - Use the native ACF REST support or admin UI methods instead
 - Check plugin activation and server configuration
 
 **Nested Group fields look odd:**
+
 - Remember the concatenation rule (group_subfield) for nested fields
 - Reference: [ACF Group Field Documentation](https://www.advancedcustomfields.com/resources/group/)
 
 ### 9.2 Common Migration Issues
 
 **Media resolution failures:**
+
 - Verify WordPress Media endpoint is accessible: `/wp-json/wp/v2/media/`
 - Check media file permissions and server configuration
 - Ensure media files exist and are not corrupted
 
 **Meta field exposure issues:**
+
 - Verify `register_post_meta` with `show_in_rest => true`
 - Check if custom post types have REST API support enabled
 - Test endpoint accessibility: `/wp-json/wp/v2/projects/` (for custom post types)
 
 **Content transformation errors:**
+
 - Validate WordPress content structure before transformation
 - Check for malformed HTML or special characters
 - Ensure proper encoding (UTF-8) throughout the process
@@ -511,6 +523,7 @@ If your theme doesn't expose post meta via REST by default, you can:
 ## 10. Official Documentation References
 
 ### 10.1 ACF (Advanced Custom Fields)
+
 - **ACF WP REST API Integration (native support):** [https://www.advancedcustomfields.com/resources/wp-rest-api-integration/](https://www.advancedcustomfields.com/resources/wp-rest-api-integration/)
 - **ACF 5.11 Release (REST support):** [https://www.advancedcustomfields.com/blog/acf-5-11-release-rest-api/](https://www.advancedcustomfields.com/blog/acf-5-11-release-rest-api/)
 - **ACF to REST API Plugin:** [https://wordpress.org/plugins/acf-to-rest-api/](https://wordpress.org/plugins/acf-to-rest-api/)
@@ -518,12 +531,14 @@ If your theme doesn't expose post meta via REST by default, you can:
 - **ACF Group Field (naming rule):** [https://www.advancedcustomfields.com/resources/group/](https://www.advancedcustomfields.com/resources/group/)
 
 ### 10.2 WordPress REST API
+
 - **WP REST API Posts (pattern applies to CPTs):** [https://developer.wordpress.org/rest-api/reference/posts/](https://developer.wordpress.org/rest-api/reference/posts/)
 - **WP REST API Reference Index:** [https://developer.wordpress.org/rest-api/reference/](https://developer.wordpress.org/rest-api/reference/)
 - **WP REST API Media Endpoint:** [https://developer.wordpress.org/rest-api/reference/media/](https://developer.wordpress.org/rest-api/reference/media/)
 - **Extending the REST API:** [https://developer.wordpress.org/rest-api/extending-the-rest-api/](https://developer.wordpress.org/rest-api/extending-the-rest-api/)
 
 ### 10.3 Next.js & Contentlayer
+
 - **Next.js App Router:** [https://nextjs.org/docs/app](https://nextjs.org/docs/app)
 - **Contentlayer Documentation:** [https://www.contentlayer.dev/docs/](https://www.contentlayer.dev/docs/)
 - **Next.js Image Optimization:** [https://nextjs.org/docs/app/api-reference/components/image](https://nextjs.org/docs/app/api-reference/components/image)

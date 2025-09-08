@@ -9,6 +9,7 @@
 - **Diagnostic Endpoint**: `https://polything.co.uk/wp-json/polything/v1`
 
 ### Mightybooth.com (Reference)
+
 - **Site URL**: `https://mightybooth.com`
 - **REST API Base**: `https://mightybooth.com/wp-json/wp/v2`
 - **Diagnostic Endpoint**: `https://mightybooth.com/wp-json/polything/v1`
@@ -16,24 +17,28 @@
 ## Content Endpoints
 
 ### Posts
+
 ```
 GET /wp/v2/posts
 GET /wp/v2/posts/{id}
 ```
 
 ### Pages
+
 ```
 GET /wp/v2/pages
 GET /wp/v2/pages/{id}
 ```
 
 ### Projects (Custom Post Type)
+
 ```
 GET /wp/v2/project
 GET /wp/v2/project/{id}
 ```
 
 ### Media
+
 ```
 GET /wp/v2/media
 GET /wp/v2/media/{id}
@@ -42,16 +47,19 @@ GET /wp/v2/media/{id}
 ## Themerain Diagnostic Endpoint
 
 ### Get Themerain Fields for Post
+
 ```
 GET /polything/v1/themerain-meta/{post_id}
 ```
 
 **Example Request**:
+
 ```bash
 curl "https://polything.co.uk/wp-json/polything/v1/themerain-meta/10680"
 ```
 
 **Example Response**:
+
 ```json
 {
   "post_id": 10680,
@@ -73,11 +81,13 @@ curl "https://polything.co.uk/wp-json/polything/v1/themerain-meta/10680"
 ## Test Post IDs
 
 ### Polything.co.uk
+
 - **Project**: 10680 (Blackriver case study)
 - **Post**: TBD
 - **Page**: TBD
 
 ### Mightybooth.com
+
 - **Project**: 1615
 - **Post**: TBD
 - **Page**: TBD

@@ -1,0 +1,1 @@
+[2025-09-08T11:34:01.403Z] ERROR: API_ERROR: API request failed: 500 Internal Server Error {"type":"api_request","endpoint":"/wp-json/wp/v2/posts","method":"GET","details":{"status":500,"statusText":"Internal Server Error"}}
