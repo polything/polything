@@ -12,7 +12,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { mapThemerainFields } from '../lib/content/field-mapper.js';
 import { transformWordPressContent } from '../lib/content/transformers.js';
-import config from '../config/wordpress.json' assert { type: 'json' };
+import { readFileSync } from 'fs';
+const config = JSON.parse(readFileSync(new URL('../config/wordpress.json', import.meta.url), 'utf8'));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,7 +32,9 @@ const DEFAULT_TIMEOUT = 30000;
  * @returns {Promise<Array>} Array of WordPress content items
  */
 export async function fetchWordPressContent(siteUrl, contentType, batchSize = DEFAULT_BATCH_SIZE) {
-  const apiBase = `${siteUrl}/wp-json/wp/v2`;
+  // Use the API base from config if available, otherwise construct it
+  const siteConfig = config.sites[Object.keys(config.sites).find(key => config.sites[key].url === siteUrl)];
+  const apiBase = siteConfig?.apiBase || `${siteUrl}/wp-json/wp/v2`;
   const endpoint = `${apiBase}/${contentType}`;
   const allItems = [];
   let page = 1;
@@ -156,7 +159,8 @@ async function processContentItem(item, contentType, options = {}) {
 export async function saveMDXFile(content, contentType, options = {}) {
   const outputDir = options.outputDir || config.export.outputDir;
   const contentDir = path.join(outputDir, contentType);
-  const filePath = path.join(contentDir, content.slug, 'index.mdx');
+  const slug = content.frontMatter?.slug || content.slug || 'untitled';
+  const filePath = path.join(contentDir, slug, 'index.mdx');
 
   try {
     // Create directory if it doesn't exist
@@ -253,6 +257,9 @@ export async function exportContent(siteUrl, options = {}) {
     if (!siteConfig) {
       throw new Error(`No configuration found for site: ${siteUrl}`);
     }
+    
+    // Use the actual site URL from config
+    const actualSiteUrl = siteConfig.url;
 
     // Export each content type
     for (const contentType of siteConfig.contentTypes) {
@@ -260,7 +267,7 @@ export async function exportContent(siteUrl, options = {}) {
       
       try {
         // Fetch content
-        const items = await fetchWordPressContent(siteUrl, contentType, options.batchSize);
+        const items = await fetchWordPressContent(actualSiteUrl, contentType, options.batchSize);
         
         if (items.length === 0) {
           console.log(`No ${contentType} found`);
@@ -334,7 +341,7 @@ export async function generateExportReport(results, options = {}) {
  */
 async function main(args = []) {
   try {
-    const siteUrl = args[0] || 'https://polything.co.uk';
+    const siteUrl = args[0] || 'polything.co.uk';
     const options = {
       batchSize: config.export.batchSize,
       outputDir: config.export.outputDir,
