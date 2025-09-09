@@ -1,21 +1,521 @@
 {
-  "site": "polything.co.uk",
+  "site": "https://polything.co.uk",
   "contentTypes": {
-    "post": {
-      "total": 0,
-      "success": 0,
-      "errors": [
+    "posts": {
+      "total": 45,
+      "success": 45,
+      "errors": [],
+      "items": [
         {
-          "error": "HTTP 404: Not Found"
+          "id": 10350,
+          "slug": "marketing-automation-and-technology",
+          "title": "Marketing Automation and Technology",
+          "filePath": "content/post/marketing-automation-and-technology/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10320,
+          "slug": "implementation-of-marketing-plans",
+          "title": "The Implementation of Marketing Plans",
+          "filePath": "content/post/implementation-of-marketing-plans/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10425,
+          "slug": "seo-for-better-online-visibility",
+          "title": "Enhancing Your SEO for Better Online Visibility",
+          "filePath": "content/post/seo-for-better-online-visibility/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6128,
+          "slug": "customer-journey-maps",
+          "title": "Understanding customer journey maps &#8211; A guide to the process",
+          "filePath": "content/post/customer-journey-maps/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10328,
+          "slug": "client-relationship-management",
+          "title": "Client Relationship Management",
+          "filePath": "content/post/client-relationship-management/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10082,
+          "slug": "market-analysis-techniques",
+          "title": "Market Analysis Techniques",
+          "filePath": "content/post/market-analysis-techniques/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10288,
+          "slug": "measuring-marketing-effectiveness",
+          "title": "Measuring Marketing Effectiveness",
+          "filePath": "content/post/measuring-marketing-effectiveness/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6012,
+          "slug": "fractional-marketing-expert-uk",
+          "title": "Fractional marketing expert (UK)",
+          "filePath": "content/post/fractional-marketing-expert-uk/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10175,
+          "slug": "developing-marketing-strategies",
+          "title": "Developing Marketing Strategies",
+          "filePath": "content/post/developing-marketing-strategies/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10255,
+          "slug": "branding-and-positioning-strategies",
+          "title": "Branding and Positioning Strategies",
+          "filePath": "content/post/branding-and-positioning-strategies/index.mdx",
+          "success": true
+        },
+        {
+          "id": 9579,
+          "slug": "introduction-to-strategic-marketing-consultancy",
+          "title": "Strategic Marketing Consultancy",
+          "filePath": "content/post/introduction-to-strategic-marketing-consultancy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8261,
+          "slug": "communication-skills-for-coaching-and-mentoring",
+          "title": "Communication Skills for Coaching and Mentoring",
+          "filePath": "content/post/communication-skills-for-coaching-and-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8320,
+          "slug": "marketing-consultancy-in-london",
+          "title": "Marketing Consultancy in London &#8211; The secret to growing your business",
+          "filePath": "content/post/marketing-consultancy-in-london/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8249,
+          "slug": "choose-the-right-coach-or-mentor",
+          "title": "How to choose the right coach or mentor",
+          "filePath": "content/post/choose-the-right-coach-or-mentor/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8218,
+          "slug": "personal-business-coaching",
+          "title": "Personal business coaching: A guide to improving your professional life",
+          "filePath": "content/post/personal-business-coaching/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8131,
+          "slug": "strategies-for-effective-mentoring",
+          "title": "Best practices and strategies for successful mentoring",
+          "filePath": "content/post/strategies-for-effective-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8142,
+          "slug": "what-is-business-mentoring",
+          "title": "What is business mentoring?",
+          "filePath": "content/post/what-is-business-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8126,
+          "slug": "measure-the-impact-of-mentoring",
+          "title": "How to measure the impact of mentoring",
+          "filePath": "content/post/measure-the-impact-of-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8115,
+          "slug": "benefits-of-mentoring",
+          "title": "How mentoring can benefit individuals and businesses?",
+          "filePath": "content/post/benefits-of-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8107,
+          "slug": "organisational-context-for-mentoring-success",
+          "title": "The effect of organisational context on mentoring success",
+          "filePath": "content/post/organisational-context-for-mentoring-success/index.mdx",
+          "success": true
+        },
+        {
+          "id": 7961,
+          "slug": "how-can-mentoring-help-your-business-grow",
+          "title": "How can mentoring help your business grow?",
+          "filePath": "content/post/how-can-mentoring-help-your-business-grow/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6504,
+          "slug": "marketing-strategy-of-amazon",
+          "title": "Marketing strategy of Amazon",
+          "filePath": "content/post/marketing-strategy-of-amazon/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6618,
+          "slug": "digital-marketing-consultancy-services-explained",
+          "title": "Digital marketing consultancy services explained",
+          "filePath": "content/post/digital-marketing-consultancy-services-explained/index.mdx",
+          "success": true
+        },
+        {
+          "id": 7356,
+          "slug": "how-do-facebook-ads-work",
+          "title": "How do Facebook Ads work?",
+          "filePath": "content/post/how-do-facebook-ads-work/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6481,
+          "slug": "basic-content-marketing-how-to",
+          "title": "Content Marketing Basics: A Guide to getting started",
+          "filePath": "content/post/basic-content-marketing-how-to/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6262,
+          "slug": "fractional-marketing-experts-myths",
+          "title": "Fractional Marketing Experts &#8211; 7 Wild myths Explained",
+          "filePath": "content/post/fractional-marketing-experts-myths/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6183,
+          "slug": "direct-marketing-in-a-recession",
+          "title": "Direct marketing in a recession &#8211; The key benefits to your business",
+          "filePath": "content/post/direct-marketing-in-a-recession/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6248,
+          "slug": "digital-marketing-courses-for-free",
+          "title": "Digital marketing courses for free &#8211; 10 resources to learn digital marketing",
+          "filePath": "content/post/digital-marketing-courses-for-free/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6166,
+          "slug": "digital-marketing-consultancy-how-to",
+          "title": "How to choose a digital marketing consultancy &#8211; Our 5 Step Guide",
+          "filePath": "content/post/digital-marketing-consultancy-how-to/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6420,
+          "slug": "value-proposition-canvas-why",
+          "title": "Value proposition canvases &#8211; Why do we need them?",
+          "filePath": "content/post/value-proposition-canvas-why/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6097,
+          "slug": "marketing-metrics-to-measure-dtc",
+          "title": "DTC marketing metrics to measure &#8211; 6 key ones for business success",
+          "filePath": "content/post/marketing-metrics-to-measure-dtc/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6041,
+          "slug": "strategic-planning-for-marketing",
+          "title": "What is strategic planning for marketing?",
+          "filePath": "content/post/strategic-planning-for-marketing/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5992,
+          "slug": "easy-growth-marketing",
+          "title": "Easy growth marketing &#8211; 8 ways to get started",
+          "filePath": "content/post/easy-growth-marketing/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5977,
+          "slug": "benefits-of-growth-marketing",
+          "title": "Growth marketing &#8211; 6 Benefits on your business",
+          "filePath": "content/post/benefits-of-growth-marketing/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6114,
+          "slug": "best-content-marketing-tools",
+          "title": "Best content marketing tools &#8211; Our best picks for 2022",
+          "filePath": "content/post/best-content-marketing-tools/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5855,
+          "slug": "build-a-better-website",
+          "title": "How to build a better website in 7 easy steps",
+          "filePath": "content/post/build-a-better-website/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5645,
+          "slug": "find-and-working-with-a-marketing-consultant",
+          "title": "Marketing Consultants &#8211; How to find the right one",
+          "filePath": "content/post/find-and-working-with-a-marketing-consultant/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5956,
+          "slug": "content-marketing-strategy-2024",
+          "title": "Content marketing strategy refresh &#8211; How to (2024)",
+          "filePath": "content/post/content-marketing-strategy-2024/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5824,
+          "slug": "google-business-profile-posts",
+          "title": "Google business profile posts &#8211; Why you need to use them",
+          "filePath": "content/post/google-business-profile-posts/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5899,
+          "slug": "what-makes-a-good-blog",
+          "title": "What makes a good blog in 2022?",
+          "filePath": "content/post/what-makes-a-good-blog/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5720,
+          "slug": "starting-with-growth-marketing",
+          "title": "Learn Growth Marketing &#8211; How To Get Started.",
+          "filePath": "content/post/starting-with-growth-marketing/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5669,
+          "slug": "why-a-fractional-marketing-director",
+          "title": "Fractional Marketing Director &#8211; 8 Critical signs that you need one",
+          "filePath": "content/post/why-a-fractional-marketing-director/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5752,
+          "slug": "digital-transformation-key-steps",
+          "title": "Digital transformation &#8211; 5 Key steps for success",
+          "filePath": "content/post/digital-transformation-key-steps/index.mdx",
+          "success": true
+        },
+        {
+          "id": 1351,
+          "slug": "google-search-console-guide",
+          "title": "Google Search Console: A Beginner&#8217;s Guide",
+          "filePath": "content/post/google-search-console-guide/index.mdx",
+          "success": true
+        },
+        {
+          "id": 112,
+          "slug": "agile-marketing-plan-how-to",
+          "title": "Agile marketing plans &#8211; Learn how to write them",
+          "filePath": "content/post/agile-marketing-plan-how-to/index.mdx",
+          "success": true
         }
       ]
     },
-    "page": {
-      "total": 0,
-      "success": 0,
-      "errors": [
+    "pages": {
+      "total": 27,
+      "success": 27,
+      "errors": [],
+      "items": [
         {
-          "error": "HTTP 404: Not Found"
+          "id": 10717,
+          "slug": "vpd-rapid-value-propositions-by-design-lite-edition-2-4",
+          "title": "Stage 2- Value by Design™ (Lite Ed)",
+          "filePath": "content/page/vpd-rapid-value-propositions-by-design-lite-edition-2-4/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10719,
+          "slug": "vpd-rapid-value-propositions-by-design-lite-edition-4-4",
+          "title": "Stage 4 &#8211; Value by Design™ (Lite Ed)",
+          "filePath": "content/page/vpd-rapid-value-propositions-by-design-lite-edition-4-4/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10718,
+          "slug": "vpd-rapid-value-propositions-by-design-lite-edition-3-4",
+          "title": "Stage 3 &#8211; Value by Design™ (Lite Ed)",
+          "filePath": "content/page/vpd-rapid-value-propositions-by-design-lite-edition-3-4/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10802,
+          "slug": "chaos-to-clarity-audit",
+          "title": "Chaos to Clarity Audit",
+          "filePath": "content/page/chaos-to-clarity-audit/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10761,
+          "slug": "build-messaging-that-customers-value",
+          "title": "Build messaging that customers value",
+          "filePath": "content/page/build-messaging-that-customers-value/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10414,
+          "slug": "sustainability-statement",
+          "title": "Sustainability Statement",
+          "filePath": "content/page/sustainability-statement/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10716,
+          "slug": "vpd-rapid-value-propositions-by-design-lite-edition-1-4",
+          "title": "Stage 1- Value by Design™ (Lite Ed)",
+          "filePath": "content/page/vpd-rapid-value-propositions-by-design-lite-edition-1-4/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10526,
+          "slug": "brand-audit",
+          "title": "Brand Audit",
+          "filePath": "content/page/brand-audit/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10715,
+          "slug": "value-by-design-lite-edition",
+          "title": "Value by Design™ (Lite Edition)",
+          "filePath": "content/page/value-by-design-lite-edition/index.mdx",
+          "success": true
+        },
+        {
+          "id": 9945,
+          "slug": "marketing-strategy",
+          "title": "Marketing Strategy",
+          "filePath": "content/page/marketing-strategy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 9684,
+          "slug": "business-mentoring",
+          "title": "Business Mentoring and Coaching",
+          "filePath": "content/page/business-mentoring/index.mdx",
+          "success": true
+        },
+        {
+          "id": 9914,
+          "slug": "marketing-growth-uel-2024",
+          "title": "Marketing Growth &#8211; UEL 2024",
+          "filePath": "content/page/marketing-growth-uel-2024/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5942,
+          "slug": "cookie-policy",
+          "title": "Cookie Policy",
+          "filePath": "content/page/cookie-policy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8285,
+          "slug": "thank-you",
+          "title": "Thank you!",
+          "filePath": "content/page/thank-you/index.mdx",
+          "success": true
+        },
+        {
+          "id": 9791,
+          "slug": "marketing-services",
+          "title": "Craft Marketing Services for Growth",
+          "filePath": "content/page/marketing-services/index.mdx",
+          "success": true
+        },
+        {
+          "id": 8001,
+          "slug": "business-mentoring-lp",
+          "title": "Business Mentoring",
+          "filePath": "content/page/business-mentoring-lp/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6290,
+          "slug": "terms-and-conditions",
+          "title": "Terms and Conditions",
+          "filePath": "content/page/terms-and-conditions/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6330,
+          "slug": "book-a-discovery-call",
+          "title": "Claim your free strategy session &#8211; Book a call",
+          "filePath": "content/page/book-a-discovery-call/index.mdx",
+          "success": true
+        },
+        {
+          "id": 7829,
+          "slug": "newsletter",
+          "title": "Newsletter",
+          "filePath": "content/page/newsletter/index.mdx",
+          "success": true
+        },
+        {
+          "id": 6286,
+          "slug": "privacy-policy",
+          "title": "Privacy Policy",
+          "filePath": "content/page/privacy-policy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5163,
+          "slug": "approach",
+          "title": "Strategic Marketing Consultants &#8211; Our Approach",
+          "filePath": "content/page/approach/index.mdx",
+          "success": true
+        },
+        {
+          "id": 56,
+          "slug": "about-us",
+          "title": "About Us",
+          "filePath": "content/page/about-us/index.mdx",
+          "success": true
+        },
+        {
+          "id": 53,
+          "slug": "contact",
+          "title": "Contact us &#8211; See how we can help",
+          "filePath": "content/page/contact/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5195,
+          "slug": "services",
+          "title": "Marketing Consultancy Services",
+          "filePath": "content/page/services/index.mdx",
+          "success": true
+        },
+        {
+          "id": 5112,
+          "slug": "polything-marketing-consultancy",
+          "title": "Polything Marketing Consultancy based in London",
+          "filePath": "content/page/polything-marketing-consultancy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 45,
+          "slug": "the-marketing-brief",
+          "title": "The Marketing Brief",
+          "filePath": "content/page/the-marketing-brief/index.mdx",
+          "success": true
+        },
+        {
+          "id": 7,
+          "slug": "case-studies",
+          "title": "Case Studies",
+          "filePath": "content/page/case-studies/index.mdx",
+          "success": true
         }
       ]
     },
@@ -39,17 +539,17 @@
           "success": true
         },
         {
-          "id": 10394,
-          "slug": "bluefort-security",
-          "title": "Bluefort Security &#8211; CRAFT Subscription",
-          "filePath": "content/project/bluefort-security/index.mdx",
-          "success": true
-        },
-        {
           "id": 10376,
           "slug": "bluefort-security-strategy",
           "title": "Bluefort Security Strategy",
           "filePath": "content/project/bluefort-security-strategy/index.mdx",
+          "success": true
+        },
+        {
+          "id": 10394,
+          "slug": "bluefort-security",
+          "title": "Bluefort Security &#8211; CRAFT Subscription",
+          "filePath": "content/project/bluefort-security/index.mdx",
           "success": true
         },
         {
@@ -63,9 +563,9 @@
     }
   },
   "summary": {
-    "total": 5,
-    "success": 5,
-    "errors": 2,
-    "duration": 328
+    "total": 77,
+    "success": 77,
+    "errors": 0,
+    "duration": 463
   }
 }

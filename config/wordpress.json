@@ -4,22 +4,22 @@
       "url": "https://polything.co.uk",
       "apiBase": "https://polything.co.uk/wp-json/wp/v2",
       "diagnosticEndpoint": "https://polything.co.uk/wp-json/polything/v1",
-      "contentTypes": ["post", "page", "project"],
+      "contentTypes": ["posts", "pages", "project"],
       "testPostIds": {
         "project": 10680,
-        "post": null,
-        "page": null
+        "posts": null,
+        "pages": null
       }
     },
     "mightybooth.com": {
       "url": "https://mightybooth.com",
       "apiBase": "https://mightybooth.com/wp-json/wp/v2",
       "diagnosticEndpoint": "https://mightybooth.com/wp-json/polything/v1",
-      "contentTypes": ["post", "page", "project"],
+      "contentTypes": ["posts", "pages", "project"],
       "testPostIds": {
         "project": 1615,
-        "post": null,
-        "page": null
+        "posts": null,
+        "pages": null
       }
     }
   },

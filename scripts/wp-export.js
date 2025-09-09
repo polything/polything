@@ -123,7 +123,8 @@ async function processContentBatch(items, contentType, options = {}) {
 async function processContentItem(item, contentType, options = {}) {
   try {
     // Transform WordPress content to clean schema
-    const transformed = transformWordPressContent(item, contentType);
+    const singularContentType = mapContentTypeToDirectory(contentType);
+    const transformed = transformWordPressContent(item, singularContentType);
     
     // Debug: Check if slug is present
     if (!transformed.frontMatter.slug) {
@@ -147,15 +148,30 @@ async function processContentItem(item, contentType, options = {}) {
 }
 
 /**
+ * Map plural API content types to singular directory names
+ * @param {string} apiContentType - Plural content type from API
+ * @returns {string} Singular directory name
+ */
+function mapContentTypeToDirectory(apiContentType) {
+  const mapping = {
+    'posts': 'post',
+    'pages': 'page', 
+    'project': 'project'  // project is already singular in the API
+  };
+  return mapping[apiContentType] || apiContentType;
+}
+
+/**
  * Save content to MDX file
  * @param {Object} content - Transformed content object
- * @param {string} contentType - Content type
+ * @param {string} contentType - Content type (plural from API)
  * @param {Object} options - Save options
  * @returns {Promise<string>} File path
  */
 async function saveMDXFile(content, contentType, options = {}) {
   const outputDir = options.outputDir || config.export.outputDir;
-  const contentDir = path.join(outputDir, contentType);
+  const directoryName = mapContentTypeToDirectory(contentType);
+  const contentDir = path.join(outputDir, directoryName);
   const filePath = path.join(contentDir, content.frontMatter.slug, 'index.mdx');
 
   try {
