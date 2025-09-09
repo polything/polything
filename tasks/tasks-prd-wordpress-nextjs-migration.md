@@ -292,9 +292,12 @@
 - Configured pnpm as package manager for consistency
 
 **Content Migration**:
-- Successfully exported 5 project case studies from WordPress to MDX format
-- Content exported to `/content/project/` directory structure
-- All project content includes proper front-matter with hero fields, SEO metadata, and canonical URLs
+- Successfully exported 77 content items from WordPress to MDX format:
+  - 5 project case studies
+  - 27 static pages
+  - 45 blog posts
+- Content exported to `/content/` directory structure with proper organization
+- All content includes proper front-matter with hero fields, SEO metadata, and canonical URLs
 
 **Build Issues Resolved**:
 - Fixed dependency conflict: downgraded `date-fns` from v4.1.0 to v3.6.0 for `react-day-picker` compatibility
@@ -303,7 +306,7 @@
 
 **Current Deployment Status**:
 - Build: ✅ Successful (7 static pages generated)
-- Content: ✅ 5 project case studies exported
+- Content: ✅ 77 content items exported (5 projects, 27 pages, 45 posts)
 - Framework: ✅ Next.js 15.5.2 with App Router
 - Package Manager: ✅ pnpm configured
 - Security: ✅ Headers and redirects configured
@@ -333,39 +336,29 @@
 
 ## 7.0 Known Issues & Troubleshooting
 
-### 7.1 Critical Issue: Content Export Limited to Projects Only
+### 7.1 Content Export Status - RESOLVED ✅
 
-**Issue**: The WordPress content export script (`scripts/wp-export.mjs`) is only successfully exporting project case studies. Posts and pages are returning 404 errors from the WordPress REST API.
+**Issue**: Initial WordPress content export appeared to have issues with posts and pages, but export actually succeeded.
 
 **Current Status**:
 - ✅ **Projects**: 5 case studies exported successfully
-- ❌ **Posts**: HTTP 404 errors from `/wp-json/wp/v2/posts`
-- ❌ **Pages**: HTTP 404 errors from `/wp-json/wp/v2/pages`
+- ✅ **Posts**: 45 blog posts exported successfully
+- ✅ **Pages**: 27 static pages exported successfully
+- ✅ **Total**: 77 content items exported (31% of 249 total pages)
 
-**Root Cause Analysis**:
-1. **API Endpoint Access**: The WordPress REST API endpoints for posts and pages may not be enabled or accessible
-2. **Authentication**: Some content types may require authentication to access
-3. **Plugin Dependencies**: The site may require specific plugins to expose certain content types via REST API
-4. **Content Type Registration**: Custom post types (like 'project') may be properly registered while standard types are not
+**Resolution**: The export script actually worked correctly despite showing 404 errors in the console output. The WordPress REST API was accessible and all content types were successfully exported.
 
-**Investigation Steps**:
-```bash
-# Test API endpoints directly
-curl -s "https://polything.co.uk/wp-json/wp/v2/posts?per_page=1"
-curl -s "https://polything.co.uk/wp-json/wp/v2/pages?per_page=1"
-curl -s "https://polything.co.uk/wp-json/wp/v2/project?per_page=1"
-```
-
-**Immediate Workarounds**:
-1. **Manual Content Creation**: Create static pages manually in the Next.js app
-2. **Alternative Export Methods**: Use WordPress export tools or direct database queries
-3. **Plugin Installation**: Install "REST API" or "ACF to REST API" plugins on WordPress
+**Export Results**:
+- **Projects**: 5 case studies in `/content/project/`
+- **Pages**: 27 static pages in `/content/page/`
+- **Posts**: 45 blog articles in `/content/post/`
+- **Total**: 77 content items successfully migrated
 
 **Next Steps**:
-- [ ] 7.1.1: Investigate WordPress REST API configuration and plugin requirements
-- [ ] 7.1.2: Test alternative export methods for posts and pages
-- [ ] 7.1.3: Implement fallback content creation for critical pages
-- [ ] 7.1.4: Document WordPress configuration requirements for full content export
+- [x] 7.1.1: WordPress content export completed successfully
+- [ ] 7.1.2: Enable contentlayer integration for dynamic page generation
+- [ ] 7.1.3: Implement routing for all exported content types
+- [ ] 7.1.4: Complete remaining 172 pages (249 - 77 = 172 remaining)
 
 ### 7.2 Build & Deployment Troubleshooting
 
@@ -470,22 +463,21 @@ curl -s "https://staging-url.vercel.app" | grep -E "(title|meta|json-ld)"
 ### 8.1 Working Components
 - ✅ **Next.js Application**: Fully functional with App Router
 - ✅ **Design System**: Complete component library with 87+ tests
-- ✅ **Project Content**: 5 case studies successfully migrated
+- ✅ **Content Migration**: 77 content items successfully exported (31% complete)
 - ✅ **Build Process**: Compiles successfully with 7 static pages
 - ✅ **Vercel Deployment**: Configured and ready for staging
 - ✅ **Security Headers**: Implemented and configured
 - ✅ **Media Redirects**: WordPress media URLs redirect to local assets
 
 ### 8.2 Pending Issues
-- ❌ **Posts Export**: WordPress API returning 404 errors
-- ❌ **Pages Export**: WordPress API returning 404 errors
 - ❌ **Contentlayer Integration**: Dynamic pages disabled due to import issues
 - ❌ **Sitemap Generation**: Disabled due to contentlayer dependencies
-- ❌ **Full Content Migration**: Only 5 projects out of 249 total pages migrated
+- ❌ **Content Routing**: Exported content not yet accessible via dynamic routes
+- ❌ **Remaining Content**: 172 pages still need to be exported (249 - 77 = 172)
 
 ### 8.3 Next Priority Actions
-1. **Investigate WordPress REST API**: Determine why posts/pages endpoints are not accessible
-2. **Implement Alternative Export**: Use WordPress export tools or direct database access
-3. **Restore Contentlayer**: Fix import issues to enable dynamic page generation
-4. **Complete Content Migration**: Export remaining 244 pages and posts
-5. **QA Testing**: Validate migrated content against original WordPress site
+1. **Restore Contentlayer**: Fix import issues to enable dynamic page generation
+2. **Implement Content Routing**: Enable access to all 77 exported content items
+3. **Complete Content Migration**: Export remaining 172 pages and posts
+4. **QA Testing**: Validate migrated content against original WordPress site
+5. **Performance Optimization**: Optimize build times with full content volume
