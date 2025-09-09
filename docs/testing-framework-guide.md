@@ -166,6 +166,7 @@ export default defineConfig({
 ## Test Scripts
 
 ### Available Commands
+
 ```json
 {
   "test": "jest",
@@ -186,6 +187,7 @@ export default defineConfig({
 ## Test Data and Mocking
 
 ### Mock Data Structure
+
 ```typescript
 // WordPress API Response Mock
 const mockWordPressPost = {
@@ -226,6 +228,7 @@ const mockTransformedContent = {
 ```
 
 ### API Mocking
+
 ```javascript
 // Mock fetch for API tests
 global.fetch = jest.fn(() =>
@@ -240,6 +243,7 @@ global.fetch = jest.fn(() =>
 ## Performance Testing
 
 ### Lighthouse Configuration
+
 ```javascript
 const lighthouse = require('lighthouse')
 const chromeLauncher = require('chrome-launcher')
@@ -261,6 +265,7 @@ const runLighthouse = async (url) => {
 ```
 
 ### Performance Budgets
+
 ```javascript
 const performanceBudgets = {
   'first-contentful-paint': 2000, // 2 seconds
@@ -274,6 +279,7 @@ const performanceBudgets = {
 ## SEO Testing
 
 ### JSON-LD Validation
+
 ```javascript
 const validateJSONLD = (html) => {
   const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs
@@ -296,6 +302,7 @@ const validateJSONLD = (html) => {
 ```
 
 ### Meta Tag Validation
+
 ```javascript
 const validateMetaTags = (html) => {
   const requiredTags = [
@@ -318,6 +325,7 @@ const validateMetaTags = (html) => {
 ## Continuous Integration
 
 ### GitHub Actions Workflow
+
 ```yaml
 name: Test Suite
 on: [push, pull_request]
@@ -391,6 +399,7 @@ jobs:
 **Solution:** Increase timeout in Jest config for integration tests
 
 ### Debug Commands
+
 ```bash
 # Run specific test file
 npm test -- --testNamePattern="specific test"

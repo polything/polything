@@ -20,6 +20,7 @@
 #### Error: `Module not found: Can't resolve '@/components/design-system'`
 
 **Symptoms:**
+
 ```
 Module not found: Can't resolve '@/components/design-system'
 Import trace for requested module:
@@ -33,7 +34,9 @@ Import trace for requested module:
 - TypeScript path mapping issues
 
 **Solutions:**
+
 1. **Check import path:**
+
    ```typescript
    // ✅ Correct
    import { Container, Section, Grid } from '@/components/design-system'
@@ -43,6 +46,7 @@ Import trace for requested module:
    ```
 
 2. **Verify design system exports:**
+
    ```typescript
    // Check components/design-system/index.ts
    export { default as Container } from './container'
@@ -51,6 +55,7 @@ Import trace for requested module:
    ```
 
 3. **Check TypeScript configuration:**
+
    ```json
    // tsconfig.json
    {
@@ -67,6 +72,7 @@ Import trace for requested module:
 #### Error: `Element type is invalid: expected a string but got: undefined`
 
 **Symptoms:**
+
 ```
 Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
 ```
@@ -78,7 +84,9 @@ Element type is invalid: expected a string (for built-in components) or a class/
 - Circular dependency issues
 
 **Solutions:**
+
 1. **Check component exports:**
+
    ```typescript
    // ✅ Correct - Default export
    const Container: React.FC<ContainerProps> = ({ children, ...props }) => {
@@ -93,6 +101,7 @@ Element type is invalid: expected a string (for built-in components) or a class/
    ```
 
 2. **Verify import statements:**
+
    ```typescript
    // ✅ Correct - Default import
    import Container from './container'
@@ -102,6 +111,7 @@ Element type is invalid: expected a string (for built-in components) or a class/
    ```
 
 3. **Check for circular dependencies:**
+
    ```bash
    # Install dependency checker
    npm install --save-dev madge
@@ -115,6 +125,7 @@ Element type is invalid: expected a string (for built-in components) or a class/
 #### Error: `Syntax error: Unexpected token, expected ","`
 
 **Symptoms:**
+
 ```
 Syntax error: Unexpected token, expected ","
   3 | import { cva, type VariantProps } from "class-variance-authority"
@@ -128,7 +139,9 @@ Syntax error: Unexpected token, expected ","
 - SWC/Babel configuration issues
 
 **Solutions:**
+
 1. **Remove conflicting Babel configurations:**
+
    ```bash
    # Remove .babelrc if present
    rm .babelrc
@@ -138,6 +151,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Use Next.js SWC (recommended):**
+
    ```javascript
    // next.config.mjs
    export default {
@@ -147,6 +161,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **If Babel is required, add TypeScript preset:**
+
    ```json
    // .babelrc
    {
@@ -176,7 +191,9 @@ Syntax error: Unexpected token, expected ","
 - Missing Tailwind CSS configuration
 
 **Solutions:**
+
 1. **Check browser support:**
+
    ```javascript
    // Check if backdrop-filter is supported
    if (CSS.supports('backdrop-filter', 'blur(10px)')) {
@@ -187,6 +204,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Verify CSS classes:**
+
    ```css
    /* Check if these classes are applied */
    .glass {
@@ -195,6 +213,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Test with manual CSS:**
+
    ```css
    .test-glass {
      background: rgba(255, 255, 255, 0.2);
@@ -220,7 +239,9 @@ Syntax error: Unexpected token, expected ","
 - Font file corruption
 
 **Solutions:**
+
 1. **Check font configuration:**
+
    ```typescript
    // app/layout.tsx
    import { Inter, Raleway } from 'next/font/google'
@@ -239,6 +260,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Verify CSS variables:**
+
    ```css
    /* Check if font variables are defined */
    :root {
@@ -248,6 +270,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Test font loading:**
+
    ```javascript
    // Check if fonts are loaded
    document.fonts.ready.then(() => {
@@ -271,7 +294,9 @@ Syntax error: Unexpected token, expected ","
 - CSS specificity issues
 
 **Solutions:**
+
 1. **Check viewport meta tag:**
+
    ```html
    <!-- app/layout.tsx -->
    <head>
@@ -280,6 +305,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Verify Tailwind configuration:**
+
    ```javascript
    // tailwind.config.ts
    module.exports = {
@@ -296,6 +322,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Test responsive classes:**
+
    ```typescript
    // Test responsive class generation
    import { createResponsiveClasses } from '@/lib/design-system'
@@ -319,7 +346,9 @@ Syntax error: Unexpected token, expected ","
 - Image backgrounds not loading
 
 **Solutions:**
+
 1. **Check hero data structure:**
+
    ```typescript
    // Verify hero data format
    const heroData = {
@@ -333,6 +362,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Test video autoplay:**
+
    ```typescript
    // Check if video autoplay is working
    const video = document.querySelector('video')
@@ -344,6 +374,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Verify image paths:**
+
    ```typescript
    // Check if images exist
    const img = new Image()
@@ -362,7 +393,9 @@ Syntax error: Unexpected token, expected ","
 - Gaps not applied
 
 **Solutions:**
+
 1. **Check grid configuration:**
+
    ```typescript
    // Verify grid props
    <Grid 
@@ -375,6 +408,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Test CSS Grid support:**
+
    ```javascript
    // Check if CSS Grid is supported
    if (CSS.supports('display', 'grid')) {
@@ -385,6 +419,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Verify Tailwind grid classes:**
+
    ```css
    /* Check if these classes are generated */
    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -403,7 +438,9 @@ Syntax error: Unexpected token, expected ","
 - Poor Lighthouse scores
 
 **Solutions:**
+
 1. **Analyze bundle size:**
+
    ```bash
    # Install bundle analyzer
    npm install --save-dev @next/bundle-analyzer
@@ -414,6 +451,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Use dynamic imports:**
+
    ```typescript
    // Lazy load heavy components
    const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
@@ -422,6 +460,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 3. **Optimize imports:**
+
    ```typescript
    // ✅ Import only what you need
    import { Container, Section } from '@/components/design-system'
@@ -440,7 +479,9 @@ Syntax error: Unexpected token, expected ","
 - Event listeners not cleaned up
 
 **Solutions:**
+
 1. **Clean up event listeners:**
+
    ```typescript
    useEffect(() => {
      const handleResize = () => {
@@ -456,6 +497,7 @@ Syntax error: Unexpected token, expected ","
    ```
 
 2. **Use React.memo for expensive components:**
+
    ```typescript
    const ExpensiveComponent = React.memo(({ data }) => {
      // Component implementation
@@ -467,6 +509,7 @@ Syntax error: Unexpected token, expected ","
 ### 11. Development Tools
 
 #### React Developer Tools
+
 ```bash
 # Install React DevTools browser extension
 # Chrome: https://chrome.google.com/webstore/detail/react-developer-tools
@@ -474,6 +517,7 @@ Syntax error: Unexpected token, expected ","
 ```
 
 #### Next.js Debug Mode
+
 ```bash
 # Enable Next.js debug mode
 DEBUG=* npm run dev
@@ -483,6 +527,7 @@ DEBUG=next:* npm run dev
 ```
 
 #### Tailwind CSS Debug
+
 ```bash
 # Install Tailwind CSS IntelliSense
 # VS Code: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
@@ -491,6 +536,7 @@ DEBUG=next:* npm run dev
 ### 12. Testing and Validation
 
 #### Component Testing
+
 ```bash
 # Run component tests
 npm test -- components/design-system/
@@ -503,6 +549,7 @@ npm test -- --watch components/design-system/
 ```
 
 #### Visual Regression Testing
+
 ```bash
 # Install Playwright for visual testing
 npm install --save-dev @playwright/test

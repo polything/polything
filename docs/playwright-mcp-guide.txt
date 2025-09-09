@@ -1,0 +1,12 @@
+
+Playwright Library - https://playwright.dev/docs/intro
+Playwright MCP Setup - https://playwright.dev/agents
+Generating tests - https://playwright.dev/agents/playwright-mcp-generating-tests
+
+Using just a prompt file inside VS Code, I asked the MCP server to:
+✅ Navigate to my personal site
+✅ Locate the podcast page
+✅ Interact with podcast filters
+✅ Automatically generate a test report based on what it saw
+✅ Produce a test plan in plain English with expected outcomes
+✅ Then run the test plan to verify everything worked as expected

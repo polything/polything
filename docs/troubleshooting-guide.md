@@ -447,22 +447,27 @@ await downloadMediaFile(
 ### 6. Error Boundary and Loading Issues
 
 #### Problem: Error boundary not catching errors
+
 **Error**: Errors not being caught by error boundary
 
 **Causes**:
+
 - Error boundary not wrapping the component that throws
 - Error thrown outside of React component lifecycle
 - Error boundary not properly configured
 
 **Solutions**:
+
 1. Ensure error boundary wraps the component:
+
 ```tsx
 <ErrorBoundary>
   <ComponentThatMightThrow />
 </ErrorBoundary>
 ```
 
-2. Check error boundary placement in component tree:
+2.Check error boundary placement in component tree:
+
 ```tsx
 // Good: Error boundary at appropriate level
 <ErrorBoundary>
@@ -475,7 +480,8 @@ await downloadMediaFile(
 </ErrorBoundary>
 ```
 
-3. Verify error boundary configuration:
+3.Verify error boundary configuration:
+
 ```tsx
 <ErrorBoundary
   onRetry={() => window.location.reload()}
@@ -486,20 +492,25 @@ await downloadMediaFile(
 ```
 
 #### Problem: Loading component not showing
+
 **Error**: Loading state not appearing
 
 **Causes**:
+
 - Loading component not properly imported
 - Loading state not triggered
 - CSS classes not applied correctly
 
 **Solutions**:
+
 1. Check loading component import:
+
 ```tsx
 import { Loading, PageLoading } from '@/components/loading'
 ```
 
-2. Verify loading state usage:
+2.Verify loading state usage:
+
 ```tsx
 // For page loading
 <PageLoading message="Loading page..." />
@@ -511,22 +522,27 @@ import { Loading, PageLoading } from '@/components/loading'
 <Loading size="sm" showMessage={false} />
 ```
 
-3. Check CSS classes:
+3.Check CSS classes:
+
 ```bash
 # Verify Tailwind classes are applied
 # Check for animate-spin, proper sizing classes
 ```
 
 #### Problem: Error boundary showing on every render
+
 **Error**: Error boundary appears even when no error occurs
 
 **Causes**:
+
 - Error boundary state not reset properly
 - Component throwing error on every render
 - Error boundary logic issue
 
 **Solutions**:
+
 1. Check error boundary state management:
+
 ```tsx
 // Ensure proper state reset
 handleRetry = () => {
@@ -534,7 +550,8 @@ handleRetry = () => {
 }
 ```
 
-2. Verify component error handling:
+2.Verify component error handling:
+
 ```tsx
 // Check for proper error handling in components
 try {
@@ -544,7 +561,8 @@ try {
 }
 ```
 
-3. Test error boundary in isolation:
+3.Test error boundary in isolation:
+
 ```tsx
 // Create test component that throws
 const ThrowError = ({ shouldThrow }) => {
@@ -556,20 +574,25 @@ const ThrowError = ({ shouldThrow }) => {
 ### 7. Sitemap and Robots Issues
 
 #### Problem: Sitemap not generating
+
 **Error**: Sitemap.xml not found or empty
 
 **Causes**:
+
 - Contentlayer not generating types
 - Sitemap function not properly exported
 - Build process not running
 
 **Solutions**:
+
 1. Generate contentlayer types:
+
 ```bash
 pnpm contentlayer build
 ```
 
-2. Check sitemap function export:
+2.Check sitemap function export:
+
 ```tsx
 // app/sitemap.ts
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -577,22 +600,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 ```
 
-3. Verify build process:
+3.Verify build process:
+
 ```bash
 pnpm build
 # Check .next/server/app/sitemap.xml
 ```
 
 #### Problem: Robots.txt not accessible
+
 **Error**: 404 for /robots.txt
 
 **Causes**:
+
 - Robots function not properly exported
 - Next.js not recognizing robots.ts
 - Build issues
 
 **Solutions**:
+
 1. Check robots function export:
+
 ```tsx
 // app/robots.ts
 export default function robots(): MetadataRoute.Robots {
@@ -600,32 +628,39 @@ export default function robots(): MetadataRoute.Robots {
 }
 ```
 
-2. Verify file location:
+2.Verify file location:
+
 ```
 app/robots.ts  # Correct location
 ```
 
-3. Test robots.txt generation:
+Test robots.txt generation:
+
 ```bash
 pnpm build
 # Check .next/server/app/robots.txt
 ```
 
 #### Problem: Sitemap missing dynamic content
+
 **Error**: Sitemap only shows static routes
 
 **Causes**:
+
 - Contentlayer data not available
 - Dynamic route generation failing
 - Import issues
 
 **Solutions**:
+
 1. Check contentlayer integration:
+
 ```tsx
 import { allPosts, allProjects, allPages } from 'contentlayer2/generated'
 ```
 
-2. Verify content directory structure:
+2.Verify content directory structure:
+
 ```
 content/
 ├── posts/
@@ -633,7 +668,8 @@ content/
 └── pages/
 ```
 
-3. Test with simplified sitemap:
+3.Test with simplified sitemap:
+
 ```tsx
 // Use sitemap-simple.ts for testing
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -642,15 +678,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ```
 
 #### Problem: AI bots not blocked
+
 **Error**: AI crawlers still accessing site
 
 **Causes**:
+
 - Robots.txt not properly configured
 - Bot user agents not recognized
 - Caching issues
 
 **Solutions**:
-1. Check robots.txt configuration:
+1.Check robots.txt configuration:
+
 ```tsx
 {
   userAgent: 'GPTBot',
@@ -658,7 +697,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 ```
 
-2. Verify bot user agents:
+2.Verify bot user agents:
+
 ```tsx
 const aiCrawlers = [
   'GPTBot',
@@ -669,7 +709,8 @@ const aiCrawlers = [
 ]
 ```
 
-3. Test robots.txt output:
+3.Test robots.txt output:
+
 ```bash
 curl https://polything.co.uk/robots.txt
 ```
@@ -803,45 +844,55 @@ pnpm test --watch
 ### 6. API Client Issues
 
 #### Problem: API requests failing with timeout errors
+
 **Error**: `Request timeout` or `AbortError`
 **Causes**: Network issues, server overload, incorrect timeout settings, firewall blocking.
-**Solutions**: 
+**Solutions**
+
 - Increase timeout in client configuration
 - Check network connectivity
 - Verify server is responding
 - Check firewall/proxy settings
 
 #### Problem: Retry logic not working as expected
+
 **Error**: Requests failing immediately without retries
 **Causes**: Incorrect retry configuration, non-retryable status codes, network errors.
-**Solutions**: 
+**Solutions**
+
 - Check `retryOnStatus` configuration includes your error codes
 - Verify `retryAttempts` is set correctly
 - Ensure `retryOnNetworkError` is enabled for network issues
 - Check retry delay and backoff settings
 
 #### Problem: Authentication failures
+
 **Error**: `401 Unauthorized` or `403 Forbidden`
 **Causes**: Invalid credentials, expired tokens, incorrect authentication method.
-**Solutions**: 
+**Solutions**
+
 - Verify username/password or API key
 - Check authentication method (basic auth vs API key)
 - Ensure credentials are properly set in configuration
 - Test authentication with curl or Postman
 
 #### Problem: Batch requests failing or timing out
+
 **Error**: Batch processing errors, partial failures
 **Causes**: Too high concurrency, server rate limiting, memory issues.
-**Solutions**: 
+**Solutions**
+
 - Reduce concurrency level in batch requests
 - Implement delays between batches
 - Check server rate limiting headers
 - Monitor memory usage during batch processing
 
 #### Problem: Error logging not capturing API errors
+
 **Error**: Missing error logs for API failures
 **Causes**: Logging not properly integrated, error logger not initialized.
-**Solutions**: 
+**Solutions**
+
 - Ensure error logger is initialized before API calls
 - Check logging configuration and file permissions
 - Verify error logger integration in API client

@@ -163,12 +163,30 @@
 - Content will be exported to `/content/` directory structure for Contentlayer processing
 - **Testing Framework:** Comprehensive test suite with 510+ tests covering unit, integration, E2E, performance, and SEO validation
 - **Test Commands:** `npm run test:integration`, `npm run test:performance`, `npm run test:seo`, `npm run test:all`
+- **Playwright MCP:** Advanced browser automation with Multi-Context Proxy for enhanced testing capabilities
+- **E2E Test Commands:** `npm run test:e2e`, `npm run test:e2e:ui`, `npm run test:e2e:headed`, `npm run test:e2e:debug`
+- **MCP Commands:** `npm run mcp:start`, `npm run mcp:stop`, `npm run playwright:install`, `npm run playwright:report`
 - **For detailed implementation guidance, see:** `docs/wordpress-migration-technical-spec.md`
   - Complete field mapping tables and transformation logic
   - WordPress REST API testing and discovery methods
   - Ready-to-use JavaScript functions for content export
   - Troubleshooting solutions and configuration examples
 - **For testing framework guidance, see:** `docs/testing-framework-guide.md` and `docs/testing-troubleshooting-guide.md`
+- **For Playwright MCP setup, see:** `docs/playwright-mcp-setup-guide.md`
+- `playwright.config.ts` - Playwright configuration with MCP support
+- `mcp-config.json` - MCP server configuration
+- `tests/e2e/global-setup.ts` - Global setup for Playwright tests
+- `tests/e2e/global-teardown.ts` - Global teardown for Playwright tests
+- `tests/e2e/pages/base-page.ts` - Base page object class
+- `tests/e2e/pages/homepage.ts` - Homepage page object
+- `tests/e2e/pages/project-page.ts` - Project page object
+- `tests/e2e/pages/blog-page.ts` - Blog page object
+- `tests/e2e/critical-journeys.spec.ts` - Critical user journey E2E tests
+- `tests/e2e/accessibility.spec.ts` - Accessibility E2E tests
+- `tests/e2e/performance.spec.ts` - Performance E2E tests
+- `tests/e2e/seo.spec.ts` - SEO E2E tests
+- `tests/e2e/utils/test-helpers.ts` - Test utility functions
+- `tests/e2e/fixtures/test-data.ts` - Test data and fixtures
 
 ## Tasks
 
@@ -253,6 +271,8 @@
   - [x] 4.12 Accessibility testing (WCAG 2.1 compliance)
   - [x] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
   - [x] 4.14 Set up CI/CD pipeline with automated testing
+  - [x] 4.15 Set up Playwright MCP and design comprehensive front-end testing structure and add to CI/CD pipeline
+
 
 - [ ] 5.0 Deploy and Validate Migration
   - [ ] 5.1 Set up staging environment (Vercel recommended)
