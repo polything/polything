@@ -1,0 +1,58 @@
+{
+  "name": "polything-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server configuration for Polything WordPress to Next.js migration testing",
+  "browser": {
+    "browserName": "chromium",
+    "userDataDir": "./test-results/user-data",
+    "launchOptions": {
+      "headless": false,
+      "args": [
+        "--disable-web-security",
+        "--disable-features=VizDisplayCompositor",
+        "--enable-features=NetworkService,NetworkServiceLogging",
+        "--remote-debugging-port=9222",
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    }
+  },
+  "server": {
+    "port": 8080,
+    "host": "localhost",
+    "cors": {
+      "origin": ["http://localhost:3000", "http://localhost:8080"],
+      "credentials": true
+    }
+  },
+  "testing": {
+    "baseUrl": "http://localhost:3000",
+    "timeout": 30000,
+    "retries": 3,
+    "screenshots": true,
+    "videos": true,
+    "traces": true
+  },
+  "environments": {
+    "development": {
+      "baseUrl": "http://localhost:3000",
+      "apiUrl": "http://localhost:3000/api"
+    },
+    "staging": {
+      "baseUrl": "https://staging.polything.co.uk",
+      "apiUrl": "https://staging.polything.co.uk/api"
+    },
+    "production": {
+      "baseUrl": "https://polything.co.uk",
+      "apiUrl": "https://polything.co.uk/api"
+    }
+  },
+  "features": {
+    "accessibility": true,
+    "performance": true,
+    "seo": true,
+    "crossBrowser": true,
+    "mobile": true,
+    "api": true
+  }
+}

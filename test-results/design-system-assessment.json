@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-09-09T08:42:43.187Z",
+  "pageUrl": "http://localhost:3000/design-system-demo",
+  "pageTitle": "Polything | Strategic Marketing for Visionary Brands",
+  "components": {
+    "buttons": 19,
+    "inputs": 0,
+    "links": 2,
+    "headings": 38,
+    "images": 0,
+    "forms": 0,
+    "cards": 0,
+    "containers": 1,
+    "grids": 5,
+    "sections": 2
+  },
+  "accessibilityChecks": {
+    "hasMainLandmark": true,
+    "hasNavigation": false,
+    "hasHeadings": true,
+    "hasAltText": true,
+    "hasFormLabels": true,
+    "hasFocusableElements": true
+  },
+  "designSystemElements": {
+    "typography": 118,
+    "colors": 178,
+    "spacing": 67,
+    "layout": 39,
+    "components": 0
+  },
+  "responsiveChecks": {
+    "hasViewportMeta": true,
+    "hasResponsiveClasses": true,
+    "hasFlexibleLayout": true
+  },
+  "interactiveElements": {
+    "clickableButtons": 19,
+    "clickableLinks": 2,
+    "formInputs": 0,
+    "hoverableElements": 25
+  },
+  "performanceMetrics": {
+    "totalElements": 468,
+    "imagesWithSrc": 0,
+    "scripts": 125,
+    "stylesheets": 1
+  },
+  "overallScore": 94
+}

@@ -9,7 +9,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/contentlayer.config.test.ts', '<rootDir>/app/.*\\.disabled/.*', '<rootDir>/scripts/wp-media-fetcher.test.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },

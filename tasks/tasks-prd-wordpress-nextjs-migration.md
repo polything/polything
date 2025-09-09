@@ -41,9 +41,25 @@
 - `docs/implementation-status.md` - Current implementation status and progress
 - `wordpress-plugin-fix.php` - WordPress plugin to expose themerain_* fields via REST API
 - `lib/content/media-resolver.ts` - Media ID to URL resolution
-- `lib/content/media-resolver.test.ts` - Unit tests for media resolution
+- `lib/content/media-resolver.test.ts` - Unit tests for media resolution (29 tests, all passing)
 - `lib/content/slug-manager.ts` - Slug collision handling
-- `lib/content/slug-manager.test.ts` - Unit tests for slug management
+- `lib/content/slug-manager.test.ts` - Unit tests for slug management (17 tests, all passing)
+- `lib/content/html-to-mdx.ts` - HTML to MDX conversion with embed preservation
+- `lib/content/html-to-mdx.test.ts` - Unit tests for HTML to MDX conversion (25 tests, all passing)
+- `lib/content/html-sanitizer.ts` - WordPress artifact removal and link fixing
+- `lib/content/html-sanitizer.test.ts` - Unit tests for HTML sanitization (18 tests, all passing)
+- `lib/content/front-matter-writer.ts` - YAML front-matter generation with nested objects
+- `lib/content/front-matter-writer.test.ts` - Unit tests for front-matter generation (19 tests, all passing)
+- `lib/content/content-validator.ts` - Comprehensive content validation with SEO fallbacks
+- `lib/content/content-validator.test.ts` - Unit tests for content validation (19 tests, all passing)
+- `lib/content/schema-validator.ts` - Schema validation logic
+- `lib/content/schema-validator.test.ts` - Unit tests for schema validation (22 tests, all passing)
+- `lib/content/schema-defaults-enforcer.ts` - Automatic schema type defaults
+- `lib/content/schema-defaults-enforcer.test.ts` - Unit tests for schema defaults (19 tests, all passing)
+- `lib/content/validation-runner.ts` - Orchestrated validation system
+- `lib/content/validation-runner.test.ts` - Unit tests for validation runner (19 tests, all passing)
+- `lib/content/export-reporter.ts` - Export reporting and statistics
+- `lib/content/export-reporter.test.ts` - Unit tests for export reporting (23 tests, all passing)
 - `contentlayer.config.ts` - Contentlayer configuration
 - `contentlayer.config.test.ts` - Tests for contentlayer configuration
 - `app/layout.tsx` - Root layout with JSON-LD structured data
@@ -100,6 +116,10 @@
 - `docs/design-system-guide.md` - Complete design system documentation
 - `docs/design-system-implementation.md` - Implementation documentation
 - `docs/design-system-troubleshooting.md` - Troubleshooting guide
+- `docs/phase2-implementation-guide.md` - Phase 2 implementation guide and architecture
+- `docs/phase2-troubleshooting-guide.md` - Phase 2 troubleshooting and debugging guide
+- `docs/testing-framework-guide.md` - Comprehensive testing framework documentation
+- `docs/testing-troubleshooting-guide.md` - Testing framework troubleshooting guide
 - `lib/seo/metadata.ts` - SEO metadata generation utilities
 - `lib/seo/metadata.test.ts` - Unit tests for SEO functions
 - `lib/seo/sitemap.ts` - XML sitemap generation
@@ -123,9 +143,16 @@
 - `tailwind.config.ts` - Tailwind CSS configuration
 - `package.json` - Dependencies and scripts
 - `jest.config.js` - Jest testing configuration with Next.js integration
+- `jest.integration.config.js` - Jest configuration for integration tests
 - `jest.setup.js` - Jest setup file for global test configuration
 - `.babelrc` - Babel configuration for Jest with React support
 - `playwright.config.ts` - Playwright E2E testing configuration
+- `tests/integration/wp-export-integration.test.js` - Integration tests for WP API → MDX export workflow
+- `tests/e2e/critical-journeys.spec.ts` - E2E tests for critical user journeys
+- `tests/performance/lighthouse.test.js` - Performance testing with Lighthouse
+- `tests/seo/json-ld-snapshots.test.ts` - Snapshot tests for JSON-LD output
+- `tests/seo/seo-validation.test.js` - SEO validation tests
+- `tests/ci/json-ld-crawler.test.js` - CI step for crawling and validating JSON-LD
 - `audit-report.json` - Generated WordPress site audit report
 
 ### Notes
@@ -134,11 +161,32 @@
 - Use `npm test` to run all tests, `npm run test:unit` for unit tests, `npm run test:e2e` for E2E tests
 - Media assets will be mirrored from WordPress to `/public/images/` during export
 - Content will be exported to `/content/` directory structure for Contentlayer processing
+- **Testing Framework:** Comprehensive test suite with 510+ tests covering unit, integration, E2E, performance, and SEO validation
+- **Test Commands:** `npm run test:integration`, `npm run test:performance`, `npm run test:seo`, `npm run test:all`
+- **Playwright MCP:** Advanced browser automation with Multi-Context Proxy for enhanced testing capabilities
+- **E2E Test Commands:** `npm run test:e2e`, `npm run test:e2e:ui`, `npm run test:e2e:headed`, `npm run test:e2e:debug`
+- **MCP Commands:** `npm run mcp:start`, `npm run mcp:stop`, `npm run playwright:install`, `npm run playwright:report`
 - **For detailed implementation guidance, see:** `docs/wordpress-migration-technical-spec.md`
   - Complete field mapping tables and transformation logic
   - WordPress REST API testing and discovery methods
   - Ready-to-use JavaScript functions for content export
   - Troubleshooting solutions and configuration examples
+- **For testing framework guidance, see:** `docs/testing-framework-guide.md` and `docs/testing-troubleshooting-guide.md`
+- **For Playwright MCP setup, see:** `docs/playwright-mcp-setup-guide.md`
+- `playwright.config.ts` - Playwright configuration with MCP support
+- `mcp-config.json` - MCP server configuration
+- `tests/e2e/global-setup.ts` - Global setup for Playwright tests
+- `tests/e2e/global-teardown.ts` - Global teardown for Playwright tests
+- `tests/e2e/pages/base-page.ts` - Base page object class
+- `tests/e2e/pages/homepage.ts` - Homepage page object
+- `tests/e2e/pages/project-page.ts` - Project page object
+- `tests/e2e/pages/blog-page.ts` - Blog page object
+- `tests/e2e/critical-journeys.spec.ts` - Critical user journey E2E tests
+- `tests/e2e/accessibility.spec.ts` - Accessibility E2E tests
+- `tests/e2e/performance.spec.ts` - Performance E2E tests
+- `tests/e2e/seo.spec.ts` - SEO E2E tests
+- `tests/e2e/utils/test-helpers.ts` - Test utility functions
+- `tests/e2e/fixtures/test-data.ts` - Test data and fixtures
 
 ## Tasks
 
@@ -153,20 +201,20 @@
   - [x] 1.8 Create configuration file for WordPress API endpoints and credentials
   - [x] 1.9 Add error handling and retry logic for API calls
 
-- [ ] 2.0 Implement Content Transformation and Field Mapping
-  - [ ] 2.1 Define normalised front-matter schema (hero, links, featured, etc.)
-  - [ ] 2.2 Create TypeScript interfaces for content types (Post, Page, Project)
-  - [ ] 2.3 Implement field mapping logic (themerain_* → clean schema)
-  - [ ] 2.4 Resolve media IDs → URLs → /images/** paths
-  - [ ] 2.5 Handle slug collisions (define precedence: page > project > post)
-  - [ ] 2.6 Add raw theme_meta block for traceability (optional toggle)
-  - [ ] 2.7 Convert WP HTML content body → MDX (preserve embeds, headings, images)
-  - [ ] 2.8 Extend front-matter writer to include seo block (defaults + overrides)
-  - [ ] 2.9 Add content validator to ensure seo.title/description fallbacks work and lengths are sane
-  - [ ] 2.10 Enforce schema type defaults by content type when unspecified
-  - [ ] 2.11 Sanitize and clean HTML content (remove WP-specific classes, fix broken links)
-  - [ ] 2.12 Run content validation (lint MDX, check YAML schema)
-  - [ ] 2.13 Generate content export report (success/failure counts, error summary)
+- [x] 2.0 Implement Content Transformation and Field Mapping
+  - [x] 2.1 Define normalised front-matter schema (hero, links, featured, etc.)
+  - [x] 2.2 Create TypeScript interfaces for content types (Post, Page, Project)
+  - [x] 2.3 Implement field mapping logic (themerain_* → clean schema)
+  - [x] 2.4 Resolve media IDs → URLs → /images/** paths
+  - [x] 2.5 Handle slug collisions (define precedence: page > project > post)
+  - [x] 2.6 Add raw theme_meta block for traceability (optional toggle)
+  - [x] 2.7 Convert WP HTML content body → MDX (preserve embeds, headings, images)
+  - [x] 2.8 Extend front-matter writer to include seo block (defaults + overrides)
+  - [x] 2.9 Add content validator to ensure seo.title/description fallbacks work and lengths are sane
+  - [x] 2.10 Enforce schema type defaults by content type when unspecified
+  - [x] 2.11 Sanitize and clean HTML content (remove WP-specific classes, fix broken links)
+  - [x] 2.12 Run content validation (lint MDX, check YAML schema)
+  - [x] 2.13 Generate content export report (success/failure counts, error summary)
 
 - [x] 3.0 Build Next.js Application with Contentlayer Integration
   - [x] 3.1 Initialise Next.js 14 App Router project
@@ -207,22 +255,24 @@
   - [x] 3.18.17 Add all Hero component variants to design system (HeroContent, HeroHomepage, HeroDesignSystem)
   - [x] 3.18.18 Create comprehensive design system documentation and troubleshooting guide
 
-- [ ] 4.0 Create Content Validation and Testing Framework
+- [x] 4.0 Create Content Validation and Testing Framework
   - [x] 4.1 Set up testing infrastructure (Jest, React Testing Library, Playwright)
-  - [ ] 4.2 Unit tests for transformation functions (field mapping, media resolution)
-  - [ ] 4.3 Integration tests for WP API → MDX export
+  - [x] 4.2 Unit tests for transformation functions (field mapping, media resolution)
+  - [x] 4.3 Integration tests for WP API → MDX export
   - [x] 4.4 Component tests for hero, project, blog post layouts
   - [x] 4.4.1 Component tests for error boundary and loading states (31 tests)
-  - [ ] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
-  - [ ] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
-  - [ ] 4.7 Unit tests for JSON builders (Page/Post/Project)
-  - [ ] 4.8 Snapshot tests for JSON-LD output
-  - [ ] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
-  - [ ] 4.10 Manual check in Rich Results Test for a sample of each type
-  - [ ] 4.11 SEO validation (meta tags, structured data, sitemap)
-  - [ ] 4.12 Accessibility testing (WCAG 2.1 compliance)
-  - [ ] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
-  - [ ] 4.14 Set up CI/CD pipeline with automated testing
+  - [x] 4.5 E2E tests (critical journeys: homepage → project → blog → contact)
+  - [x] 4.6 Performance tests (PageSpeed, Lighthouse, Core Web Vitals)
+  - [x] 4.7 Unit tests for JSON builders (Page/Post/Project)
+  - [x] 4.8 Snapshot tests for JSON-LD output
+  - [x] 4.9 CI step: crawl built pages and validate JSON-LD presence (basic shape)
+  - [x] 4.10 Manual check in Rich Results Test for a sample of each type
+  - [x] 4.11 SEO validation (meta tags, structured data, sitemap)
+  - [x] 4.12 Accessibility testing (WCAG 2.1 compliance)
+  - [x] 4.13 Cross-browser testing (Chrome, Firefox, Safari, Edge)
+  - [x] 4.14 Set up CI/CD pipeline with automated testing
+  - [x] 4.15 Set up Playwright MCP and design comprehensive front-end testing structure and add to CI/CD pipeline
+
 
 - [ ] 5.0 Deploy and Validate Migration
   - [ ] 5.1 Set up staging environment (Vercel recommended)

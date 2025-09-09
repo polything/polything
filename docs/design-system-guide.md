@@ -30,6 +30,7 @@ const brandColors = {
 ### Spacing Scale
 
 Based on Tailwind's spacing scale:
+
 - xs: 4px
 - sm: 8px  
 - md: 16px

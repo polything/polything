@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation'
 import { allPosts } from 'contentlayer2/generated'
 import Hero from '@/components/hero'
 import { MDXContent } from 'next-contentlayer2/hooks'
+import { generateBlogPostMetadata } from '@/lib/seo/metadata'
+import { generateAllJsonLd } from '@/lib/seo/structured-data'
+import Script from 'next/script'
 
 interface BlogPostPageProps {
   params: {
@@ -24,20 +27,13 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     }
   }
 
-  return {
-    title: post.seo?.title || post.title,
-    description: post.seo?.description || `Read more about ${post.title}`,
-    openGraph: {
-      title: post.seo?.title || post.title,
-      description: post.seo?.description || `Read more about ${post.title}`,
-      images: post.seo?.schema?.image ? [post.seo.schema.image] : [],
-      type: 'article',
-      publishedTime: post.seo?.schema?.publishDate || post.date,
-      modifiedTime: post.seo?.schema?.modifiedDate || post.updated || post.date,
-      authors: [post.seo?.schema?.author || 'Polything Ltd'],
-    },
-    canonical: post.seo?.canonical,
-  }
+  return generateBlogPostMetadata(post as any, {
+    baseUrl: 'https://polything.co.uk',
+    siteName: 'Polything',
+    defaultDescription: 'Strategic Marketing for Visionary Brands',
+    defaultImage: '/images/og-default.jpg',
+    twitterHandle: '@polything'
+  })
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -48,36 +44,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   // Generate JSON-LD structured data
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': post.seo?.schema?.type || 'BlogPosting',
-    headline: post.title,
-    url: `https://polything.co.uk${post.url}`,
-    description: post.seo?.description,
-    image: post.seo?.schema?.image,
-    author: {
-      '@type': 'Organization',
-      name: post.seo?.schema?.author || 'Polything Ltd',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Polything Ltd',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://polything.co.uk/logo.png',
-      },
-    },
-    datePublished: post.seo?.schema?.publishDate || post.date,
-    dateModified: post.seo?.schema?.modifiedDate || post.updated || post.date,
-  }
+  const jsonLdArray = generateAllJsonLd('https://polything.co.uk', post as any)
 
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      {jsonLdArray.map((jsonLd, index) => (
+        <Script
+          key={`jsonld-${index}`}
+          id={`ld-article-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ))}
 
       <main className="min-h-screen">
         {/* Hero Section */}
