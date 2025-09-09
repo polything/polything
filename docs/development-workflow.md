@@ -1,8 +1,8 @@
 # Development Workflow Guide
 
-**Date:** 2025-01-27  
-**Status:** Active  
-**Project:** WordPress to Next.js Migration
+**Date** 2025-01-27  
+**Status** Active  
+**Project** WordPress to Next.js Migration
 
 ## Overview
 
@@ -73,10 +73,10 @@ polything-redesign/
 
 ### File Naming Conventions
 
-- **Components**: `kebab-case.tsx` (e.g., `hero-section.tsx`)
-- **Tests**: `component-name.test.tsx` (e.g., `hero.test.tsx`)
-- **Content**: `index.mdx` in slug directories
-- **Scripts**: `kebab-case.mjs` (e.g., `wp-export.mjs`)
+- **Components** `kebab-case.tsx` (e.g., `hero-section.tsx`)
+- **Tests** `component-name.test.tsx` (e.g., `hero.test.tsx`)
+- **Content** `index.mdx` in slug directories
+- **Scripts** `kebab-case.mjs` (e.g., `wp-export.mjs`)
 
 ## Development Commands
 
@@ -129,9 +129,9 @@ pnpm type-check
 
 ### Branch Strategy
 
-- **Main Branch**: `main` - Production-ready code
-- **Feature Branches**: `task-X-description` - Individual tasks
-- **Development Branch**: `develop` - Integration branch
+- **Main Branch** `main` - Production-ready code
+- **Feature Branches** `task-X-description` - Individual tasks
+- **Development Branch** `develop` - Integration branch
 
 ### Commit Convention
 
@@ -157,21 +157,21 @@ refactor: improve contentlayer configuration
 
 ### Pull Request Process
 
-1. **Create Feature Branch**: `git checkout -b task-3-hero-component`
-2. **Implement with TDD**: Write tests first, then implementation
-3. **Run Tests**: Ensure all tests pass
-4. **Update Documentation**: Update relevant docs
-5. **Create PR**: With descriptive title and description
-6. **Code Review**: Address feedback
-7. **Merge**: After approval and CI passes
+1. **Create Feature Branch** `git checkout -b task-3-hero-component`
+2. **Implement with TDD** Write tests first, then implementation
+3. **Run Tests** Ensure all tests pass
+4. **Update Documentation** Update relevant docs
+5. **Create PR** With descriptive title and description
+6. **Code Review** Address feedback
+7. **Merge** After approval and CI passes
 
 ## Testing Strategy
 
 ### Unit Tests
 
-**Location**: Alongside component files
-**Framework**: Jest + React Testing Library
-**Coverage**: Minimum 80% for critical components
+**Location** Alongside component files
+**Framework** Jest + React Testing Library
+**Coverage** Minimum 80% for critical components
 
 ```typescript
 // Example unit test
@@ -192,8 +192,8 @@ describe('Hero Component', () => {
 
 ### Integration Tests
 
-**Purpose**: Test component interactions
-**Scope**: Page templates with contentlayer integration
+**Purpose** Test component interactions
+**Scope** Page templates with contentlayer integration
 
 ```typescript
 // Example integration test
@@ -212,18 +212,18 @@ describe('Project Detail Page', () => {
 
 ### End-to-End Tests
 
-**Framework**: Playwright (planned)
-**Scope**: Critical user journeys
-**Examples**: Homepage → Project → Contact flow
+**Framework** Playwright (planned)
+**Scope** Critical user journeys
+**Examples** Homepage → Project → Contact flow
 
 ## Code Quality Standards
 
 ### TypeScript
 
-- **Strict Mode**: Enabled
-- **Type Coverage**: 100% for new code
-- **Interfaces**: Use interfaces over types for object shapes
-- **Type Guards**: Use for runtime type checking
+- **Strict Mode** Enabled
+- **Type Coverage** 100% for new code
+- **Interfaces** Use interfaces over types for object shapes
+- **Type Guards** Use for runtime type checking
 
 ```typescript
 // Good: Interface for component props
@@ -239,10 +239,10 @@ function isHeroData(data: unknown): data is HeroData {
 
 ### React Best Practices
 
-- **Functional Components**: Use function declarations
-- **Hooks**: Use custom hooks for reusable logic
-- **Props**: Destructure props in function parameters
-- **Keys**: Use stable keys for list items
+- **Functional Components** Use function declarations
+- **Hooks** Use custom hooks for reusable logic
+- **Props** Destructure props in function parameters
+- **Keys** Use stable keys for list items
 
 ```typescript
 // Good: Functional component with proper typing
@@ -259,10 +259,10 @@ function Hero({ hero }: HeroProps) {
 
 ### CSS and Styling
 
-- **Tailwind CSS**: Use utility classes
-- **Responsive Design**: Mobile-first approach
-- **Accessibility**: Include proper ARIA attributes
-- **Performance**: Optimize for Core Web Vitals
+- **Tailwind CSS** Use utility classes
+- **Responsive Design** Mobile-first approach
+- **Accessibility** Include proper ARIA attributes
+- **Performance** Optimize for Core Web Vitals
 
 ```tsx
 // Good: Responsive and accessible
@@ -302,25 +302,25 @@ This is the page content in MDX format.
 
 ### Content Validation
 
-- **Front-matter**: Validate required fields
-- **MDX Syntax**: Check for valid syntax
-- **Images**: Verify image paths exist
-- **Links**: Check for broken links
+- **Front-matter** Validate required fields
+- **MDX Syntax** Check for valid syntax
+- **Images** Verify image paths exist
+- **Links** Check for broken links
 
 ## Performance Guidelines
 
 ### Core Web Vitals
 
-- **LCP**: < 2.5s (Largest Contentful Paint)
-- **FID**: < 100ms (First Input Delay)
-- **CLS**: < 0.1 (Cumulative Layout Shift)
+- **LCP** < 2.5s (Largest Contentful Paint)
+- **FID** < 100ms (First Input Delay)
+- **CLS** < 0.1 (Cumulative Layout Shift)
 
 ### Optimization Strategies
 
-1. **Image Optimization**: Use Next.js Image component
-2. **Code Splitting**: Automatic route-based splitting
-3. **Static Generation**: Pre-render all content
-4. **Caching**: Appropriate cache headers
+1. **Image Optimization** Use Next.js Image component
+2. **Code Splitting** Automatic route-based splitting
+3. **Static Generation** Pre-render all content
+4. **Caching** Appropriate cache headers
 
 ### Performance Monitoring
 
@@ -337,28 +337,28 @@ npx @next/bundle-analyzer
 
 ### Staging Deployment
 
-1. **Build**: `pnpm build`
-2. **Test**: Run all tests
-3. **Deploy**: Push to staging branch
-4. **Validate**: Check staging site
-5. **Approve**: Stakeholder approval
+1. **Build** `pnpm build`
+2. **Test** Run all tests
+3. **Deploy** Push to staging branch
+4. **Validate** Check staging site
+5. **Approve** Stakeholder approval
 
 ### Production Deployment
 
-1. **Merge**: Merge approved changes to main
-2. **Build**: Production build
-3. **Deploy**: Deploy to production
-4. **Monitor**: Check error logs and performance
-5. **Verify**: Confirm site functionality
+1. **Merge** Merge approved changes to main
+2. **Build** Production build
+3. **Deploy** Deploy to production
+4. **Monitor** Check error logs and performance
+5. **Verify** Confirm site functionality
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Contentlayer Types**: Run `pnpm contentlayer build`
-2. **Test Failures**: Check Jest configuration
-3. **Build Errors**: Verify TypeScript types
-4. **Image Issues**: Check public directory structure
+1. **Contentlayer Types** Run `pnpm contentlayer build`
+2. **Test Failures** Check Jest configuration
+3. **Build Errors** Verify TypeScript types
+4. **Image Issues** Check public directory structure
 
 ### Debug Commands
 
@@ -377,17 +377,17 @@ pnpm test --verbose
 
 ### Code Documentation
 
-- **JSDoc**: For complex functions
-- **Comments**: For non-obvious logic
-- **README**: For setup instructions
-- **API Docs**: For utility functions
+- **JSDoc** For complex functions
+- **Comments** For non-obvious logic
+- **README** For setup instructions
+- **API Docs** For utility functions
 
 ### Documentation Updates
 
-- **Implementation Docs**: Update after major changes
-- **Troubleshooting**: Add new issues and solutions
-- **Workflow**: Update process changes
-- **API Changes**: Document breaking changes
+- **Implementation Docs** Update after major changes
+- **Troubleshooting** Add new issues and solutions
+- **Workflow** Update process changes
+- **API Changes** Document breaking changes
 
 ## Quality Assurance
 
