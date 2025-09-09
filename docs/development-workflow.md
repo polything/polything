@@ -212,9 +212,9 @@ describe('Project Detail Page', () => {
 
 ### End-to-End Tests
 
-**Framework** Playwright (planned)
-**Scope** Critical user journeys
-**Examples** Homepage → Project → Contact flow
+**Framework:** Playwright (planned)
+**Scope:** Critical user journeys
+**Examples:** Homepage → Project → Contact flow
 
 ## Code Quality Standards
 

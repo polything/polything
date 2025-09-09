@@ -427,11 +427,11 @@ npm run test:performance -- --verbose
 - **SEO Tests:** Comprehensive SEO validation
 
 ### Coverage Goals
-- Unit test coverage: >90%
-- Integration test coverage: All critical workflows
-- E2E test coverage: All user journeys
-- Performance test coverage: All page types
-- SEO test coverage: All content types
+- **Unit test coverage:** >90%
+- **Integration test coverage:** All critical workflows
+- **E2E test coverage:** All user journeys
+- **Performance test coverage:** All page types
+- **SEO test coverage:** All content types
 
 ## Maintenance
 

@@ -12,11 +12,11 @@ This guide provides comprehensive instructions for setting up and using Playwrig
 
 Playwright MCP is a server that facilitates browser automation by managing multiple browser contexts. It provides:
 
-- **Advanced browser automation** with multiple context support
-- **Enhanced debugging capabilities** with persistent browser sessions
-- **Improved test reliability** through better resource management
-- **Cross-browser testing** with unified API
-- **Performance optimization** through connection pooling
+- **Advanced browser automation:** with multiple context support
+- **Enhanced debugging capabilities:** with persistent browser sessions
+- **Improved test reliability:** through better resource management
+- **Cross-browser testing:** with unified API
+- **Performance optimization:** through connection pooling
 
 ## Installation
 
@@ -472,29 +472,29 @@ export default defineConfig({
 ## Monitoring and Reporting
 
 ### 1. Test Reports
-- HTML reports with screenshots and videos
-- JSON reports for CI integration
-- JUnit reports for test management systems
+- **HTML reports:** with screenshots and videos
+- **JSON reports:** for CI integration
+- **JUnit reports:** for test management systems
 
 ### 2. Performance Monitoring
-- Core Web Vitals tracking
-- Page load time monitoring
-- Network performance analysis
+- **Core Web Vitals tracking**
+- **Page load time monitoring**
+- **Network performance analysis**
 
 ### 3. Accessibility Monitoring
-- WCAG compliance checking
-- Screen reader compatibility
-- Keyboard navigation testing
+- **WCAG compliance checking**
+- **Screen reader compatibility**
+- **Keyboard navigation testing**
 
 ## Conclusion
 
 The Playwright MCP setup provides a robust foundation for comprehensive E2E testing of the WordPress to Next.js migration project. It enables:
 
-- **Advanced browser automation** with MCP server
-- **Comprehensive test coverage** across multiple dimensions
-- **Reliable test execution** with proper error handling
-- **Performance monitoring** with Core Web Vitals
-- **Accessibility compliance** with WCAG 2.1 testing
-- **SEO validation** with structured data testing
+- **Advanced browser automation:** with MCP server
+- **Comprehensive test coverage:** across multiple dimensions
+- **Reliable test execution:** with proper error handling
+- **Performance monitoring:** with Core Web Vitals
+- **Accessibility compliance:** with WCAG 2.1 testing
+- **SEO validation:** with structured data testing
 
 For additional support and troubleshooting, refer to the [Playwright documentation](https://playwright.dev/docs/intro) and [MCP documentation](https://playwright.dev/agents).

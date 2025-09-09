@@ -467,43 +467,43 @@ npx lighthouse http://localhost:3000 --only-categories=performance --chrome-flag
 ## Best Practices for Troubleshooting
 
 ### 1. Isolate the Problem
-- Run tests individually
-- Check specific test files
-- Verify environment setup
+- **Run tests individually**
+- **Check specific test files**
+- **Verify environment setup**
 
 ### 2. Check Dependencies
-- Ensure all packages are installed
-- Verify version compatibility
-- Check for peer dependency warnings
+- **Ensure all packages are installed**
+- **Verify version compatibility**
+- **Check for peer dependency warnings**
 
 ### 3. Review Configuration
-- Validate Jest configuration
-- Check Playwright setup
-- Verify environment variables
+- **Validate Jest configuration**
+- **Check Playwright setup**
+- **Verify environment variables**
 
 ### 4. Use Debug Tools
-- Enable verbose logging
-- Use browser dev tools
-- Check network requests
+- **Enable verbose logging**
+- **Use browser dev tools**
+- **Check network requests**
 
 ### 5. Update Documentation
-- Document new issues and solutions
-- Update troubleshooting guide
-- Share knowledge with team
+- **Document new issues and solutions**
+- **Update troubleshooting guide**
+- **Share knowledge with team**
 
 ## Getting Help
 
 ### Resources
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [Playwright Documentation](https://playwright.dev/docs/intro)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Lighthouse Documentation](https://developers.google.com/web/tools/lighthouse)
+- **[Jest Documentation](https://jestjs.io/docs/getting-started)**
+- **[Playwright Documentation](https://playwright.dev/docs/intro)**
+- **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)**
+- **[Lighthouse Documentation](https://developers.google.com/web/tools/lighthouse)**
 
 ### Support Channels
-- Project documentation
-- Team knowledge base
-- GitHub issues
-- Community forums
+- **Project documentation**
+- **Team knowledge base**
+- **GitHub issues**
+- **Community forums**
 
 ## Conclusion
 

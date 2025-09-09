@@ -12,32 +12,32 @@ This document outlines the implementation of the Next.js application skeleton wi
 
 ### Content Management
 
-- **Contentlayer2** Modern content management system for MDX files
-- **MDX Support** Rich content with React components
-- **Type Safety** Full TypeScript integration with generated types
+- **Contentlayer2:** Modern content management system for MDX files
+- **MDX Support:** Rich content with React components
+- **Type Safety:** Full TypeScript integration with generated types
 
 ### Content Types
 
 #### 1. Posts (Blog Articles)
 
-- **Path** `/content/posts/[slug]/index.mdx`
-- **Route** `/blog/[slug]`
-- **Schema** BlogPosting with author, publish date, categories, tags
-- **Features** Featured posts, hero sections, SEO metadata
+- **Path:** `/content/posts/[slug]/index.mdx`
+- **Route:** `/blog/[slug]`
+- **Schema:** BlogPosting with author, publish date, categories, tags
+- **Features:** Featured posts, hero sections, SEO metadata
 
 #### 2. Projects (Case Studies)
 
-- **Path** `/content/projects/[slug]/index.mdx`
-- **Route** `/work/[slug]`
-- **Schema** CreativeWork with project links, client information
-- **Features** Project URLs, hero sections, case study content
+- **Path:** `/content/projects/[slug]/index.mdx`
+- **Route:** `/work/[slug]`
+- **Schema:** CreativeWork with project links, client information
+- **Features:** Project URLs, hero sections, case study content
 
 #### 3. Pages (Static Content)
 
-- **Path** `/content/pages/[slug]/index.mdx`
-- **Route** `/[slug]`
-- **Schema** WebPage for general content
-- **Features** Hero sections, flexible content layout
+- **Path:** `/content/pages/[slug]/index.mdx`
+- **Route:** `/[slug]`
+- **Schema:** WebPage for general content
+- **Features:** Hero sections, flexible content layout
 
 ## File Structure
 
@@ -82,9 +82,9 @@ contentlayer.config.ts        # Contentlayer configuration
 
 ### Hero Component
 
-**Location** `components/hero.tsx`
+**Location:** `components/hero.tsx`
 
-**Features**
+**Features:**
 
 - Image and video background support
 - Custom text and background colors
@@ -92,7 +92,7 @@ contentlayer.config.ts        # Contentlayer configuration
 - Next.js Image optimization
 - Accessibility features
 
-**Props**
+**Props:**
 
 ```typescript
 interface HeroData {
@@ -105,7 +105,7 @@ interface HeroData {
 }
 ```
 
-**Usage**
+**Usage:**
 
 ```tsx
 <Hero hero={page.hero} />
@@ -113,16 +113,16 @@ interface HeroData {
 
 ### Error Boundary Component
 
-**Location** `components/error-boundary.tsx`
+**Location:** `components/error-boundary.tsx`
 
-**Features**
+**Features:**
 - Catches JavaScript errors in component tree
 - Custom fallback UI with retry functionality
 - Development error logging
 - Accessibility-compliant error messages
 - Custom error messages and fallback components
 
-**Props**
+**Props:**
 ```typescript
 interface ErrorBoundaryProps {
   children: ReactNode
@@ -132,7 +132,7 @@ interface ErrorBoundaryProps {
 }
 ```
 
-**Usage**
+**Usage:**
 ```tsx
 <ErrorBoundary onRetry={reset}>
   <ComponentThatMightThrow />
@@ -141,16 +141,16 @@ interface ErrorBoundaryProps {
 
 ### Loading Component
 
-**Location** `components/loading.tsx`
+**Location:** `components/loading.tsx`
 
-**Features**
+**Features:**
 - Multiple size variants (sm, md, lg)
 - Layout options (full screen, inline, button)
 - Custom loading messages
 - Accessibility support with screen readers
 - Specialized components for common use cases
 
-**Props**
+**Props:**
 ```typescript
 interface LoadingProps {
   message?: string
@@ -162,7 +162,7 @@ interface LoadingProps {
 }
 ```
 
-**Usage**
+**Usage:**
 ```tsx
 // Page loading
 <PageLoading message="Loading page..." />
@@ -178,28 +178,28 @@ interface LoadingProps {
 
 All page templates follow a consistent pattern:
 
-1. **Static Generation**: `generateStaticParams()` for all content
-2. **SEO Metadata**: `generateMetadata()` with OpenGraph support
-3. **JSON-LD**: Structured data for search engines
-4. **Hero Section**: Optional hero with custom styling
-5. **Content Rendering**: MDX content with prose styling
+1. **Static Generation:** `generateStaticParams()` for all content
+2. **SEO Metadata:** `generateMetadata()` with OpenGraph support
+3. **JSON-LD:** Structured data for search engines
+4. **Hero Section:** Optional hero with custom styling
+5. **Content Rendering:** MDX content with prose styling
 
 ## SEO Implementation
 
 ### Site-wide Structured Data
 
-**Location** `app/layout.tsx`
+**Location:** `app/layout.tsx`
 
-- **Organization** Company information, contact details, social media
-- **Website** Site-wide metadata and publisher information
+- **Organization:** Company information, contact details, social media
+- **Website:** Site-wide metadata and publisher information
 
 ### Per-page Structured Data
 
 Each page template includes:
 
-- **BlogPosting** For blog posts with author and publish dates
-- **CreativeWork** For projects with client information
-- **WebPage** For static pages
+- **BlogPosting:** For blog posts with author and publish dates
+- **CreativeWork:** For projects with client information
+- **WebPage:** For static pages
 
 ### Metadata API
 
@@ -212,15 +212,15 @@ Using Next.js 14 App Router Metadata API:
 
 ### Sitemap Generation
 
-**Location** `app/sitemap.ts`
+**Location:** `app/sitemap.ts`
 
-**Features**
+**Features:**
 - Dynamic sitemap with static and contentlayer routes
 - Priority hierarchy: Homepage (1.0) → Work/Blog (0.8) → Projects (0.7) → Posts (0.6) → Pages (0.5)
 - Change frequencies: Weekly for main sections, monthly for content
 - Last modified dates from contentlayer data
 
-**Usage**
+**Usage:**
 ```tsx
 // Automatically generates /sitemap.xml
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -230,15 +230,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 ### Robots.txt Configuration
 
-**Location** `app/robots.ts`
+**Location:** `app/robots.ts`
 
-**Features**
+**Features:**
 - Comprehensive crawler rules
 - AI bot blocking (GPTBot, ChatGPT-User, CCBot, anthropic-ai, Claude-Web)
 - Directory restrictions (API, Next.js internals, admin, private)
 - Sitemap reference
 
-**Usage**
+**Usage:**
 ```tsx
 // Automatically generates /robots.txt
 export default function robots(): MetadataRoute.Robots {
@@ -250,9 +250,9 @@ export default function robots(): MetadataRoute.Robots {
 
 ### Unit Tests
 
-- **Jest** Testing framework with React Testing Library
-- **Component Tests** Hero component with full test coverage
-- **Page Tests** Template structure validation
+- **Jest:** Testing framework with React Testing Library
+- **Component Tests:** Hero component with full test coverage
+- **Page Tests:** Template structure validation
 
 ### Test Coverage
 
@@ -288,9 +288,9 @@ export default function robots(): MetadataRoute.Robots {
 
 ### TDD Approach
 
-1. **Red Phase**: Write failing tests first
-2. **Green Phase**: Implement minimum code to pass tests
-3. **Refactor Phase**: Improve code while maintaining test coverage
+1. **Red Phase:** Write failing tests first
+2. **Green Phase:** Implement minimum code to pass tests
+3. **Refactor Phase:** Improve code while maintaining test coverage
 
 ### Testing Commands
 
@@ -398,10 +398,10 @@ pnpm build
 
 ### Future Enhancements
 
-1. **CMS Integration** Prepare for KeyStatic/Contentful migration
-2. **Performance Monitoring** Add real-time performance tracking
-3. **Analytics** Implement Google Analytics 4
-4. **Search** Add full-text search functionality
+1. **CMS Integration:** Prepare for KeyStatic/Contentful migration
+2. **Performance Monitoring:** Add real-time performance tracking
+3. **Analytics:** Implement Google Analytics 4
+4. **Search:** Add full-text search functionality
 
 ## Dependencies
 
@@ -429,19 +429,19 @@ pnpm build
 
 ### Jest Configuration
 
-- **File** `jest.config.js`
-- **Features** Next.js integration, TypeScript support, ES modules
-- **Test Environment** jsdom for React components
+- **File:** `jest.config.js`
+- **Features:** Next.js integration, TypeScript support, ES modules
+- **Test Environment:** jsdom for React components
 
 ### Contentlayer Configuration
 
-- **File** `contentlayer.config.ts`
-- **Features** Document type definitions, computed fields, content directory
+- **File:** `contentlayer.config.ts`
+- **Features:** Document type definitions, computed fields, content directory
 
 ### Next.js Configuration
 
-- **File** `next.config.mjs`
-- **Features** Image optimization, TypeScript support, ESLint integration
+- **File:** `next.config.mjs`
+- **Features:** Image optimization, TypeScript support, ESLint integration
 
 ---
 

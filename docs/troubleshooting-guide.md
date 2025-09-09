@@ -12,13 +12,13 @@
 
 **Error**: `Cannot find module 'contentlayer2/generated'`
 
-**Causes**:
+**Causes:**
 
 - Contentlayer hasn't generated types yet
 - Build process not run
 - Configuration issues
 
-**Solutions**:
+**Solutions:**
 
 ```bash
 # Generate contentlayer types
@@ -47,19 +47,19 @@ pnpm contentlayer validate
 
 **Error**: Content not appearing in generated types
 
-**Causes**:
+**Causes:**
 
 - Incorrect file paths in contentlayer config
 - Missing front-matter
 - Invalid MDX syntax
 
-**Solutions**:
+**Solutions:**
 
 1. Check file paths match `filePathPattern` in config
 2. Ensure all MDX files have valid front-matter
 3. Validate MDX syntax
 
-**Debug**:
+**Debug:**
 
 ```bash
 # Check contentlayer processing
@@ -75,7 +75,7 @@ pnpm contentlayer validate content/posts/example.mdx
 
 **Error**: `SyntaxError: Unexpected token 'export'`
 
-**Causes**:
+**Causes:**
 
 - Contentlayer uses ES modules
 - Jest configuration not handling ES modules properly

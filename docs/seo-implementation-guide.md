@@ -35,15 +35,18 @@ This document provides comprehensive guidance on the SEO implementation for the 
 ### JSON-LD Structured Data
 
 #### Site-wide Schema
-- **Organization Schema**: Company information, contact details, social profiles
-- **Website Schema**: Site-wide search functionality and navigation
+
+- **Organization Schema:** Company information, contact details, social profiles
+- **Website Schema:** Site-wide search functionality and navigation
 
 #### Per-page Schema
-- **WebPage**: Default for static pages
-- **BlogPosting**: For blog posts with article-specific metadata
-- **CreativeWork**: For project pages with work-specific details
+
+- **WebPage:** Default for static pages
+- **BlogPosting:** For blog posts with article-specific metadata
+- **CreativeWork:** For project pages with work-specific details
 
 #### Schema Type Defaults
+
 ```typescript
 // Automatic schema type assignment based on content type
 const schemaDefaults = {
@@ -56,11 +59,13 @@ const schemaDefaults = {
 ### SEO Fallback System
 
 #### Title Fallback Chain
+
 1. `doc.seo.title` (explicit SEO title)
 2. `doc.hero.title` (hero section title)
 3. `doc.title` (document title)
 
 #### Description Fallback Chain
+
 1. `doc.seo.description` (explicit SEO description)
 2. `doc.hero.subtitle` (hero subtitle)
 3. `doc.hero.description` (hero description)
@@ -69,11 +74,13 @@ const schemaDefaults = {
 ### Content Validation
 
 #### Field Length Validation
-- **Title**: 60 characters (warning at 50+)
-- **Description**: 160 characters (warning at 140+)
-- **Custom SEO fields**: Configurable limits
+
+- **Title:** 60 characters (warning at 50+)
+- **Description:** 160 characters (warning at 140+)
+- **Custom SEO fields:** Configurable limits
 
 #### Schema Validation
+
 - Required fields validation
 - Schema type enforcement
 - Breadcrumb structure validation
@@ -173,39 +180,39 @@ interface SEOOptions {
 ## Testing
 
 ### Unit Tests
-- **Structured Data Tests**: 15 tests covering all JSON-LD generation
-- **Metadata Tests**: 14 tests covering metadata generation
-- **Validation Tests**: 14 tests covering SEO validation
-- **Integration Tests**: 20 tests covering end-to-end JSON-LD validation
+- **Structured Data Tests:** 15 tests covering all JSON-LD generation
+- **Metadata Tests:** 14 tests covering metadata generation
+- **Validation Tests:** 14 tests covering SEO validation
+- **Integration Tests:** 20 tests covering end-to-end JSON-LD validation
 
 ### Snapshot Tests
-- **JSON-LD Snapshots**: 18 tests ensuring consistent output
-- **Schema Validation**: Comprehensive schema type testing
+- **JSON-LD Snapshots:** 18 tests ensuring consistent output
+- **Schema Validation:** Comprehensive schema type testing
 
 ### Test Coverage
-- **Total Tests**: 63 SEO-related tests
-- **Coverage**: 100% of SEO functionality
-- **Status**: All tests passing
+- **Total Tests:** 63 SEO-related tests
+- **Coverage:** 100% of SEO functionality
+- **Status:** All tests passing
 
 ## Best Practices
 
 ### Content Guidelines
-1. **Titles**: Keep under 60 characters for optimal display
-2. **Descriptions**: Aim for 120-160 characters
-3. **Images**: Use high-quality images for OpenGraph
-4. **Canonical URLs**: Always provide canonical URLs
+1. **Titles:** Keep under 60 characters for optimal display
+2. **Descriptions:** Aim for 120-160 characters
+3. **Images:** Use high-quality images for OpenGraph
+4. **Canonical URLs:** Always provide canonical URLs
 
 ### Schema Guidelines
-1. **Required Fields**: Ensure all required schema fields are present
-2. **Type Consistency**: Use correct schema types for content
-3. **Breadcrumbs**: Include breadcrumbs for complex site structures
-4. **Organization Data**: Keep company information up to date
+1. **Required Fields:** Ensure all required schema fields are present
+2. **Type Consistency:** Use correct schema types for content
+3. **Breadcrumbs:** Include breadcrumbs for complex site structures
+4. **Organization Data:** Keep company information up to date
 
 ### Performance Considerations
-1. **JSON-LD Size**: Keep structured data concise
-2. **Image Optimization**: Use Next.js Image component
-3. **Metadata Caching**: Leverage Next.js metadata caching
-4. **Lazy Loading**: Implement lazy loading for non-critical content
+1. **JSON-LD Size:** Keep structured data concise
+2. **Image Optimization:** Use Next.js Image component
+3. **Metadata Caching:** Leverage Next.js metadata caching
+4. **Lazy Loading:** Implement lazy loading for non-critical content
 
 ## Troubleshooting
 
@@ -227,10 +234,10 @@ interface SEOOptions {
 - Validate breadcrumb structure
 
 ### Debug Tools
-- **Rich Results Test**: Google's structured data testing tool
-- **Schema Markup Validator**: W3C's schema validation tool
-- **Lighthouse**: SEO and performance auditing
-- **Console Logs**: Check for validation warnings
+- **Rich Results Test:** Google's structured data testing tool
+- **Schema Markup Validator:** W3C's schema validation tool
+- **Lighthouse:** SEO and performance auditing
+- **Console Logs:** Check for validation warnings
 
 ## Migration Checklist
 
@@ -248,17 +255,17 @@ interface SEOOptions {
 ## Future Enhancements
 
 ### Potential Improvements
-1. **Dynamic Schema**: More sophisticated schema type detection
-2. **A/B Testing**: SEO metadata A/B testing framework
-3. **Analytics Integration**: SEO performance tracking
-4. **Multi-language Support**: International SEO implementation
-5. **Advanced Breadcrumbs**: Dynamic breadcrumb generation
+1. **Dynamic Schema:** More sophisticated schema type detection
+2. **A/B Testing:** SEO metadata A/B testing framework
+3. **Analytics Integration:** SEO performance tracking
+4. **Multi-language Support:** International SEO implementation
+5. **Advanced Breadcrumbs:** Dynamic breadcrumb generation
 
 ### Monitoring
-1. **Search Console**: Monitor structured data errors
-2. **Analytics**: Track SEO performance metrics
-3. **Lighthouse CI**: Automated SEO auditing
-4. **Error Tracking**: Monitor SEO-related errors
+1. **Search Console:** Monitor structured data errors
+2. **Analytics:** Track SEO performance metrics
+3. **Lighthouse CI:** Automated SEO auditing
+4. **Error Tracking:** Monitor SEO-related errors
 
 ## References
 

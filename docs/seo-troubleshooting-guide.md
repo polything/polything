@@ -314,10 +314,10 @@ if (debugSEO) {
 ```
 
 ### External Validation
-- **Google Rich Results Test**: https://search.google.com/test/rich-results
-- **Schema Markup Validator**: https://validator.schema.org/
-- **Facebook Sharing Debugger**: https://developers.facebook.com/tools/debug/
-- **Twitter Card Validator**: https://cards-dev.twitter.com/validator
+- **Google Rich Results Test:** https://search.google.com/test/rich-results
+- **Schema Markup Validator:** https://validator.schema.org/
+- **Facebook Sharing Debugger:** https://developers.facebook.com/tools/debug/
+- **Twitter Card Validator:** https://cards-dev.twitter.com/validator
 
 ## Performance Optimization
 

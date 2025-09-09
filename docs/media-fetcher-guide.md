@@ -10,20 +10,20 @@ The WordPress Media Fetcher (`scripts/wp-media-fetcher.js`) downloads all media 
 
 ### ✅ **Core Functionality**
 
-- **WordPress Media API Integration** Fetches all media from `/wp-json/wp/v2/media`
-- **Batch Processing** Handles large media collections efficiently (configurable batch size)
-- **Local Directory Mirroring** Maintains WordPress upload structure in `/public/images/`
-- **Error Handling** Gracefully handles failed downloads with detailed error reporting
-- **Skip Existing Files** Avoids re-downloading existing media (configurable)
-- **Progress Reporting** Real-time batch progress updates
-- **Comprehensive Reporting** Detailed success/failure reports with error details
+- **WordPress Media API Integration:** Fetches all media from `/wp-json/wp/v2/media`
+- **Batch Processing:** Handles large media collections efficiently (configurable batch size)
+- **Local Directory Mirroring:** Maintains WordPress upload structure in `/public/images/`
+- **Error Handling:** Gracefully handles failed downloads with detailed error reporting
+- **Skip Existing Files:** Avoids re-downloading existing media (configurable)
+- **Progress Reporting:** Real-time batch progress updates
+- **Comprehensive Reporting:** Detailed success/failure reports with error details
 
 ### ✅ **Performance Features**
 
-- **Pagination Support** Automatically handles multiple pages of media
-- **Timeout Protection** Configurable request timeouts to prevent hanging
-- **Memory Efficient** Processes media in batches to avoid memory issues
-- **Concurrent Downloads** Parallel processing within batches
+- **Pagination Support:** Automatically handles multiple pages of media
+- **Timeout Protection:** Configurable request timeouts to prevent hanging
+- **Memory Efficient:** Processes media in batches to avoid memory issues
+- **Concurrent Downloads:** Parallel processing within batches
 
 ## Usage
 
@@ -67,20 +67,20 @@ console.log(`Downloaded: ${results.downloaded}, Errors: ${results.errors}`);
 
 Fetches all media items from WordPress REST API.
 
-**Parameters**
+**Parameters:**
 
 - `siteUrl` (string) WordPress site URL
 - `options` (object) Fetch options
   - `perPage` (number) Items per page (default: 100)
   - `timeout` (number) Request timeout (default: 30000)
 
-**Returns** Promise<Array> Array of media items
+**Returns:** Promise<Array> Array of media items
 
 ### `downloadMediaFile(mediaUrl, localPath, options)`
 
 Downloads a single media file and saves it locally.
 
-**Parameters**
+**Parameters:**
 
 - `mediaUrl` (string) URL of the media file
 - `localPath` (string) Local path to save the file
@@ -88,7 +88,7 @@ Downloads a single media file and saves it locally.
   - `skipExisting` (boolean) Skip if file exists (default: true)
   - `timeout` (number) Download timeout (default: 30000)
 
-**Returns** Promise<string> Local path of saved file
+**Returns:** Promise<string> Local path of saved file
 
 ### `processMediaItem(mediaItem, options)`
 
@@ -101,28 +101,28 @@ Processes a single media item and downloads it.
   - `outputDir` (string) Output directory (default: './public/images')
   - `skipExisting` (boolean) Skip existing files (default: true)
 
-**Returns** Promise<object> Processing result with success/error status
+**Returns:** Promise<object> Processing result with success/error status
 
 ### `fetchAndMirrorMedia(siteUrl, options)`
 
 Main function that fetches and mirrors all media from a WordPress site.
 
-**Parameters**
+**Parameters:**
 
 - `siteUrl` (string) WordPress site URL
 - `options` (object) Processing options (see Configuration Options)
 
-**Returns** Promise<object> Processing results summary
+**Returns:** Promise<object> Processing results summary
 
 ### `generateMediaReport(results)`
 
 Generates a formatted report of the media fetch operation.
 
-**Parameters**
+**Parameters:**
 
 - `results` (object) Results from fetchAndMirrorMedia
 
-**Returns** string Formatted markdown report
+**Returns:** string Formatted markdown report
 
 ## Directory Structure
 
@@ -150,10 +150,10 @@ public/images/
 
 ### Common Error Types
 
-1. **403 Forbidden** Access denied (common with protected files)
-2. **404 Not Found** File no longer exists on WordPress
-3. **Timeout** Request took too long
-4. **Network Error** Connection issues
+1. **403 Forbidden:** Access denied (common with protected files)
+2. **404 Not Found:** File no longer exists on WordPress
+3. **Timeout:** Request took too long
+4. **Network Error:** Connection issues
 
 ### Error Reporting
 
@@ -185,11 +185,11 @@ npm test -- scripts/wp-media-fetcher.test.js --testNamePattern="should fetch med
 
 ### Test Categories
 
-1. **API Integration Tests** WordPress REST API communication
-2. **Download Tests** File download and saving functionality
-3. **Error Handling Tests** Graceful error handling
-4. **Batch Processing Tests** Large dataset handling
-5. **Report Generation Tests** Output formatting
+1. **API Integration Tests:** WordPress REST API communication
+2. **Download Tests:** File download and saving functionality
+3. **Error Handling Tests:** Graceful error handling
+4. **Batch Processing Tests:** Large dataset handling
+5. **Report Generation Tests:** Output formatting
 
 ## Real-World Performance
 
@@ -207,9 +207,9 @@ npm test -- scripts/wp-media-fetcher.test.js --testNamePattern="should fetch med
 
 #### 1. **403 Forbidden Errors**
 
-**Cause** WordPress site has access restrictions on certain files.
+**Cause:** WordPress site has access restrictions on certain files.
 
-**Solution**
+**Solution:**
 
 - Check WordPress file permissions
 - Verify REST API access
@@ -217,9 +217,9 @@ npm test -- scripts/wp-media-fetcher.test.js --testNamePattern="should fetch med
 
 #### 2. **Timeout Errors**
 
-**Cause** Large files or slow network connections.
+**Cause:** Large files or slow network connections.
 
-**Solution**
+**Solution:**
 
 ```javascript
 // Increase timeout
@@ -230,9 +230,9 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 
 #### 3. **Memory Issues with Large Sites**
 
-**Cause** Processing too many files simultaneously.
+**Cause:** Processing too many files simultaneously.
 
-**Solution**
+**Solution:**
 
 ```javascript
 // Reduce batch size
@@ -243,9 +243,9 @@ const results = await fetchAndMirrorMedia(siteUrl, {
 
 #### 4. **Directory Permission Errors**
 
-**Cause** Insufficient permissions to create directories.
+**Cause:** Insufficient permissions to create directories.
 
-**Solution**
+**Solution:**
 
 ```bash
 # Ensure write permissions
@@ -269,19 +269,19 @@ if (DEBUG) {
 
 The media fetcher works seamlessly with the content export system:
 
-1. **Content Export** (`wp-export.js`) exports content and references media IDs
-2. **Media Fetcher** (`wp-media-fetcher.js`) downloads all media files
-3. **Media Resolution** (future) will update content to use local paths
+1. **Content Export:** (`wp-export.js`) exports content and references media IDs
+2. **Media Fetcher:** (`wp-media-fetcher.js`) downloads all media files
+3. **Media Resolution:** (future) will update content to use local paths
 
 ## Future Enhancements
 
 ### Planned Features
 
-1. **Media Resolution Integration** - Update content to use local media paths
-2. **Image Optimization** - Compress and optimize images during download
-3. **Duplicate Detection** - Identify and handle duplicate media files
-4. **Progress Persistence** - Resume interrupted downloads
-5. **Media Validation** - Verify downloaded files are valid
+1. **Media Resolution Integration:** - Update content to use local media paths
+2. **Image Optimization:** - Compress and optimize images during download
+3. **Duplicate Detection:** - Identify and handle duplicate media files
+4. **Progress Persistence:** - Resume interrupted downloads
+5. **Media Validation:** - Verify downloaded files are valid
 
 ### Configuration File Support
 
@@ -318,10 +318,10 @@ Future version will support configuration files:
 
 ### Metrics to Track
 
-1. **Download Success Rate** Percentage of successful downloads
-2. **Average Download Time** Time per media item
-3. **Error Distribution** Types and frequency of errors
-4. **Storage Usage** Total size of downloaded media
+1. **Download Success Rate:** Percentage of successful downloads
+2. **Average Download Time:** Time per media item
+3. **Error Distribution:** Types and frequency of errors
+4. **Storage Usage:** Total size of downloaded media
 
 ### Monitoring Commands
 
