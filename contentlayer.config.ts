@@ -2,49 +2,19 @@ import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: 'posts/**/*.mdx',
+  filePathPattern: 'post/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     slug: { type: 'string', required: true },
+    type: { type: 'string', required: true },
     date: { type: 'date', required: true },
     updated: { type: 'date', required: false },
-    categories: { type: 'list', of: { type: 'string' }, required: false },
-    tags: { type: 'list', of: { type: 'string' }, required: false },
+    categories: { type: 'json', required: false },
+    tags: { type: 'json', required: false },
     featured: { type: 'boolean', required: false },
-    hero: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        subtitle: { type: 'string', required: false },
-        image: { type: 'string', required: false },
-        video: { type: 'string', required: false },
-        text_color: { type: 'string', required: false },
-        background_color: { type: 'string', required: false },
-      },
-      required: false,
-    },
-    seo: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        description: { type: 'string', required: false },
-        canonical: { type: 'string', required: false },
-        schema: {
-          type: 'nested',
-          of: {
-            type: { type: 'string', required: false },
-            image: { type: 'string', required: false },
-            author: { type: 'string', required: false },
-            publishDate: { type: 'string', required: false },
-            modifiedDate: { type: 'string', required: false },
-            breadcrumbs: { type: 'list', of: { type: 'json' }, required: false },
-          },
-          required: false,
-        },
-      },
-      required: false,
-    },
+    hero: { type: 'json', required: false },
+    seo: { type: 'json', required: false },
   },
   computedFields: {
     url: {
@@ -56,57 +26,19 @@ export const Post = defineDocumentType(() => ({
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
-  filePathPattern: 'projects/**/*.mdx',
+  filePathPattern: 'project/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     slug: { type: 'string', required: true },
+    type: { type: 'string', required: true },
     date: { type: 'date', required: true },
     updated: { type: 'date', required: false },
-    categories: { type: 'list', of: { type: 'string' }, required: false },
-    tags: { type: 'list', of: { type: 'string' }, required: false },
-    hero: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        subtitle: { type: 'string', required: false },
-        image: { type: 'string', required: false },
-        video: { type: 'string', required: false },
-        text_color: { type: 'string', required: false },
-        background_color: { type: 'string', required: false },
-      },
-      required: false,
-    },
-    links: {
-      type: 'nested',
-      of: {
-        url: { type: 'string', required: false },
-        image: { type: 'string', required: false },
-        video: { type: 'string', required: false },
-      },
-      required: false,
-    },
-    seo: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        description: { type: 'string', required: false },
-        canonical: { type: 'string', required: false },
-        schema: {
-          type: 'nested',
-          of: {
-            type: { type: 'string', required: false },
-            image: { type: 'string', required: false },
-            author: { type: 'string', required: false },
-            publishDate: { type: 'string', required: false },
-            modifiedDate: { type: 'string', required: false },
-            breadcrumbs: { type: 'list', of: { type: 'json' }, required: false },
-          },
-          required: false,
-        },
-      },
-      required: false,
-    },
+    categories: { type: 'json', required: false },
+    tags: { type: 'json', required: false },
+    hero: { type: 'json', required: false },
+    links: { type: 'json', required: false },
+    seo: { type: 'json', required: false },
   },
   computedFields: {
     url: {
@@ -118,53 +50,30 @@ export const Project = defineDocumentType(() => ({
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',
-  filePathPattern: 'pages/**/*.mdx',
+  filePathPattern: 'page/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     slug: { type: 'string', required: true },
+    type: { type: 'string', required: true },
     date: { type: 'date', required: true },
     updated: { type: 'date', required: false },
-    categories: { type: 'list', of: { type: 'string' }, required: false },
-    tags: { type: 'list', of: { type: 'string' }, required: false },
-    hero: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        subtitle: { type: 'string', required: false },
-        image: { type: 'string', required: false },
-        video: { type: 'string', required: false },
-        text_color: { type: 'string', required: false },
-        background_color: { type: 'string', required: false },
-      },
-      required: false,
-    },
-    seo: {
-      type: 'nested',
-      of: {
-        title: { type: 'string', required: false },
-        description: { type: 'string', required: false },
-        canonical: { type: 'string', required: false },
-        schema: {
-          type: 'nested',
-          of: {
-            type: { type: 'string', required: false },
-            image: { type: 'string', required: false },
-            author: { type: 'string', required: false },
-            publishDate: { type: 'string', required: false },
-            modifiedDate: { type: 'string', required: false },
-            breadcrumbs: { type: 'list', of: { type: 'json' }, required: false },
-          },
-          required: false,
-        },
-      },
-      required: false,
-    },
+    categories: { type: 'json', required: false },
+    tags: { type: 'json', required: false },
+    hero: { type: 'json', required: false },
+    seo: { type: 'json', required: false },
   },
   computedFields: {
     url: {
       type: 'string',
-      resolve: (doc) => `/${doc.slug}`,
+      resolve: (doc) => {
+        // Service pages go to /services/[slug]
+        const serviceSlugs = ['marketing-strategy', 'marketing-services', 'business-mentoring'];
+        if (serviceSlugs.includes(doc.slug)) {
+          return `/services/${doc.slug}`;
+        }
+        return `/${doc.slug}`;
+      },
     },
   },
 }))

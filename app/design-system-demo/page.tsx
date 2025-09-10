@@ -1,3 +1,8 @@
+// ⚠️  PROTECTED FILE - DO NOT MODIFY ⚠️
+// This is the design system demo page and showcases the new design system.
+// Any changes to this file require explicit approval.
+// Last protected: 2025-01-27
+
 import { 
   Container, 
   Section, 

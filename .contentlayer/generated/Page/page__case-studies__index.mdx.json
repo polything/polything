@@ -1,0 +1,35 @@
+{
+  "title": "Case Studies",
+  "slug": "case-studies",
+  "type": "Page",
+  "date": "2019-11-15T19:50:33.000Z",
+  "updated": "2024-10-14T13:18:27.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "Case Studies",
+    "description": "Client Case Studies",
+    "canonical": "https://polything.co.uk/case-studies"
+  },
+  "body": {
+    "raw": "\n<h1>Client Case Studies</h1> ",
+    "code": "var Component=(()=>{var p=Object.create;var o=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var C=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var m=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),_=(t,e)=>{for(var n in e)o(t,n,{get:e[n],enumerable:!0})},r=(t,e,n,a)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let s of C(e))!h.call(t,s)&&s!==n&&o(t,s,{get:()=>e[s],enumerable:!(a=x(e,s))||a.enumerable});return t};var f=(t,e,n)=>(n=t!=null?p(g(t)):{},r(e||!t||!t.__esModule?o(n,\"default\",{value:t,enumerable:!0}):n,t)),S=t=>r(o({},\"__esModule\",{value:!0}),t);var c=m((b,u)=>{u.exports=_jsx_runtime});var y={};_(y,{default:()=>d,frontmatter:()=>j});var i=f(c()),j={title:\"Case Studies\",slug:\"case-studies\",type:\"Page\",date:\"2019-11-15T19:50:33\",updated:\"2024-10-14T14:18:27\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"Case Studies\",description:\"Client Case Studies\",canonical:\"https://polything.co.uk/case-studies\"}};function l(t){return(0,i.jsx)(\"h1\",{children:\"Client Case Studies\"})}function d(t={}){let{wrapper:e}=t.components||{};return e?(0,i.jsx)(e,{...t,children:(0,i.jsx)(l,{...t})}):l(t)}return S(y);})();\n;return Component;"
+  },
+  "_id": "page/case-studies/index.mdx",
+  "_raw": {
+    "sourceFilePath": "page/case-studies/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "page/case-studies",
+    "contentType": "mdx",
+    "flattenedPath": "page/case-studies"
+  },
+  "url": "/case-studies"
+}

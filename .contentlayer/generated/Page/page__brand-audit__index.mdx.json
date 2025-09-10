@@ -1,0 +1,35 @@
+{
+  "title": "Brand Audit",
+  "slug": "brand-audit",
+  "type": "Page",
+  "date": "2024-10-10T09:43:12.000Z",
+  "updated": "2024-10-14T12:20:19.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "Brand Audit",
+    "description": "",
+    "canonical": "https://polything.co.uk/brand-audit"
+  },
+  "body": {
+    "raw": "\n",
+    "code": "var Component=(()=>{var g=Object.create;var a=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,_=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),b=(t,e)=>{for(var n in e)a(t,n,{get:e[n],enumerable:!0})},u=(t,e,n,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of p(e))!_.call(t,r)&&r!==n&&a(t,r,{get:()=>e[r],enumerable:!(i=m(e,r))||i.enumerable});return t};var h=(t,e,n)=>(n=t!=null?g(x(t)):{},u(e||!t||!t.__esModule?a(n,\"default\",{value:t,enumerable:!0}):n,t)),j=t=>u(a({},\"__esModule\",{value:!0}),t);var c=f((A,d)=>{d.exports=_jsx_runtime});var M={};b(M,{default:()=>s,frontmatter:()=>y});var o=h(c()),y={title:\"Brand Audit\",slug:\"brand-audit\",type:\"Page\",date:\"2024-10-10T10:43:12\",updated:\"2024-10-14T13:20:19\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"Brand Audit\",description:\"\",canonical:\"https://polything.co.uk/brand-audit\"}};function l(t){return(0,o.jsx)(o.Fragment,{})}function s(t={}){let{wrapper:e}=t.components||{};return e?(0,o.jsx)(e,{...t,children:(0,o.jsx)(l,{...t})}):l(t)}return j(M);})();\n;return Component;"
+  },
+  "_id": "page/brand-audit/index.mdx",
+  "_raw": {
+    "sourceFilePath": "page/brand-audit/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "page/brand-audit",
+    "contentType": "mdx",
+    "flattenedPath": "page/brand-audit"
+  },
+  "url": "/brand-audit"
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Chaos to Clarity Audit",
+  "slug": "chaos-to-clarity-audit",
+  "type": "Page",
+  "date": "2025-08-15T07:43:36.000Z",
+  "updated": "2025-08-15T09:42:39.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "Chaos to Clarity Audit",
+    "description": "",
+    "canonical": "https://polything.co.uk/chaos-to-clarity-audit"
+  },
+  "body": {
+    "raw": "\n",
+    "code": "var Component=(()=>{var g=Object.create;var r=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var p=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var y=(t,o)=>()=>(o||t((o={exports:{}}).exports,o),o.exports),_=(t,o)=>{for(var e in o)r(t,e,{get:o[e],enumerable:!0})},c=(t,o,e,i)=>{if(o&&typeof o==\"object\"||typeof o==\"function\")for(let n of m(o))!x.call(t,n)&&n!==e&&r(t,n,{get:()=>o[n],enumerable:!(i=h(o,n))||i.enumerable});return t};var C=(t,o,e)=>(e=t!=null?g(p(t)):{},c(o||!t||!t.__esModule?r(e,\"default\",{value:t,enumerable:!0}):e,t)),f=t=>c(r({},\"__esModule\",{value:!0}),t);var s=y((k,l)=>{l.exports=_jsx_runtime});var M={};_(M,{default:()=>d,frontmatter:()=>j});var a=C(s()),j={title:\"Chaos to Clarity Audit\",slug:\"chaos-to-clarity-audit\",type:\"Page\",date:\"2025-08-15T08:43:36\",updated:\"2025-08-15T10:42:39\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"Chaos to Clarity Audit\",description:\"\",canonical:\"https://polything.co.uk/chaos-to-clarity-audit\"}};function u(t){return(0,a.jsx)(a.Fragment,{})}function d(t={}){let{wrapper:o}=t.components||{};return o?(0,a.jsx)(o,{...t,children:(0,a.jsx)(u,{...t})}):u(t)}return f(M);})();\n;return Component;"
+  },
+  "_id": "page/chaos-to-clarity-audit/index.mdx",
+  "_raw": {
+    "sourceFilePath": "page/chaos-to-clarity-audit/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "page/chaos-to-clarity-audit",
+    "contentType": "mdx",
+    "flattenedPath": "page/chaos-to-clarity-audit"
+  },
+  "url": "/chaos-to-clarity-audit"
+}

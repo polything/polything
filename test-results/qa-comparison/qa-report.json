@@ -1,0 +1,2504 @@
+{
+  "summary": {
+    "totalPages": 10,
+    "pagesWithIssues": 10,
+    "criticalIssues": 1,
+    "highPriorityIssues": 6,
+    "mediumPriorityIssues": 3,
+    "timestamp": "2025-09-09T11:16:18.721Z"
+  },
+  "results": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "priority": "critical",
+      "localUrl": "http://localhost:3000/",
+      "liveUrl": "https://polything.co.uk/",
+      "localScreenshot": "test-results/qa-comparison/__local.png",
+      "liveScreenshot": "test-results/qa-comparison/__live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"Polything | Strategic Marketing for Visionary Brands\" vs \"Polything Marketing Consultancy - Based in London\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "h1",
+            "severity": "high",
+            "message": "H1 mismatch: \"Build a Brand That Leads — Without the Guesswork\" vs \"ELEVATE\nYOUR MARKETING\""
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 14 vs 64"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 11 vs 57"
+          }
+        ],
+        "local": {
+          "title": "Polything | Strategic Marketing for Visionary Brands",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "Build a Brand That Leads — Without the Guesswork",
+          "h2s": [
+            "Strategic Marketing for Visionary Brands",
+            "Strategy That Moves",
+            "Services Snapshot",
+            "Case Studies Snapshot",
+            "Is your brand distinct—or just busy?",
+            "Client Reviews",
+            "About Polything",
+            "Ready to stop second-guessing—and start growing with purpose?"
+          ],
+          "images": [
+            {
+              "src": "http://localhost:3000/images/logos/nme.png",
+              "alt": "NME",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/boots-hearingcare.png",
+              "alt": "Boots Hearingcare",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/time-inc.png",
+              "alt": "Time Inc.",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/unipart-group.png",
+              "alt": "Unipart Group",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/devon-county-council.png",
+              "alt": "Devon County Council",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/south-gloucestershire-council.png",
+              "alt": "South Gloucestershire Council",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/logos/luton-borough-council.png",
+              "alt": "Luton Borough Council",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "src": "http://localhost:3000/images/wolf-case-study.png",
+              "alt": "WOLF",
+              "width": 385,
+              "height": 192
+            },
+            {
+              "src": "http://localhost:3000/images/blackriver-case-study.png",
+              "alt": "Blackriver Ramps",
+              "width": 385,
+              "height": 192
+            },
+            {
+              "src": "http://localhost:3000/images/bluefort-case-study.png",
+              "alt": "Bluefort Security",
+              "width": 385,
+              "height": 192
+            },
+            {
+              "src": "http://localhost:3000/images/clients/chris-dicker.webp",
+              "alt": "Chris Dicker",
+              "width": 76,
+              "height": 76
+            },
+            {
+              "src": "http://localhost:3000/images/clients/benoit-collin.png",
+              "alt": "Benoit Collin",
+              "width": 76,
+              "height": 76
+            },
+            {
+              "src": "http://localhost:3000/images/clients/ellora-coupe.jpeg",
+              "alt": "Ellora Coupe",
+              "width": 76,
+              "height": 76
+            },
+            {
+              "src": "http://localhost:3000/images/chris-talintyre.jpeg",
+              "alt": "Chris, Polything Founder",
+              "width": 257,
+              "height": 257
+            }
+          ],
+          "links": [
+            {
+              "href": "http://localhost:3000/",
+              "text": ""
+            },
+            {
+              "href": "http://localhost:3000/#services",
+              "text": "Services"
+            },
+            {
+              "href": "http://localhost:3000/services/marketing-strategy",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "http://localhost:3000/#approach",
+              "text": "Approach"
+            },
+            {
+              "href": "http://localhost:3000/#case-studies",
+              "text": "Case Studies"
+            },
+            {
+              "href": "http://localhost:3000/#reviews",
+              "text": "Reviews"
+            },
+            {
+              "href": "http://localhost:3000/#about",
+              "text": "About"
+            },
+            {
+              "href": "http://localhost:3000/#",
+              "text": "Take the Brand Assessment"
+            },
+            {
+              "href": "http://localhost:3000/#",
+              "text": "Explore Our Services"
+            },
+            {
+              "href": "http://localhost:3000/#",
+              "text": "View Case Studies"
+            },
+            {
+              "href": "http://localhost:3000/#",
+              "text": "Meet Chris"
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Book a call",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Book a Free Discovery Call",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Explore Services",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "View All Case Studies",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Take the Free Assessment",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Read More Reviews",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "About Chris",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Book a Free Discovery Call",
+              "type": "submit",
+              "disabled": false
+            },
+            {
+              "text": "Book a Call",
+              "type": "submit",
+              "disabled": false
+            }
+          ],
+          "forms": []
+        },
+        "live": {
+          "title": "Polything Marketing Consultancy - Based in London",
+          "metaDescription": "We help Start-ups, Scale-ups and SMEs scale their marketing effectively. An expert-led strategic marketing consultancy for founders looking to grow.",
+          "h1": "ELEVATE\nYOUR MARKETING",
+          "h2s": [
+            "Selected Clients",
+            "A Marketing Consultancy based in London",
+            "Three ways we can help SME business owners – Our Services",
+            "Case Studies",
+            "The Momentum Model",
+            "ExplorationCollaborationExperimentationImplementation",
+            "Latest Reviews",
+            "Our Founder",
+            "More Information"
+          ],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/NME_Dark.png",
+              "alt": "NME_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Unipart_Group.png",
+              "alt": "Unipart_Group",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Luton_Bourough_Council.png",
+              "alt": "Luton_Bourough_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Devon_County_Council.png",
+              "alt": "Devon_County_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Time_Inc_Dark.png",
+              "alt": "Time_Inc_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/South_Gloucestershire_Council.png",
+              "alt": "South_Gloucestershire_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Boots_Hearingcare.png",
+              "alt": "Boots_Hearingcare",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Zinc_Media_Dark.png",
+              "alt": "Zinc_Media_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Marie_Claire_Dark.png",
+              "alt": "Marie_Claire_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/WOLF_Dark.png",
+              "alt": "WOLF_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Trusted_Reviews_Dark.png",
+              "alt": "Trusted_Reviews_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/SSS_Learning_Dark.png",
+              "alt": "SSS_Learning_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Much_Better_Adventurers_Dark.png",
+              "alt": "Much_Better_Adventurers_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Aftershokz_Dark.png",
+              "alt": "Aftershokz_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Two_Brooks_Drinks.png",
+              "alt": "Two_Brooks_Drinks",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/This_is_the_Remix.png",
+              "alt": "This_is_the_Remix",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/The_Olive_Oil_Guy.png",
+              "alt": "The_Olive_Oil_Guy",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Starlizard_Hedge_Fund.png",
+              "alt": "Starlizard_Hedge_Fund",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Hamptons_Mortgage_Services.png",
+              "alt": "Hamptons_Mortgage_Services",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Sparkle_Lighting.png",
+              "alt": "Sparkle_Lighting",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Songdrop_logo.png",
+              "alt": "Songdrop_logo",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Skins_Golf.png",
+              "alt": "Skins_Golf",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Out_of_the_Ashes_Charity_Consultancy.png",
+              "alt": "Out_of_the_Ashes_Charity_Consultancy",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Thompson_Sales_Training.png",
+              "alt": "Thompson_Sales_Training",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Skin_Rules.png",
+              "alt": "Skin_Rules",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/JMT_Care_Services.png",
+              "alt": "JMT_Care_Services",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Treasure_Map_Trails.png",
+              "alt": "Treasure_Map_Trails",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Lawnswood_School.png",
+              "alt": "Lawnswood_School",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Kiss_Agency.png",
+              "alt": "Kiss_Agency",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Her_Retrofit_Space.png",
+              "alt": "Her_Retrofit_Space",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Happy_Smiles_Training.png",
+              "alt": "Happy_Smiles_Training",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/cbec_eco_engineering.png",
+              "alt": "cbec_eco_engineering",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Bikmo_Insurance.png",
+              "alt": "Bikmo_Insurance",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Chadwicks_Wealth_Management.png",
+              "alt": "Chadwicks_Wealth_Management",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/03/Are-you-lost-in-the-crowd-or-leading-the-pack_-Mockup-1024x640.png",
+              "alt": "Are you lost in the crowd or leading the pack Mockup",
+              "width": 319,
+              "height": 407
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/ClarityFocus-300x283.png",
+              "alt": "ClarityFocus",
+              "width": 300,
+              "height": 283
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Digital_Marketing_Mastery-300x247.png",
+              "alt": "Digital_Marketing_Mastery",
+              "width": 300,
+              "height": 247
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Subscribe_V2-300x300.png",
+              "alt": "Subscribe_V2",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/04/036-blackriver-team-0523-lichtzelt_com-1-scaled.jpg",
+              "alt": "The Blackriver Team - Case Study",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/WOLF_Approved_Images1.jpg",
+              "alt": "The World's Online Festival - Case Study",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/09/Art_Direction_Graphics.png",
+              "alt": "Bluefort Security",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/09/The_Momentum_Model_1.jpg",
+              "alt": "Strategic Marketing Consultancy",
+              "width": 308,
+              "height": 410
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjWU5A6264ZyKKsIIC3_VG6O8b5I64AY-jlqDWXfY5rr-FMFZMcgjg=s128-c0x00000000-cc-rp-mo-ba3",
+              "alt": "ALV UjWU5A6264ZyKKsIIC3 VG6O8b5I64AY jlqDWXfY5rr FMFZMcgjg=s128 c0x00000000 cc rp mo ba3",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUFLwvuBWZqdF3X7tD6SARHRkx4lhaAOydPJg1sFCSYC7T5gswG=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUFLwvuBWZqdF3X7tD6SARHRkx4lhaAOydPJg1sFCSYC7T5gswG=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjXxndz2SwsUOYrR-yAGQqkfaDmeyrxKVsRkg2XfnEPchk4Atq6w=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjXxndz2SwsUOYrR yAGQqkfaDmeyrxKVsRkg2XfnEPchk4Atq6w=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocJHK1pwdmNrFkhIHRvpRJxzkLhhdqsXrRkZf9FwiUxX5-Kx0A=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocJHK1pwdmNrFkhIHRvpRJxzkLhhdqsXrRkZf9FwiUxX5 Kx0A=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjWd0ML2WZXb4Ms_AHBdYlVt-uR7uQcHX1UUVzyo7zDnqhfXmaVW=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjWd0ML2WZXb4Ms AHBdYlVt uR7uQcHX1UUVzyo7zDnqhfXmaVW=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUooBNGFS72qjgADZEUhgr1HE_6nk-SL6uz9Lnya_VYGAThPpTFYg=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUooBNGFS72qjgADZEUhgr1HE 6nk SL6uz9Lnya VYGAThPpTFYg=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUOJLGCRjUX6AjIbnXAJSLAufVQRWQb0PKHNPyg4A3XRZVwX68=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUOJLGCRjUX6AjIbnXAJSLAufVQRWQb0PKHNPyg4A3XRZVwX68=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocIz3CR_B4VC4qeopxIeCFkf1Bg47zoTd7y7Hehgdd2EjbSDrQ=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocIz3CR B4VC4qeopxIeCFkf1Bg47zoTd7y7Hehgdd2EjbSDrQ=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/AD5-WClEF4oFCMRQtL6-lMv-SHvo5qDZPXAEGP1-w5n5Yw=s128-c0x00000000-cc-rp-mo",
+              "alt": "AD5 WClEF4oFCMRQtL6 lMv SHvo5qDZPXAEGP1 w5n5Yw=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/AEdFTp6AKhDB_RCqtBICDfPiBssekES3IxXr_Dci-KVs=s128-c0x00000000-cc-rp-mo",
+              "alt": "AEdFTp6AKhDB RCqtBICDfPiBssekES3IxXr Dci KVs=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/AEdFTp5e3wFOCyyq-ekRJfY9xGjJhV3eXMSCQKoY21k2=s128-c0x00000000-cc-rp-mo",
+              "alt": "AEdFTp5e3wFOCyyq ekRJfY9xGjJhV3eXMSCQKoY21k2=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocIfSg0vCpcNAAG-pRPzoeUzPXyQZzso0CuJhrkqTQlEmKb-WQ=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocIfSg0vCpcNAAG pRPzoeUzPXyQZzso0CuJhrkqTQlEmKb WQ=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/AD5-WCnoMRTUSwUF2TO_VCUKXdxLj-7PVRu0PV8j1TAf1g=s128-c0x00000000-cc-rp-mo",
+              "alt": "AD5 WCnoMRTUSwUF2TO VCUKXdxLj 7PVRu0PV8j1TAf1g=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+              "alt": "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+              "width": 1,
+              "height": 1
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2021/12/me-2-237x300.jpg",
+              "alt": "Chris_Profile_Shot",
+              "width": 237,
+              "height": 300
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/Digital_Boost.png",
+              "alt": "Digital Boost Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/HTG.png",
+              "alt": "Help to Grow Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/ILM_Bl.png",
+              "alt": "ILM Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/ABM_Sq.png",
+              "alt": "ABM Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/UKBA.png",
+              "alt": "UKBA Membership",
+              "width": 150,
+              "height": 150
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "strategic approach"
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": ""
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": "Distinctive Brand Index"
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": "Take the Assessment"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "consultancy method"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "leading marketing strategy"
+            },
+            {
+              "href": "https://polything.co.uk/fractional-marketing-expert-uk/",
+              "text": "fractional working model"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Craft Subscription model"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "marketing services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "mentoring programme"
+            },
+            {
+              "href": "https://polything.co.uk/project/blackriver/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/project/wolf-the-worlds-online-festival/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/project/bluefort-security/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/introduction-to-strategic-marketing-consultancy/",
+              "text": "strategic marketing consultancy"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Find out more…"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "initial discovery session"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/108592008846258275226/reviews",
+              "text": "Beth Mawdsley"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/117023354977130365204/reviews",
+              "text": "Thomas Graham"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/115620833447969691626/reviews",
+              "text": "Anurah Farrell"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/100019196821367324263/reviews",
+              "text": "Ben Cosbie Ross"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/109681266989421029440/reviews",
+              "text": "Benoit Collin"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/103265982782484042433/reviews",
+              "text": "Jay Maniar"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/117743026590072742640/reviews",
+              "text": "Ellora Coupe"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/113280013752600921766/reviews",
+              "text": "jon draper"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/112466200404818439174/reviews",
+              "text": "Ellie Good"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/100037425501655339536/reviews",
+              "text": "Don Magrane"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/110146590008600340184/reviews",
+              "text": "Thalia Shaw"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/111951407421306693109/reviews",
+              "text": "Gilly Thompson"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/105805050633381959724/reviews",
+              "text": "Daniel Johnson"
+            },
+            {
+              "href": "https://clutch.co/profile/polything-marketing-consultancy#highlights",
+              "text": "Clutch"
+            },
+            {
+              "href": "https://www.associationofbusinessmentors.org/",
+              "text": "ABM"
+            },
+            {
+              "href": "https://ukba.co.uk/",
+              "text": "UK Business Advisors"
+            },
+            {
+              "href": "https://calendly.com/chris-polything/the-momentum-model-see-if-we-are-a-fit-call",
+              "text": "Book a call"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Let's talk"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "hello@polything.co.uk"
+            },
+            {
+              "href": "tel:+44 2080640312",
+              "text": "+44 208 06403120"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms & Conditions"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/newsletter/",
+              "text": "Newsletter"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "buttons",
+            "severity": "medium",
+            "message": "Button count mismatch: 11 vs 0"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:15:07.203Z"
+    },
+    {
+      "page": "About Page",
+      "path": "/about",
+      "priority": "high",
+      "localUrl": "http://localhost:3000/about",
+      "liveUrl": "https://polything.co.uk/about",
+      "localScreenshot": "test-results/qa-comparison/_about_local.png",
+      "liveScreenshot": "test-results/qa-comparison/_about_live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"Polything | Strategic Marketing for Visionary Brands\" vs \"Polything Marketing Consultancy - Based in London\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "h1",
+            "severity": "high",
+            "message": "H1 mismatch: \"404\" vs \"ELEVATE\nYOUR MARKETING\""
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 0 vs 64"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 0 vs 57"
+          }
+        ],
+        "local": {
+          "title": "Polything | Strategic Marketing for Visionary Brands",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "404",
+          "h2s": [
+            "This page could not be found."
+          ],
+          "images": [],
+          "links": [],
+          "buttons": [],
+          "forms": []
+        },
+        "live": {
+          "title": "Polything Marketing Consultancy - Based in London",
+          "metaDescription": "We help Start-ups, Scale-ups and SMEs scale their marketing effectively. An expert-led strategic marketing consultancy for founders looking to grow.",
+          "h1": "ELEVATE\nYOUR MARKETING",
+          "h2s": [
+            "Selected Clients",
+            "A Marketing Consultancy based in London",
+            "Three ways we can help SME business owners – Our Services",
+            "Case Studies",
+            "The Momentum Model",
+            "ExplorationCollaborationExperimentationImplementation",
+            "Latest Reviews",
+            "Our Founder",
+            "More Information"
+          ],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/NME_Dark.png",
+              "alt": "NME_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Unipart_Group.png",
+              "alt": "Unipart_Group",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Luton_Bourough_Council.png",
+              "alt": "Luton_Bourough_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Devon_County_Council.png",
+              "alt": "Devon_County_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Time_Inc_Dark.png",
+              "alt": "Time_Inc_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/South_Gloucestershire_Council.png",
+              "alt": "South_Gloucestershire_Council",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Boots_Hearingcare.png",
+              "alt": "Boots_Hearingcare",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Zinc_Media_Dark.png",
+              "alt": "Zinc_Media_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Marie_Claire_Dark.png",
+              "alt": "Marie_Claire_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/WOLF_Dark.png",
+              "alt": "WOLF_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Trusted_Reviews_Dark.png",
+              "alt": "Trusted_Reviews_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/SSS_Learning_Dark.png",
+              "alt": "SSS_Learning_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Much_Better_Adventurers_Dark.png",
+              "alt": "Much_Better_Adventurers_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Aftershokz_Dark.png",
+              "alt": "Aftershokz_Dark",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Two_Brooks_Drinks.png",
+              "alt": "Two_Brooks_Drinks",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/This_is_the_Remix.png",
+              "alt": "This_is_the_Remix",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/The_Olive_Oil_Guy.png",
+              "alt": "The_Olive_Oil_Guy",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Starlizard_Hedge_Fund.png",
+              "alt": "Starlizard_Hedge_Fund",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Hamptons_Mortgage_Services.png",
+              "alt": "Hamptons_Mortgage_Services",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Sparkle_Lighting.png",
+              "alt": "Sparkle_Lighting",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Songdrop_logo.png",
+              "alt": "Songdrop_logo",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Skins_Golf.png",
+              "alt": "Skins_Golf",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Out_of_the_Ashes_Charity_Consultancy.png",
+              "alt": "Out_of_the_Ashes_Charity_Consultancy",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Thompson_Sales_Training.png",
+              "alt": "Thompson_Sales_Training",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Skin_Rules.png",
+              "alt": "Skin_Rules",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/JMT_Care_Services.png",
+              "alt": "JMT_Care_Services",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Treasure_Map_Trails.png",
+              "alt": "Treasure_Map_Trails",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Lawnswood_School.png",
+              "alt": "Lawnswood_School",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Kiss_Agency.png",
+              "alt": "Kiss_Agency",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Her_Retrofit_Space.png",
+              "alt": "Her_Retrofit_Space",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Happy_Smiles_Training.png",
+              "alt": "Happy_Smiles_Training",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/cbec_eco_engineering.png",
+              "alt": "cbec_eco_engineering",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Bikmo_Insurance.png",
+              "alt": "Bikmo_Insurance",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/07/Chadwicks_Wealth_Management.png",
+              "alt": "Chadwicks_Wealth_Management",
+              "width": 1920,
+              "height": 1920
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/03/Are-you-lost-in-the-crowd-or-leading-the-pack_-Mockup-1024x640.png",
+              "alt": "Are you lost in the crowd or leading the pack Mockup",
+              "width": 319,
+              "height": 407
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/ClarityFocus-300x283.png",
+              "alt": "ClarityFocus",
+              "width": 300,
+              "height": 283
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Digital_Marketing_Mastery-300x247.png",
+              "alt": "Digital_Marketing_Mastery",
+              "width": 300,
+              "height": 247
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Subscribe_V2-300x300.png",
+              "alt": "Subscribe_V2",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/04/036-blackriver-team-0523-lichtzelt_com-1-scaled.jpg",
+              "alt": "The Blackriver Team - Case Study",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/WOLF_Approved_Images1.jpg",
+              "alt": "The World's Online Festival - Case Study",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/09/Art_Direction_Graphics.png",
+              "alt": "Bluefort Security",
+              "width": 600,
+              "height": 505
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/09/The_Momentum_Model_1.jpg",
+              "alt": "Strategic Marketing Consultancy",
+              "width": 308,
+              "height": 410
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjWU5A6264ZyKKsIIC3_VG6O8b5I64AY-jlqDWXfY5rr-FMFZMcgjg=s128-c0x00000000-cc-rp-mo-ba3",
+              "alt": "ALV UjWU5A6264ZyKKsIIC3 VG6O8b5I64AY jlqDWXfY5rr FMFZMcgjg=s128 c0x00000000 cc rp mo ba3",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUFLwvuBWZqdF3X7tD6SARHRkx4lhaAOydPJg1sFCSYC7T5gswG=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUFLwvuBWZqdF3X7tD6SARHRkx4lhaAOydPJg1sFCSYC7T5gswG=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjXxndz2SwsUOYrR-yAGQqkfaDmeyrxKVsRkg2XfnEPchk4Atq6w=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjXxndz2SwsUOYrR yAGQqkfaDmeyrxKVsRkg2XfnEPchk4Atq6w=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocJHK1pwdmNrFkhIHRvpRJxzkLhhdqsXrRkZf9FwiUxX5-Kx0A=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocJHK1pwdmNrFkhIHRvpRJxzkLhhdqsXrRkZf9FwiUxX5 Kx0A=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjWd0ML2WZXb4Ms_AHBdYlVt-uR7uQcHX1UUVzyo7zDnqhfXmaVW=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjWd0ML2WZXb4Ms AHBdYlVt uR7uQcHX1UUVzyo7zDnqhfXmaVW=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUooBNGFS72qjgADZEUhgr1HE_6nk-SL6uz9Lnya_VYGAThPpTFYg=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUooBNGFS72qjgADZEUhgr1HE 6nk SL6uz9Lnya VYGAThPpTFYg=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/ALV-UjUOJLGCRjUX6AjIbnXAJSLAufVQRWQb0PKHNPyg4A3XRZVwX68=s128-c0x00000000-cc-rp-mo",
+              "alt": "ALV UjUOJLGCRjUX6AjIbnXAJSLAufVQRWQb0PKHNPyg4A3XRZVwX68=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocIz3CR_B4VC4qeopxIeCFkf1Bg47zoTd7y7Hehgdd2EjbSDrQ=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocIz3CR B4VC4qeopxIeCFkf1Bg47zoTd7y7Hehgdd2EjbSDrQ=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/AD5-WClEF4oFCMRQtL6-lMv-SHvo5qDZPXAEGP1-w5n5Yw=s128-c0x00000000-cc-rp-mo",
+              "alt": "AD5 WClEF4oFCMRQtL6 lMv SHvo5qDZPXAEGP1 w5n5Yw=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/AEdFTp6AKhDB_RCqtBICDfPiBssekES3IxXr_Dci-KVs=s128-c0x00000000-cc-rp-mo",
+              "alt": "AEdFTp6AKhDB RCqtBICDfPiBssekES3IxXr Dci KVs=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/AEdFTp5e3wFOCyyq-ekRJfY9xGjJhV3eXMSCQKoY21k2=s128-c0x00000000-cc-rp-mo",
+              "alt": "AEdFTp5e3wFOCyyq ekRJfY9xGjJhV3eXMSCQKoY21k2=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a/ACg8ocIfSg0vCpcNAAG-pRPzoeUzPXyQZzso0CuJhrkqTQlEmKb-WQ=s128-c0x00000000-cc-rp-mo",
+              "alt": "ACg8ocIfSg0vCpcNAAG pRPzoeUzPXyQZzso0CuJhrkqTQlEmKb WQ=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/a-/AD5-WCnoMRTUSwUF2TO_VCUKXdxLj-7PVRu0PV8j1TAf1g=s128-c0x00000000-cc-rp-mo",
+              "alt": "AD5 WCnoMRTUSwUF2TO VCUKXdxLj 7PVRu0PV8j1TAf1g=s128 c0x00000000 cc rp mo",
+              "width": 46,
+              "height": 46
+            },
+            {
+              "src": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+              "alt": "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+              "width": 1,
+              "height": 1
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2021/12/me-2-237x300.jpg",
+              "alt": "Chris_Profile_Shot",
+              "width": 237,
+              "height": 300
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/Digital_Boost.png",
+              "alt": "Digital Boost Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/HTG.png",
+              "alt": "Help to Grow Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/ILM_Bl.png",
+              "alt": "ILM Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/ABM_Sq.png",
+              "alt": "ABM Membership",
+              "width": 150,
+              "height": 150
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2023/02/UKBA.png",
+              "alt": "UKBA Membership",
+              "width": 150,
+              "height": 150
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "strategic approach"
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": ""
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": "Distinctive Brand Index"
+            },
+            {
+              "href": "https://chris-q9avi0iq.scoreapp.com/",
+              "text": "Take the Assessment"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "consultancy method"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "leading marketing strategy"
+            },
+            {
+              "href": "https://polything.co.uk/fractional-marketing-expert-uk/",
+              "text": "fractional working model"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Craft Subscription model"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "marketing services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "mentoring programme"
+            },
+            {
+              "href": "https://polything.co.uk/project/blackriver/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/project/wolf-the-worlds-online-festival/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/project/bluefort-security/",
+              "text": "Explore"
+            },
+            {
+              "href": "https://polything.co.uk/introduction-to-strategic-marketing-consultancy/",
+              "text": "strategic marketing consultancy"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Find out more…"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "initial discovery session"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/108592008846258275226/reviews",
+              "text": "Beth Mawdsley"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/117023354977130365204/reviews",
+              "text": "Thomas Graham"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/115620833447969691626/reviews",
+              "text": "Anurah Farrell"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/100019196821367324263/reviews",
+              "text": "Ben Cosbie Ross"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/109681266989421029440/reviews",
+              "text": "Benoit Collin"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/103265982782484042433/reviews",
+              "text": "Jay Maniar"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/117743026590072742640/reviews",
+              "text": "Ellora Coupe"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/113280013752600921766/reviews",
+              "text": "jon draper"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/112466200404818439174/reviews",
+              "text": "Ellie Good"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/100037425501655339536/reviews",
+              "text": "Don Magrane"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/110146590008600340184/reviews",
+              "text": "Thalia Shaw"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/111951407421306693109/reviews",
+              "text": "Gilly Thompson"
+            },
+            {
+              "href": "https://www.google.com/maps/contrib/105805050633381959724/reviews",
+              "text": "Daniel Johnson"
+            },
+            {
+              "href": "https://clutch.co/profile/polything-marketing-consultancy#highlights",
+              "text": "Clutch"
+            },
+            {
+              "href": "https://www.associationofbusinessmentors.org/",
+              "text": "ABM"
+            },
+            {
+              "href": "https://ukba.co.uk/",
+              "text": "UK Business Advisors"
+            },
+            {
+              "href": "https://calendly.com/chris-polything/the-momentum-model-see-if-we-are-a-fit-call",
+              "text": "Book a call"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Let's talk"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "hello@polything.co.uk"
+            },
+            {
+              "href": "tel:+44 2080640312",
+              "text": "+44 208 06403120"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms & Conditions"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/newsletter/",
+              "text": "Newsletter"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "navigation",
+            "severity": "high",
+            "message": "Navigation structure mismatch"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:15:15.976Z"
+    },
+    {
+      "page": "Contact Page",
+      "path": "/contact",
+      "priority": "high",
+      "localUrl": "http://localhost:3000/contact",
+      "liveUrl": "https://polything.co.uk/contact",
+      "localScreenshot": "test-results/qa-comparison/_contact_local.png",
+      "liveScreenshot": "test-results/qa-comparison/_contact_live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"404: This page could not be found.\" vs \"Contact us - See how we can help - Polything Marketing Consultancy\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "h1",
+            "severity": "high",
+            "message": "H1 mismatch: \"404\" vs \"Contact Us\""
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 0 vs 3"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 0 vs 31"
+          }
+        ],
+        "local": {
+          "title": "404: This page could not be found.",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "404",
+          "h2s": [
+            "This page could not be found."
+          ],
+          "images": [],
+          "links": [],
+          "buttons": [],
+          "forms": []
+        },
+        "live": {
+          "title": "Contact us - See how we can help - Polything Marketing Consultancy",
+          "metaDescription": "We are a marketing consultancy that can help clients with a wide range of strategic marketing advice. Please drop us a line and get in touch.",
+          "h1": "Contact Us",
+          "h2s": [],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2021/12/Contact_Us.jpg",
+              "alt": "polything-contact",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            },
+            {
+              "href": "tel:+44 2080640312",
+              "text": "+44 208 0640312"
+            },
+            {
+              "href": "mailto:hello@polything.co.uk",
+              "text": "hello@polything.co.uk"
+            },
+            {
+              "href": "mailto:hello@polything.co.uk",
+              "text": "Email Us"
+            },
+            {
+              "href": "https://calendly.com/chris-polything/30min",
+              "text": "Book here"
+            },
+            {
+              "href": "https://www.linkedin.com/company/19056822",
+              "text": "Linkedin"
+            },
+            {
+              "href": "https://polything.co.uk/contact/#",
+              "text": "Twitter"
+            },
+            {
+              "href": "https://www.facebook.com/polything/",
+              "text": "Facebook"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Let's talk"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "hello@polything.co.uk"
+            },
+            {
+              "href": "tel:+44 2080640312",
+              "text": "+44 208 06403120"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms & Conditions"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/newsletter/",
+              "text": "Newsletter"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "navigation",
+            "severity": "high",
+            "message": "Navigation structure mismatch"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:15:23.436Z"
+    },
+    {
+      "page": "Book a Call",
+      "path": "/book-a-call",
+      "priority": "high",
+      "localUrl": "http://localhost:3000/book-a-call",
+      "liveUrl": "https://polything.co.uk/book-a-call",
+      "localScreenshot": "test-results/qa-comparison/_book-a-call_local.png",
+      "liveScreenshot": "test-results/qa-comparison/_book-a-call_live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 0 vs 2"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 0 vs 15"
+          }
+        ],
+        "local": {
+          "title": "404: This page could not be found.",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "404",
+          "h2s": [
+            "This page could not be found."
+          ],
+          "images": [],
+          "links": [],
+          "buttons": [],
+          "forms": []
+        },
+        "live": {
+          "title": "Page Not Found - Polything Marketing Consultancy",
+          "metaDescription": "",
+          "h1": "404",
+          "h2s": [],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "navigation",
+            "severity": "high",
+            "message": "Navigation structure mismatch"
+          },
+          {
+            "type": "buttons",
+            "severity": "medium",
+            "message": "Button count mismatch: 1 vs 0"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:15:38.455Z"
+    },
+    {
+      "page": "Blog Index",
+      "path": "/blog",
+      "priority": "medium",
+      "localUrl": "http://localhost:3000/blog",
+      "liveUrl": "https://polything.co.uk/blog",
+      "localScreenshot": "test-results/qa-comparison/_blog_local.png",
+      "liveScreenshot": "test-results/qa-comparison/_blog_live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 0 vs 2"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 0 vs 15"
+          }
+        ],
+        "local": {
+          "title": "404: This page could not be found.",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "404",
+          "h2s": [
+            "This page could not be found."
+          ],
+          "images": [],
+          "links": [],
+          "buttons": [],
+          "forms": []
+        },
+        "live": {
+          "title": "Page Not Found - Polything Marketing Consultancy",
+          "metaDescription": "",
+          "h1": "404",
+          "h2s": [],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "navigation",
+            "severity": "high",
+            "message": "Navigation structure mismatch"
+          },
+          {
+            "type": "buttons",
+            "severity": "medium",
+            "message": "Button count mismatch: 1 vs 0"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:16:01.941Z"
+    },
+    {
+      "page": "Terms of Service",
+      "path": "/terms-of-service",
+      "priority": "medium",
+      "localUrl": "http://localhost:3000/terms-of-service",
+      "liveUrl": "https://polything.co.uk/terms-of-service",
+      "localScreenshot": "test-results/qa-comparison/_terms-of-service_local.png",
+      "liveScreenshot": "test-results/qa-comparison/_terms-of-service_live.png",
+      "contentComparison": {
+        "issues": [
+          {
+            "type": "title",
+            "severity": "high",
+            "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+          },
+          {
+            "type": "meta_description",
+            "severity": "medium",
+            "message": "Meta description mismatch"
+          },
+          {
+            "type": "image_count",
+            "severity": "medium",
+            "message": "Image count mismatch: 0 vs 2"
+          },
+          {
+            "type": "link_count",
+            "severity": "medium",
+            "message": "Link count mismatch: 0 vs 15"
+          }
+        ],
+        "local": {
+          "title": "404: This page could not be found.",
+          "metaDescription": "We help founders and teams cut through the noise, sharpen their strategy, and build marketing that actually works.",
+          "h1": "404",
+          "h2s": [
+            "This page could not be found."
+          ],
+          "images": [],
+          "links": [],
+          "buttons": [],
+          "forms": []
+        },
+        "live": {
+          "title": "Page Not Found - Polything Marketing Consultancy",
+          "metaDescription": "",
+          "h1": "404",
+          "h2s": [],
+          "images": [
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2022/01/Polything_Wordmark_RGB.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            },
+            {
+              "src": "https://polything.co.uk/wp-content/uploads/sites/3/2024/06/Polything_Wordmark_Logo_Light_Small.png",
+              "alt": "Polything Marketing Consultancy",
+              "width": 150,
+              "height": 32
+            }
+          ],
+          "links": [
+            {
+              "href": "https://polything.co.uk/",
+              "text": ""
+            },
+            {
+              "href": "https://polything.co.uk/services/",
+              "text": "Services"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-strategy/",
+              "text": "Marketing Strategy"
+            },
+            {
+              "href": "https://polything.co.uk/marketing-services/",
+              "text": "Marketing Services"
+            },
+            {
+              "href": "https://polything.co.uk/business-mentoring/",
+              "text": "Business Mentoring"
+            },
+            {
+              "href": "https://polything.co.uk/approach/",
+              "text": "Approach"
+            },
+            {
+              "href": "https://polything.co.uk/the-marketing-brief/",
+              "text": "Articles"
+            },
+            {
+              "href": "https://polything.co.uk/case-studies/",
+              "text": "Case Studies"
+            },
+            {
+              "href": "https://polything.co.uk/about-us/",
+              "text": "About"
+            },
+            {
+              "href": "https://polything.co.uk/contact/",
+              "text": "Contact"
+            },
+            {
+              "href": "https://polything.co.uk/terms-and-conditions/",
+              "text": "Terms"
+            },
+            {
+              "href": "https://polything.co.uk/privacy-policy/",
+              "text": "Privacy Policy"
+            },
+            {
+              "href": "https://polything.co.uk/cookie-policy/",
+              "text": "Cookie Policy"
+            },
+            {
+              "href": "https://polything.co.uk/sustainability-statement/",
+              "text": "Sustainability Statement"
+            },
+            {
+              "href": "https://polything.co.uk/book-a-discovery-call/",
+              "text": "Book a call"
+            }
+          ],
+          "buttons": [],
+          "forms": []
+        }
+      },
+      "interactions": {
+        "issues": [
+          {
+            "type": "navigation",
+            "severity": "high",
+            "message": "Navigation structure mismatch"
+          },
+          {
+            "type": "buttons",
+            "severity": "medium",
+            "message": "Button count mismatch: 1 vs 0"
+          }
+        ]
+      },
+      "timestamp": "2025-09-09T11:16:16.701Z"
+    }
+  ],
+  "issues": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "priority": "critical",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"Polything | Strategic Marketing for Visionary Brands\" vs \"Polything Marketing Consultancy - Based in London\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "h1",
+          "severity": "high",
+          "message": "H1 mismatch: \"Build a Brand That Leads — Without the Guesswork\" vs \"ELEVATE\nYOUR MARKETING\""
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 14 vs 64"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 11 vs 57"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "buttons",
+          "severity": "medium",
+          "message": "Button count mismatch: 11 vs 0"
+        }
+      ]
+    },
+    {
+      "page": "About Page",
+      "path": "/about",
+      "priority": "high",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"Polything | Strategic Marketing for Visionary Brands\" vs \"Polything Marketing Consultancy - Based in London\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "h1",
+          "severity": "high",
+          "message": "H1 mismatch: \"404\" vs \"ELEVATE\nYOUR MARKETING\""
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 0 vs 64"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 0 vs 57"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "navigation",
+          "severity": "high",
+          "message": "Navigation structure mismatch"
+        }
+      ]
+    },
+    {
+      "page": "Contact Page",
+      "path": "/contact",
+      "priority": "high",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"404: This page could not be found.\" vs \"Contact us - See how we can help - Polything Marketing Consultancy\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "h1",
+          "severity": "high",
+          "message": "H1 mismatch: \"404\" vs \"Contact Us\""
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 0 vs 3"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 0 vs 31"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "navigation",
+          "severity": "high",
+          "message": "Navigation structure mismatch"
+        }
+      ]
+    },
+    {
+      "page": "Services Page",
+      "path": "/services",
+      "priority": "high",
+      "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "page": "Book a Call",
+      "path": "/book-a-call",
+      "priority": "high",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 0 vs 2"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 0 vs 15"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "navigation",
+          "severity": "high",
+          "message": "Navigation structure mismatch"
+        },
+        {
+          "type": "buttons",
+          "severity": "medium",
+          "message": "Button count mismatch: 1 vs 0"
+        }
+      ]
+    },
+    {
+      "page": "Blackriver Project",
+      "path": "/work/blackriver",
+      "priority": "high",
+      "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "page": "Bluefort Security Project",
+      "path": "/work/bluefort-security",
+      "priority": "high",
+      "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "page": "Blog Index",
+      "path": "/blog",
+      "priority": "medium",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 0 vs 2"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 0 vs 15"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "navigation",
+          "severity": "high",
+          "message": "Navigation structure mismatch"
+        },
+        {
+          "type": "buttons",
+          "severity": "medium",
+          "message": "Button count mismatch: 1 vs 0"
+        }
+      ]
+    },
+    {
+      "page": "Privacy Policy",
+      "path": "/privacy-policy",
+      "priority": "medium",
+      "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "page": "Terms of Service",
+      "path": "/terms-of-service",
+      "priority": "medium",
+      "contentIssues": [
+        {
+          "type": "title",
+          "severity": "high",
+          "message": "Title mismatch: \"404: This page could not be found.\" vs \"Page Not Found - Polything Marketing Consultancy\""
+        },
+        {
+          "type": "meta_description",
+          "severity": "medium",
+          "message": "Meta description mismatch"
+        },
+        {
+          "type": "image_count",
+          "severity": "medium",
+          "message": "Image count mismatch: 0 vs 2"
+        },
+        {
+          "type": "link_count",
+          "severity": "medium",
+          "message": "Link count mismatch: 0 vs 15"
+        }
+      ],
+      "interactionIssues": [
+        {
+          "type": "navigation",
+          "severity": "high",
+          "message": "Navigation structure mismatch"
+        },
+        {
+          "type": "buttons",
+          "severity": "medium",
+          "message": "Button count mismatch: 1 vs 0"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "localUrl": "http://localhost:3000",
+    "liveUrl": "https://polything.co.uk",
+    "outputDir": "./test-results/qa-comparison",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "timeout": 30000
+  }
+}

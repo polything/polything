@@ -1,0 +1,35 @@
+{
+  "title": "Marketing Growth &#8211; UEL 2024",
+  "slug": "marketing-growth-uel-2024",
+  "type": "Page",
+  "date": "2024-06-13T07:22:26.000Z",
+  "updated": "2024-06-13T07:23:32.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "Marketing Growth &#8211; UEL 2024",
+    "description": "",
+    "canonical": "https://polything.co.uk/marketing-growth-uel-2024"
+  },
+  "body": {
+    "raw": "\n",
+    "code": "var Component=(()=>{var m=Object.create;var a=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var p=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var _=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),k=(t,e)=>{for(var n in e)a(t,n,{get:e[n],enumerable:!0})},l=(t,e,n,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of h(e))!x.call(t,r)&&r!==n&&a(t,r,{get:()=>e[r],enumerable:!(i=d(e,r))||i.enumerable});return t};var f=(t,e,n)=>(n=t!=null?m(p(t)):{},l(e||!t||!t.__esModule?a(n,\"default\",{value:t,enumerable:!0}):n,t)),w=t=>l(a({},\"__esModule\",{value:!0}),t);var c=_((L,u)=>{u.exports=_jsx_runtime});var j={};k(j,{default:()=>s,frontmatter:()=>M});var o=f(c()),M={title:\"Marketing Growth &#8211; UEL 2024\",slug:\"marketing-growth-uel-2024\",type:\"Page\",date:\"2024-06-13T08:22:26\",updated:\"2024-06-13T08:23:32\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"Marketing Growth &#8211; UEL 2024\",description:\"\",canonical:\"https://polything.co.uk/marketing-growth-uel-2024\"}};function g(t){return(0,o.jsx)(o.Fragment,{})}function s(t={}){let{wrapper:e}=t.components||{};return e?(0,o.jsx)(e,{...t,children:(0,o.jsx)(g,{...t})}):g(t)}return w(j);})();\n;return Component;"
+  },
+  "_id": "page/marketing-growth-uel-2024/index.mdx",
+  "_raw": {
+    "sourceFilePath": "page/marketing-growth-uel-2024/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "page/marketing-growth-uel-2024",
+    "contentType": "mdx",
+    "flattenedPath": "page/marketing-growth-uel-2024"
+  },
+  "url": "/marketing-growth-uel-2024"
+}

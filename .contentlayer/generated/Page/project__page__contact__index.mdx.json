@@ -1,0 +1,35 @@
+{
+  "title": "Contact us &#8211; See how we can help",
+  "slug": "contact",
+  "type": "Page",
+  "date": "2019-11-15T20:18:27.000Z",
+  "updated": "2025-03-13T17:09:12.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "Contact us &#8211; See how we can help",
+    "description": "Contact Us Contact +44 208 0640312hello@polything.co.uk Meet Book a call Address EarlsfieldLondon United Kingdom Follow",
+    "canonical": "https://polything.co.uk/contact"
+  },
+  "body": {
+    "raw": "\n<h1>Contact Us</h1> <div style=\"height:100px\" aria-hidden=\"true\"></div> <p>Contact</p> <p><strong><strong><a href=\"tel:+44 2080640312\" >+44 208 0640312</a></strong><br /><a href=\"mailto:hello@polything.co.uk\" target=\"_blank\" rel=\"noreferrer noopener\">hello@polything.co.uk</a></strong></p> <div> <div><a href=\"mailto:hello@polything.co.uk\">Email Us</a></div> </div> <div style=\"height:50px\" aria-hidden=\"true\"></div> <div style=\"height:50px\" aria-hidden=\"true\"></div> <p>Meet</p> <p><strong>Book a call</strong></p> <div> <div><a href=\"https://calendly.com/chris-polything/30min\" style=\"background-color:#04a876\" target=\"_blank\" rel=\"noopener\"><strong>Book here</strong></a></div> </div>  <div class=\"calendly-inline-widget\" style=\"min-width:320px;height:700px;\"></div> <script type=\"text/javascript\" src=\"https://assets.calendly.com/assets/external/widget.js\" async></script>  <div style=\"height:50px\" aria-hidden=\"true\"></div> <p>Address</p> <p><strong>Earlsfield<br />London </strong><br /><strong>United Kingdom</strong></p> <p>Follow</p> <p><strong><a href=\"https://www.linkedin.com/company/19056822\" target=\"_blank\" rel=\"noopener\">Linkedin</a><br /><a href=\"#\">Twitter</a><br /><a href=\"https://www.facebook.com/polything/\" target=\"_blank\" rel=\"noopener\">Facebook</a></strong></p>",
+    "code": "var Component=(()=>{var p=Object.create;var i=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var y=Object.getPrototypeOf,m=Object.prototype.hasOwnProperty;var k=(n,t)=>()=>(t||n((t={exports:{}}).exports,t),t.exports),x=(n,t)=>{for(var r in t)i(n,r,{get:t[r],enumerable:!0})},c=(n,t,r,o)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let l of u(t))!m.call(n,l)&&l!==r&&i(n,l,{get:()=>t[l],enumerable:!(o=g(t,l))||o.enumerable});return n};var w=(n,t,r)=>(r=n!=null?p(y(n)):{},c(t||!n||!n.__esModule?i(r,\"default\",{value:n,enumerable:!0}):r,n)),f=n=>c(i({},\"__esModule\",{value:!0}),n);var d=k((C,a)=>{a.exports=_jsx_runtime});var _={};x(_,{default:()=>s,frontmatter:()=>b});var e=w(d()),b={title:\"Contact us &#8211; See how we can help\",slug:\"contact\",type:\"Page\",date:\"2019-11-15T20:18:27\",updated:\"2025-03-13T17:09:12\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"Contact us &#8211; See how we can help\",description:\"Contact Us Contact +44 208 0640312hello@polything.co.uk Meet Book a call Address EarlsfieldLondon United Kingdom Follow\",canonical:\"https://polything.co.uk/contact\"}};function h(n){return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(\"h1\",{children:\"Contact Us\"}),`\n`,(0,e.jsx)(\"div\",{style:\"height:100px\",\"aria-hidden\":\"true\"}),`\n`,(0,e.jsx)(\"p\",{children:\"Contact\"}),`\n`,(0,e.jsx)(\"p\",{children:(0,e.jsxs)(\"strong\",{children:[(0,e.jsx)(\"strong\",{children:(0,e.jsx)(\"a\",{href:\"tel:+44 2080640312\",children:\"+44 208 0640312\"})}),(0,e.jsx)(\"br\",{}),(0,e.jsx)(\"a\",{href:\"mailto:hello@polything.co.uk\",target:\"_blank\",rel:\"noreferrer noopener\",children:\"hello@polything.co.uk\"})]})}),`\n`,(0,e.jsxs)(\"div\",{children:[\" \",(0,e.jsx)(\"div\",{children:(0,e.jsx)(\"a\",{href:\"mailto:hello@polything.co.uk\",children:\"Email Us\"})}),\" \"]}),`\n`,(0,e.jsx)(\"div\",{style:\"height:50px\",\"aria-hidden\":\"true\"}),`\n`,(0,e.jsx)(\"div\",{style:\"height:50px\",\"aria-hidden\":\"true\"}),`\n`,(0,e.jsx)(\"p\",{children:\"Meet\"}),`\n`,(0,e.jsx)(\"p\",{children:(0,e.jsx)(\"strong\",{children:\"Book a call\"})}),`\n`,(0,e.jsxs)(\"div\",{children:[\" \",(0,e.jsx)(\"div\",{children:(0,e.jsx)(\"a\",{href:\"https://calendly.com/chris-polything/30min\",style:\"background-color:#04a876\",target:\"_blank\",rel:\"noopener\",children:(0,e.jsx)(\"strong\",{children:\"Book here\"})})}),\" \"]}),`\n`,(0,e.jsx)(\"div\",{class:\"calendly-inline-widget\",style:\"min-width:320px;height:700px;\"}),`\n`,(0,e.jsx)(\"script\",{type:\"text/javascript\",src:\"https://assets.calendly.com/assets/external/widget.js\",async:!0}),`\n`,(0,e.jsx)(\"div\",{style:\"height:50px\",\"aria-hidden\":\"true\"}),`\n`,(0,e.jsx)(\"p\",{children:\"Address\"}),`\n`,(0,e.jsxs)(\"p\",{children:[(0,e.jsxs)(\"strong\",{children:[\"Earlsfield\",(0,e.jsx)(\"br\",{}),\"London \"]}),(0,e.jsx)(\"br\",{}),(0,e.jsx)(\"strong\",{children:\"United Kingdom\"})]}),`\n`,(0,e.jsx)(\"p\",{children:\"Follow\"}),`\n`,(0,e.jsx)(\"p\",{children:(0,e.jsxs)(\"strong\",{children:[(0,e.jsx)(\"a\",{href:\"https://www.linkedin.com/company/19056822\",target:\"_blank\",rel:\"noopener\",children:\"Linkedin\"}),(0,e.jsx)(\"br\",{}),(0,e.jsx)(\"a\",{href:\"#\",children:\"Twitter\"}),(0,e.jsx)(\"br\",{}),(0,e.jsx)(\"a\",{href:\"https://www.facebook.com/polything/\",target:\"_blank\",rel:\"noopener\",children:\"Facebook\"})]})})]})}function s(n={}){let{wrapper:t}=n.components||{};return t?(0,e.jsx)(t,{...n,children:(0,e.jsx)(h,{...n})}):h(n)}return f(_);})();\n;return Component;"
+  },
+  "_id": "project/page/contact/index.mdx",
+  "_raw": {
+    "sourceFilePath": "project/page/contact/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "project/page/contact",
+    "contentType": "mdx",
+    "flattenedPath": "project/page/contact"
+  },
+  "url": "/contact"
+}

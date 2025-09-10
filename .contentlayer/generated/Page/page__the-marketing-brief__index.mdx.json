@@ -1,0 +1,35 @@
+{
+  "title": "The Marketing Brief",
+  "slug": "the-marketing-brief",
+  "type": "Page",
+  "date": "2019-11-15T20:17:04.000Z",
+  "updated": "2024-06-24T11:13:50.000Z",
+  "categories": null,
+  "tags": null,
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "image": "",
+    "video": "",
+    "text_color": "",
+    "background_color": ""
+  },
+  "seo": {
+    "title": "The Marketing Brief",
+    "description": "The Marketing Brief Your guide for useful advice and information",
+    "canonical": "https://polything.co.uk/the-marketing-brief"
+  },
+  "body": {
+    "raw": "\n<h1>The Marketing Brief</h1> <h2>Your guide for useful advice and information</h2> ",
+    "code": "var Component=(()=>{var f=Object.create;var o=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var k=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),p=(e,t)=>{for(var n in t)o(e,n,{get:t[n],enumerable:!0})},u=(e,t,n,a)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let i of h(t))!x.call(e,i)&&i!==n&&o(e,i,{get:()=>t[i],enumerable:!(a=g(t,i))||a.enumerable});return e};var _=(e,t,n)=>(n=e!=null?f(m(e)):{},u(t||!e||!e.__esModule?o(n,\"default\",{value:e,enumerable:!0}):n,e)),M=e=>u(o({},\"__esModule\",{value:!0}),e);var c=k((B,s)=>{s.exports=_jsx_runtime});var j={};p(j,{default:()=>d,frontmatter:()=>T});var r=_(c()),T={title:\"The Marketing Brief\",slug:\"the-marketing-brief\",type:\"Page\",date:\"2019-11-15T20:17:04\",updated:\"2024-06-24T12:13:50\",categories:null,tags:null,hero:{title:\"\",subtitle:\"\",image:\"\",video:\"\",text_color:\"\",background_color:\"\"},seo:{title:\"The Marketing Brief\",description:\"The Marketing Brief Your guide for useful advice and information\",canonical:\"https://polything.co.uk/the-marketing-brief\"}};function l(e){return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(\"h1\",{children:\"The Marketing Brief\"}),`\n`,(0,r.jsx)(\"h2\",{children:\"Your guide for useful advice and information\"})]})}function d(e={}){let{wrapper:t}=e.components||{};return t?(0,r.jsx)(t,{...e,children:(0,r.jsx)(l,{...e})}):l(e)}return M(j);})();\n;return Component;"
+  },
+  "_id": "page/the-marketing-brief/index.mdx",
+  "_raw": {
+    "sourceFilePath": "page/the-marketing-brief/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "page/the-marketing-brief",
+    "contentType": "mdx",
+    "flattenedPath": "page/the-marketing-brief"
+  },
+  "url": "/the-marketing-brief"
+}

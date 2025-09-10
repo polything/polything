@@ -1,3 +1,8 @@
+// ⚠️  PROTECTED FILE - DO NOT MODIFY ⚠️
+// This is the homepage and has been redeveloped with a new design system.
+// Any changes to this file require explicit approval.
+// Last protected: 2025-01-27
+
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import CredibilityStrip from "@/components/credibility-strip"
